@@ -1,0 +1,130 @@
+/*header */
+
+.navbar-collapse {
+    width: 100%;
+}
+
+.navbar-avatar {
+    margin: -15px 6px 0 0px !important;
+}
+
+.pill-list  {
+  margin: 0;
+  padding: 0;
+}
+
+.pill-list > li {
+  list-style: none;
+  margin: 6px 0;
+  text-align: center;
+}
+
+
+.pill-list > li > a {
+  background: #ececec;
+  border-radius: 5px;
+  padding: 4px;
+  margin: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+
+.layout-container {
+    overflow: visible;
+}
+
+h2.ng-binding {
+  color: #006A96;
+  font-size: 19px !important;
+  padding: 10px !important;
+  font-family: "Helvetica",sans-serif;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-weight: bold !important;
+}
+
+/*
+
+original header styles
+
+.title-header-large {
+  font-size: 21px !important;
+}
+
+/*.navbar {
+  transition: 250ms opacity ease-in-out;
+  -webkit-transition: 250ms opacity ease-in-out;
+  border: 0;
+  border-bottom: 4px solid $sp-navbar-divider-color;
+}
+
+.navbar-fade {
+  opacity: 0.4;
+}
+
+.navbar-inverse .navbar-toggle {
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+header[role="banner"],
+.nav > li > a {
+  max-height: 60px;
+}
+
+@media screen and (max-width: 768px){
+  .nav > li > a {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+.navbar-brand {
+  max-height: 60px;
+  padding: 0;
+  padding-bottom: 0.5rem;
+}
+
+.navbar-brand img, .navbar-brand span {
+  margin-left: $sp-logo-margin-x;
+  margin-right: $sp-logo-margin-x;
+  margin-top: $sp-logo-margin-y;
+  margin-bottom: $sp-logo-margin-y;
+  display: block;
+  max-height: $sp-logo-max-height;
+  max-width: $sp-logo-max-width;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.breadcrumb-container {
+  background-color: $panel-bg;
+}
+
+/* for mobile app */
+.navbar-inverse.is-native {
+  background-color: #405060;
+}
+
+nav{
+ margin-bottom: 0px;
+ border-radius: 0px;
+}
+
+.navbar-collapse{
+padding-right: 0px;
+}
+
+.navbar-nav {
+margin: 0px;
+} */
+
+/* PRB923910: Fix for Service Portal - Header Poorly Aligned in Safari
+@media screen and (min-width: 768px) {
+  .navbar-collapse {
+    display: flex !important;
+  }
+}*/
