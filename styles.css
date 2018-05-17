@@ -8,32 +8,47 @@
     margin: -15px 6px 0 0px !important;
 }
 
+button.navbar-toggle {
+    padding: 9px 5px;
+    margin: 8px 0;
+}
+
+.layout-container {
+    overflow: visible;
+}
+
+@media screen and (max-width: 768px) {
+  .user-inf {
+      float: left !important;
+  }
+}
+
+/*content*/
+
 .pill-list  {
-  margin: 0;
   padding: 0;
 }
 
 .pill-list > li {
   list-style: none;
-  margin: 6px 0;
+  margin: 3px 0;
   text-align: center;
 }
 
 
 .pill-list > li > a {
-  background: #ececec;
+  background: #f7f7f7;
   border-radius: 5px;
   padding: 4px;
   margin: 10px;
   text-align: center;
   cursor: pointer;
+  font-size: 12px;
 }
 
 
 
-.layout-container {
-    overflow: visible;
-}
+
 
 h2.ng-binding {
   color: #006A96;
@@ -45,8 +60,22 @@ h2.ng-binding {
   font-weight: bold !important;
 }
 
+/*h2.ng-binding:hover {
+    color: #f3c501;
+}*/
+
+.iconlink:hover  {
+    background: #fbfbfb;
+}
+
+.iconlink:hover h2.ng-binding {
+    color: #fccd05;
+}
+
 /*
 
+
+/***********************
 original header styles
 
 .title-header-large {
@@ -104,7 +133,7 @@ header[role="banner"],
   background-color: $panel-bg;
 }
 
-/* for mobile app */
+/* for mobile app
 .navbar-inverse.is-native {
   background-color: #405060;
 }
