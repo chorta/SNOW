@@ -1,29 +1,62 @@
-/*header */
+a {
+    color: #01577a;
+}
+
+.panel {
+  background: #FFF;
+}
+
+.panel.panel-primary div.panel-heading {
+  background-color: #FFF;
+  color: #000;
+  border-bottom: 4px solid #006a96;
+}
+
+.panel.panel-default div.panel-heading {
+  background-color: #FFF;
+  color: #000;
+  border-bottom: 4px solid #006a96;
+}
+
+.navbar-default {
+    z-index: 1;
+    background: #006a96;
+}
+
+.layout-container.container {
+    z-index: 1;
+}
+
+.layout-container {
+    overflow: visible;
+  	max-width: 1200px;
+    width: 98%;
+    margin: 0 auto;
+}
+
+.layout-header {
+  max-height: unset !important;
+}
 
 .navbar-collapse {
     width: 100%;
 }
 
-.navbar-avatar {
+/*.navbar-avatar {
     margin: -15px 6px 0 0px !important;
+}*/
+
+.container.portal-icons {
+    margin-bottom: 60px;
 }
 
-button.navbar-toggle {
-    padding: 9px 5px;
-    margin: 8px 0;
+footer {
+    position: relative !important;
 }
 
-.layout-container {
-    overflow: visible;
+.navbar-collapse {
+    width: 100%;
 }
-
-@media screen and (max-width: 768px) {
-  .user-inf {
-      float: left !important;
-  }
-}
-
-/*content*/
 
 .pill-list  {
   padding: 0;
@@ -43,117 +76,160 @@ button.navbar-toggle {
   margin: 10px;
   text-align: center;
   cursor: pointer;
-  font-size: 12px;
+  font: 12px/1.7 Roboto, sans-serif;
 }
 
 
-
-
-
-h2.ng-binding {
-  color: #006A96;
-  font-size: 19px !important;
-  padding: 10px !important;
-  font-family: "Helvetica",sans-serif;
-  border-radius: 20px;
-  text-transform: uppercase;
-  font-weight: bold !important;
+button.navbar-toggle {
+    padding: 9px 5px;
+    margin: 8px 0;
 }
 
-/*h2.ng-binding:hover {
-    color: #f3c501;
-}*/
+.mobile-logo {
+    padding: 0;
+}
+
+main.body.padding-top {
+    background: #FFF;
+}
+
+.landing-container {
+  font: 16px/1.7 Roboto, sans-serif;
+}
+
+.landing-container h2.ng-binding {
+    color: #006A96;
+    font-size: 19px !important;
+    padding: 10px !important;
+    font-family: "Helvetica",sans-serif;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: bold !important;
+}
 
 .iconlink:hover  {
-    background: #fbfbfb;
+    background: #f7f7f7;
 }
 
 .iconlink:hover h2.ng-binding {
     color: #fccd05;
 }
 
-/*
-
-
-/***********************
-original header styles
-
-.title-header-large {
-  font-size: 21px !important;
+.m-b-xs {
+    margin-bottom: 5px !important;
+    font-size: 16px;
+    font-weight: bold;
 }
 
-/*.navbar {
-  transition: 250ms opacity ease-in-out;
-  -webkit-transition: 250ms opacity ease-in-out;
-  border: 0;
-  border-bottom: 4px solid $sp-navbar-divider-color;
+.text-muted {
+    color: #757575;
+    font-size: 15px;
 }
 
-.navbar-fade {
-  opacity: 0.4;
+.homepage-search {
+    padding: 10px 0 100px 0;
 }
 
-.navbar-inverse .navbar-toggle {
-  border-color: rgba(255, 255, 255, 0.25);
+.kb-cat-container > .panel li:before {
+    font-family: "FontAwesome";
+    content: "\f0f6";
+    margin: 0 10px 0 -23px;
 }
 
-header[role="banner"],
-.nav > li > a {
-  max-height: 60px;
+.kb-cat-container > .panel ul {
+    list-style-type: none;
 }
 
-@media screen and (max-width: 768px){
-  .nav > li > a {
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+.kb-cat-container > .panel > .panel-body {
+    min-height: 300px;
+}
+
+@media screen and (max-width: 768px) {
+  .user-inf {
+      float: left !important;
   }
 }
 
-.navbar-brand {
-  max-height: 60px;
-  padding: 0;
-  padding-bottom: 0.5rem;
+/* homepage search bar styles */
+
+input.form-control.input-typeahead.ng-pristine.ng-valid.ng-empty.ng-touched {
+    border-radius: 7px 0  0 7px !important;
 }
 
-.navbar-brand img, .navbar-brand span {
-  margin-left: $sp-logo-margin-x;
-  margin-right: $sp-logo-margin-x;
-  margin-top: $sp-logo-margin-y;
-  margin-bottom: $sp-logo-margin-y;
-  display: block;
-  max-height: $sp-logo-max-height;
-  max-width: $sp-logo-max-width;
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-.breadcrumb-container {
-  background-color: $panel-bg;
+#x19538fc2cb10120000f8d856634c9c01 > form > div > span > button {
+    border-radius: 0 7px 7px 0 !important;
 }
 
-/* for mobile app
-.navbar-inverse.is-native {
-  background-color: #405060;
+
+#homepage-search > div > h2 {
+    text-shadow: 2px 2px 12px #0000008f;
+    color: #fff !important;
+    font: 54px/1.7 Roboto, sans-serif;
 }
 
-nav{
- margin-bottom: 0px;
- border-radius: 0px;
+h4#kb-header-tag {
+    text-shadow: 2px 2px 12px #0000008f;
+    color: #fff !important;
+    font: 18px/1.7 Roboto, sans-serif;
 }
 
-.navbar-collapse{
-padding-right: 0px;
+h1#kb-header-title {
+    text-shadow: 2px 2px 12px #0000008f;
+    color: #fff !important;
+    font: 54px/1 Roboto, sans-serif;
 }
 
-.navbar-nav {
-margin: 0px;
-} */
+@media screen and (max-width: 767px) {
 
-/* PRB923910: Fix for Service Portal - Header Poorly Aligned in Safari
-@media screen and (min-width: 768px) {
-  .navbar-collapse {
-    display: flex !important;
+  #homepage-search {
+      display: block !important;
+      margin: 0 !important;
+      padding: 15px !important;
   }
-}*/
+
+  .homepage-search {
+      padding: 0;
+  }
+
+
+}
+
+@media screen and (max-width: 457px) {
+
+  #homepage-search > div > h2 {
+      font-size: 25px !important;
+  }
+
+}
+
+
+/* kb styles */
+@media screen and (max-width: 768px) {
+  #kb-header-title {
+	font-size: 25px !important;
+  }
+}
+
+@media screen and (max-width:590px) {
+
+  .kb-cat-container {
+  	width: 100% !important;
+  }
+
+  .row {
+    margin: 0 !important;
+}
+
+  button.navbar-toggle {
+
+    margin: 8px 0 !important;
+
+  }
+
+}
+
+@media screen and (min-width: 970px) {
+	#kb-header-title {
+		padding-top: 50px;
+	}
+}
