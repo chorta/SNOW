@@ -179,6 +179,10 @@ h1#kb-header-title {
     font: 54px/1 Roboto, sans-serif;
 }
 
+.header-loader {
+    display: none;
+}
+
 @media screen and (max-width: 767px) {
 
   #homepage-search {
@@ -232,4 +236,20 @@ h1#kb-header-title {
 	#kb-header-title {
 		padding-top: 50px;
 	}
+}
+
+/* buttons */
+
+.btn-help {
+    background: #d7eaf7;
+    border-color: #d7eaf7;
+    font-weight: bold;
+    color: #525252;
+}
+
+/* sc images */
+
+.catalog-item-image {
+    max-height: 100px;
+    width: auto;
 }
