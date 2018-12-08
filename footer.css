@@ -1,0 +1,78 @@
+/*@import url("https://fonts.googleapis.com/css?family=Roboto");*/
+.layout-footer>.layout-container,
+.title-logo {
+    background: url(https://cdn.ucsd.edu/cms/decorator-5/styles/img/sprite_base.png) no-repeat transparent
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:2) {
+    .layout-footer>.layout-container,
+    .title-logo {
+        background-image: url(img/sprite_base2x.png);
+        background-size: 500px 120px
+    }
+}
+
+.layout-footer {
+    width: 100%;
+    color: #fff;
+    font-size: 90%;
+    border-top: 1px solid #ccc;
+    padding: 1em 0;
+    line-height: 1.5
+}
+
+.layout-footer>.layout-container {
+    background-position: right -74px
+}
+
+@media only screen and (max-width:640px) {
+    .layout-footer>.layout-container {
+        background: none
+    }
+}
+
+footer {
+    font: 16px/1.7 Roboto, sans-serif;
+    background-color: #006a96
+}
+
+.footer-links {
+    list-style: none;
+    margin: .5em 0 0;
+    padding: 0
+}
+
+.footer-links>li {
+    display: inline;
+    margin-left: 0;
+    margin-right: .5em;
+    padding-right: .75em
+}
+
+.footer-links>li a {
+    color: #fff;
+    text-decoration: underline
+}
+
+.footer-links>li:first-child {
+    border-right: 1px solid #fff
+}
+
+.footer .row {
+    padding: 1.5em .5em;
+    color: #fff;
+    font-size: .9em
+}
+
+.footer-logo {
+    width: 158px;
+    height: 30px;
+    float: right
+}
+
+@media only screen and (max-width:768px) {
+    .footer-logo {
+        float: none;
+        margin-top: 15px
+    }
+}

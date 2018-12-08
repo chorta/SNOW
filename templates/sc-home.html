@@ -1,0 +1,3695 @@
+
+<html lang="en" ng-app="sn.$sp" ng-init="portal_id = '9a05b546db705b0006037a131f9619bf'" style="height: 100%;" class="page-dea5792147132100ba13a5554ee4902d vdea5792147132100ba13a5554ee4902d" data-page-id="dea5792147132100ba13a5554ee4902d">
+
+<head sp-metatags="">
+	<style type="text/css">
+		[uib-typeahead-popup].dropdown-menu {
+			display: block;
+		}
+	</style>
+	<style type="text/css">
+		.uib-time input {
+			width: 50px;
+		}
+	</style>
+	<style type="text/css">
+		.uib-datepicker .uib-title {
+			width: 100%;
+		}
+
+		.uib-day button,
+		.uib-month button,
+		.uib-year button {
+			min-width: 100%;
+		}
+
+		.uib-datepicker-popup.dropdown-menu {
+			display: block;
+		}
+
+		.uib-button-bar {
+			padding: 10px 9px 2px;
+		}
+	</style>
+	<style type="text/css">
+		.ng-animate.item:not(.left):not(.right) {
+			-webkit-transition: 0s ease-in-out left;
+			transition: 0s ease-in-out left
+		}
+	</style>
+	<style type="text/css">
+		@charset "UTF-8";
+		[ng\:cloak],
+		[ng-cloak],
+		[data-ng-cloak],
+		[x-ng-cloak],
+		.ng-cloak,
+		.x-ng-cloak,
+		.ng-hide:not(.ng-hide-animate) {
+			display: none !important;
+		}
+
+		ng\:form {
+			display: block;
+		}
+
+		.ng-animate-shim {
+			visibility: hidden;
+		}
+
+		.ng-anchor {
+			position: absolute;
+		}
+	</style>
+	<title>KB0010510 - Get Access to Business Systems (SSO) - IT Service Hub</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge; IE=10">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta http-equiv="cache-control" content="public">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="cache-control" content="max-age=0">
+	<meta http-equiv="pragma" content="no-cache">
+	<link href="favicon-sd.png" rel="shortcut icon">
+	<link href=":https://ucsdservicedesk.service-now.com/images/mobile/apple_touch_snc.png?v=07-14-2018_1223" rel="apple-touch-icon">
+	<link type="text/css" rel="stylesheet" href="https://ucsdservicedesk.service-now.com/styles/css_includes_$sp.cssx?v=07-14-2018_1223">
+	<link href="https://ucsdservicedesk.service-now.com/styles/scss/sp-bootstrap.scss?portal_id=9a05b546db705b0006037a131f9619bf&amp;v=2d0db098db1e2700bd30f6e9af96197d" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="https://ucsdservicedesk.service-now.com/styles/sp-patch.css?v=2d0db098db1e2700bd30f6e9af96197d">
+	<link href=":https://ucsdservicedesk.service-now.com/ab1d3aafdb861740dbd6f2b6af961913.spcssdbx?portal=9a05b546db705b0006037a131f9619bf&amp;v=1cd07098dbda2700bd30f6e9af96196a" type="text/css" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="https://ucsdservicedesk.service-now.com/scripts/icon-fonts/font-awesome/css/font-awesome.cssx?v=07-14-2018_1223">
+	<script async="" src="//www.google-analytics.com/analytics.js"></script>
+	<script data-description="NOW session, user_name, etc">
+		window.NOW = window.NOW || {};
+		// record watch / presence
+		window.NOW.session_id = '7289EDDCDB5A6700BD30F6E9AF961930';
+		window.NOW.user_name = 'chorta';
+		window.NOW.user_id = 'e5ae1cb2db175200dbd6f2b6af961989';
+		window.NOW.user_display_name = 'Cristian Horta';
+		window.NOW.user_initials = 'CH';
+		window.NOW.user_avatar = '';
+		window.NOW.presence_interval = 15;
+		window.NOW.record_presence_interval = 20;
+		window.NOW.ambConnected = false;
+	</script>
+	<script data-description="NOW vars set by properties, custom events, g_* globals">
+		window.g_ck = '039638c8db16eb009736f35aaf9619714207f05df4549ebb6d45dda256e86fabd505cbc0';
+		window.logged_in = true;
+		if (!window.NOW)
+			window.NOW = {};
+		window.NOW.ac_wait_time = parseInt(250, 10);
+		window.NOW.sp_dual_list_default_view = '';
+		window.NOW.sp_debug = 'false' == 'true';
+		window.NOW.sp_show_console_error = 'true' == 'true' && true;
+		window.NOW.page_id = '';
+		window.NOW.has_access = 'true' === 'true';
+		// script checks for environment
+		// if (NOW.sp) ...
+		// added Aug 1, 2016
+		window.NOW.sp = {};
+		window.NOW.sp.version = {};
+		window.NOW.sp.version.major = 1;
+		window.NOW.sp.version.minor = 2;
+		window.NOW.sp.version.dot = 0;
+		window.NOW.sp.enableTours = 'false' == 'true';
+
+		// SP doesn't define app resources yet
+		window.SN_APP_RESOURCES = {};
+
+		// script globals
+		var g_tz_offset = -28800000;
+		var g_tz = 'America/Los_Angeles';
+		var g_first_day_of_week = parseInt(1, 10);
+		var g_date_picker_first_day_of_week = parseInt(0, 10);
+		var g_notif_timeout = parseInt(5, 10);
+		var g_ck = '039638c8db16eb009736f35aaf9619714207f05df4549ebb6d45dda256e86fabd505cbc0';
+		var g_searchWaitTime = 100;
+		var g_amb_on_login = false;
+
+		var g_lang = 'en';
+		var g_system_lang = "en";
+		var g_user_date_time_format = "yyyy-MM-dd HH:mm:ss";
+		var g_user_date_format = "yyyy-MM-dd";
+		var g_user_decimal_separator = ".";
+		var g_user_grouping_separator = ",";
+		var g_text_direction = "ltr";
+		var g_accessibility = "false";
+		var g_accessibility_visual_patterns = false;
+		var g_glide_list_separator = ", ";
+		var g_sort_elements_by_session_language = "true" == "true";
+		var g_mandatory_field_msg = 'Some fields are incomplete:';
+		var g_field_error_msg = 'The following fields contains error:';
+	</script>
+	<script type="text/javascript" src=":https://ucsdservicedesk.service-now.com/scripts/js_includes_sp.jsx?v=07-14-2018_1223&amp;lp=Tue_Sep_25_13_17_26_PDT_2018&amp;c=22_510"></script>
+	<script language="javascript" src="Google Analytics - UCSD.jsdbx?c=14"></script>
+	<script data-description="set sp.dependencies">
+		(function() {
+			angular.module('sp.dependencies', []);
+			var portal = JSON.parse(
+				'{\"sp_rectangle_menu\":\"656d6f68db899f0006037a131f961985\",\"sqanda_knowledge_base_dv\":\"\",\"sc_category_page_dv\":\"\",\"icon\":\"\",\"sc_catalog\":\"e0d08b13c3330100c8b837659bba8fb4\",\"kb_knowledge_page_dv\":\"kb_view\",\"title\":\"IT Service Hub\",\"sc_catalog_page\":\"fe87a11147132100ba13a5554ee490b9\",\"sys_class_name\":\"sp_portal\",\"sys_id\":\"9a05b546db705b0006037a131f9619bf\",\"theme_dv\":\"UCSD ITS Theme\",\"default\":true,\"homepage_dv\":\"index\",\"notfound_page_dv\":\"404\",\"sc_catalog_dv\":\"IT Services Request Catalog\",\"logo\":\"e631c6cadb705b0006037a131f961927.iix\",\"sys_name\":\"IT Service Hub\",\"sp_rectangle_menu_dv\":\"ITS Header Menu\",\"theme\":\"5f40b15fdb025f0006037a131f9619cc\",\"sc_catalog_page_dv\":\"sc_home\",\"sys_class_name_dv\":\"Service Portal\",\"quick_start_config\":\"[{\\n\\t\\\"tagline\\\": {\\n\\t\\t\\\"table\\\" : \\\"sp_instance\\\",\\n\\t\\t\\\"sys_id\\\" : \\\"34fe3d96cb20020000f8d856634c9cf4\\\",\\n\\t\\t\\\"field\\\" : \\\"title\\\"\\n\\t},\\n\\t\\\"hero_background\\\": {\\n\\t\\t\\\"table\\\" : \\\"sp_container\\\",\\n\\t\\t\\\"sys_id\\\" : \\\"be98a8d2cb20020000f8d856634c9c63\\\",\\n\\t\\t\\\"field\\\" : \\\"background_image\\\"\\n\\t}\\n}]\",\"kb_knowledge_page\":\"db9fcab847101200ba13a5554ee490cf\",\"sys_tags\":\"\",\"login_page_dv\":\"landing\",\"sp_chat_queue_dv\":\"\",\"css_variables\":\"$brand-primary: #006a96;\\r\\n$body-bg: #fafafa;\\r\\n$state-success-text: #4caf50;\\r\\n$sp-homepage-bg: #fff;\\r\\n$sp-navbar-divider-color: #006a96;\\r\\n$text-color: #424242;\\r\\n$sp-logo-margin-y: .5rem;\\r\\n$navbar-inverse-link-hover-color: #eeeeee;\\r\\n$panel-bg: #eeeeee;\\r\\n$brand-success: #4caf50;\\r\\n$navbar-inverse-bg: #006a96;\\r\\n$brand-warning: #ffc107;\\r\\n$brand-danger: #f44336;\\r\\n$sp-tagline-color: #717171;\\r\\n$navbar-inverse-link-color: #f5f5f5;\\r\\n$brand-info: #03a9f4;\\r\\n$link-color: #03a9f4;\\r\\n$sp-logo-margin-x: 15px;\\r\\n$btn-default-bg: #fff;\\r\\n$text-muted: #757575;\\r\\n\",\"notfound_page\":\"3c2c9063cb11020000f8d856634c9c1f\",\"kb_knowledge_base_dv\":\"IT Services\",\"kb_knowledge_base\":\"e343172edb3c1f40bd30f6e9af961996\",\"login_page\":\"36c61807cb31120000f8d856634c9ca9\",\"url_suffix\":\"its\",\"homepage\":\"c6c53d86db705b0006037a131f96190b\"}'
+			);
+			angular.module('sp.pageData', []).factory('spPageData', function() {
+				return {
+					getPortal: function() {
+						return portal;
+					}
+				}
+			});
+		})();
+	</script>
+	<script>
+		$(document).ready(function() {
+			if ('ontouchstart' in window || (navigator.maxTouchPoints !== 'undefined' && navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints !== 'undefined' && navigator.msMaxTouchPoints > 0)) {
+				$("body").addClass('touch_scroll');
+			}
+		});
+	</script>
+	<style type="text/css">
+		.gsfBackground {
+			border-color: #fff779;
+			font-size: 16;
+			margin-bottom: 5;
+		}
+	</style>
+	<style></style>
+	<style></style>
+	<style type="text/css" data-page-id="c6c53d86db705b0006037a131f96190b" data-page-title="Service Portal"></style>
+	<script src="https://ucsdservicedesk.service-now.com/scripts/angular-truncate.js" async=""></script>
+	<style type="text/css" id="v81603553db425f0006037a131f9619ab-s" widget="UCSD ITS Header">
+		.v81603553db425f0006037a131f9619ab section.page {
+			display: flex;
+			flex-direction: column;
+			display: -ms-flexbox;
+			-ms-flex-direction: column;
+		}
+
+		.v81603553db425f0006037a131f9619ab section.page>main.body,
+		.v81603553db425f0006037a131f9619ab section.page>section.body {
+			flex-grow: 1;
+			flex-shrink: 0;
+			-ms-flex-positive: 1;
+		}
+
+		@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+		.v81603553db425f0006037a131f9619ab .layout-footer>.layout-container,
+		.v81603553db425f0006037a131f9619ab .title-logo {
+			background: url(https://cdn.ucsd.edu/cms/decorator-5/styles/img/sprite_base.png) no-repeat transparent;
+		}
+
+		@media screen and (-webkit-min-device-pixel-ratio:2) {
+
+			.v81603553db425f0006037a131f9619ab .layout-footer>.layout-container,
+			.v81603553db425f0006037a131f9619ab .title-logo {
+				background-image: url(img/sprite_base2x.png);
+				background-size: 500px 120px;
+			}
+		}
+
+		.v81603553db425f0006037a131f9619ab .layout-header {
+			font: 16px/1.7 Roboto, sans-serif;
+			display: block;
+			width: 100%;
+			background-color: #2b92b9;
+		}
+
+		.v81603553db425f0006037a131f9619ab .layout-container {
+			font: 16px/1.7 Roboto, sans-serif;
+		}
+
+		@media only screen and (min-width:320px) and (max-width:768px) {
+
+			.v81603553db425f0006037a131f9619ab .layout-header {
+				height: 105px;
+			}
+		}
+
+		.v81603553db425f0006037a131f9619ab .isLoggedIn,
+		.v81603553db425f0006037a131f9619ab .layout-header {
+			height: 100%;
+		}
+
+		.v81603553db425f0006037a131f9619ab .layout-header {
+			display: block;
+			width: 100%;
+			background-color: #2b92b9;
+		}
+
+		@media only screen and (min-width:320px) and (max-width:768px) {
+
+			.v81603553db425f0006037a131f9619ab .layout-header {
+				height: 105px;
+			}
+		}
+
+		.v81603553db425f0006037a131f9619ab .isLoggedIn,
+		.v81603553db425f0006037a131f9619ab .layout-header {
+			height: 100%;
+		}
+
+		.v81603553db425f0006037a131f9619ab .title-header {
+			float: left;
+			font: 21px/1.7 Roboto, sans-serif;
+			color: #000;
+			letter-spacing: 1px;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+
+		.v81603553db425f0006037a131f9619ab .title-header.title-header-short {
+			display: none;
+		}
+
+		@media only screen and (max-width:480px) {
+
+			.v81603553db425f0006037a131f9619ab .title-header.title-header-short {
+				display: block;
+				margin-top: 0;
+			}
+		}
+
+		.v81603553db425f0006037a131f9619ab .title-header:focus,
+		.v81603553db425f0006037a131f9619ab .title-header:hover {
+			color: #666;
+			text-decoration: none;
+		}
+
+		@media only screen and (max-width:480px) {
+
+			.v81603553db425f0006037a131f9619ab .title-header {
+				display: none;
+				margin-top: 2.25em;
+			}
+		}
+
+		@media only screen and (max-width:360px) {
+
+			.v81603553db425f0006037a131f9619ab .title-header {
+				font-size: 20px;
+				margin-top: 2em;
+			}
+		}
+
+		.v81603553db425f0006037a131f9619ab .title-header-large {
+			margin-top: 5px;
+		}
+
+		@media only screen and (min-width:480px) and (max-width:768px) {
+
+			.v81603553db425f0006037a131f9619ab .title-header-large {
+				display: block;
+				margin-top: 2.5em;
+			}
+		}
+
+		.v81603553db425f0006037a131f9619ab .title-logo {
+			float: right;
+			width: 229px;
+			height: 65px;
+			overflow: hidden;
+			text-indent: -999em;
+			background-position: 0 -3px;
+		}
+
+		@media only screen and (max-width:480px) {
+
+			.v81603553db425f0006037a131f9619ab .title-logo {
+				background-position: -239px -2px;
+				height: 45px;
+				width: 166px;
+				display: none !important;
+			}
+		}
+
+		@media only screen and (max-width:768px) {
+
+			.v81603553db425f0006037a131f9619ab .title-logo {
+				display: block;
+				position: absolute;
+			}
+		}
+
+		.v81603553db425f0006037a131f9619ab .layout-title {
+			font: 16px/1.7 Roboto, sans-serif;
+			box-sizing: border-box;
+			height: 92px;
+			width: 100%;
+			background: #fff;
+			padding: 1.5em 0;
+		}
+
+		@media only screen and (max-width:360px) {
+
+			.v81603553db425f0006037a131f9619ab .layout-title {
+				padding: .5em 0;
+			}
+		}
+
+		@media only screen and (max-width:768px) {
+
+			.v81603553db425f0006037a131f9619ab .layout-title {
+				padding: 1em 0;
+				height: auto;
+			}
+		}
+
+		.v81603553db425f0006037a131f9619ab .layout-bar {
+			min-height: 50px;
+			width: 100%;
+			background-color: #006a96;
+			border: 0;
+			border-bottom: 1px solid #006a96;
+			margin-bottom: 0;
+			z-index: 100;
+		}
+
+		.v81603553db425f0006037a131f9619ab .layout-navbar .layout-container {
+			overflow: visible;
+		}
+
+		.v81603553db425f0006037a131f9619ab .layout-main {
+			width: 100%;
+		}
+
+		.v81603553db425f0006037a131f9619ab .header-logo {
+			height: 30px;
+			margin: 15px 20px 0 0;
+			width: auto;
+		}
+
+		@media only screen and (min-width:480px) {
+
+			.v81603553db425f0006037a131f9619ab .header-logo {
+				display: none;
+			}
+		}
+
+		.v81603553db425f0006037a131f9619ab .sidebar-section {
+			padding: 0 4em 1em 0;
+		}
+
+		@media (max-width:960px) {
+
+			.v81603553db425f0006037a131f9619ab .sidebar-section {
+				padding: 0 0 3em;
+				width: 100%;
+			}
+		}
+
+		.v81603553db425f0006037a131f9619ab #site-logo img {
+			max-width: 100%;
+			height: auto;
+			margin-top: 0;
+			margin-bottom: 15px;
+		}
+
+		@media (max-width:768px) {
+
+			.v81603553db425f0006037a131f9619ab #site-logo img {
+				display: none;
+			}
+		}
+
+		.v81603553db425f0006037a131f9619ab .layout-footer.open,
+		.v81603553db425f0006037a131f9619ab .layout-header.open,
+		.v81603553db425f0006037a131f9619ab .layout-main.open {
+			-webkit-transform: translate(42%);
+			transform: translate(42%);
+		}
+
+		@media only screen and (max-width:640px) {
+
+			.v81603553db425f0006037a131f9619ab .layout-footer.open,
+			.v81603553db425f0006037a131f9619ab .layout-header.open,
+			.v81603553db425f0006037a131f9619ab .layout-main.open {
+				-webkit-transform: translate(83%);
+				transform: translate(83%);
+			}
+		}
+
+		.v81603553db425f0006037a131f9619ab .layout-header button.btn-nav {
+			position: relative;
+			float: left;
+			height: 44px;
+			color: #fff;
+			font-size: 24px;
+			background-image: none;
+			background-color: #006a96;
+			border-radius: 1px;
+			border: 1px solid #006a96;
+			padding: 9px 10px;
+			margin-right: 10px;
+		}
+
+		@media only screen and (max-width:360px) {
+
+			.v81603553db425f0006037a131f9619ab .layout-header button.btn-nav {
+				font-size: 20px;
+			}
+		}
+
+		@media only screen and (max-width:960px) {
+
+			.v81603553db425f0006037a131f9619ab .layout-header button.btn-nav {
+				display: block;
+			}
+		}
+
+		.v81603553db425f0006037a131f9619ab button.btn-nav .icon-bar {
+			display: block;
+			width: 30px;
+			height: 2px;
+			background-color: #fff;
+			border-radius: 1px;
+			margin-top: .25em;
+		}
+
+		@media only screen and (max-width:360px) {
+
+			.v81603553db425f0006037a131f9619ab button.btn-nav .icon-bar {
+				width: 22px;
+			}
+		}
+
+		.v81603553db425f0006037a131f9619ab .btn-nav .icon-bar:nth-child(2),
+		.v81603553db425f0006037a131f9619ab .btn-nav .icon-bar:nth-child(3),
+		.v81603553db425f0006037a131f9619ab .btn-nav .icon-bar:nth-child(4) {
+			transition: all .2s ease;
+			transition-delay: .25s;
+			opacity: 1;
+		}
+
+		.v81603553db425f0006037a131f9619ab .btn-nav .icon-bar:nth-child(2) {
+			margin: 0;
+		}
+
+		.v81603553db425f0006037a131f9619ab .btn-nav .icon-bar:nth-child(2),
+		.v81603553db425f0006037a131f9619ab .btn-nav .icon-bar:nth-child(4) {
+			transition: all .2s ease;
+			transition-delay: .25s;
+		}
+
+		.v81603553db425f0006037a131f9619ab .layout-header.open .btn-nav .icon-bar:nth-child(2) {
+			-webkit-transform: translate3d(0, 8px, 0) rotate(45deg);
+			transform: translate3d(0, 8px, 0) rotate(45deg);
+		}
+
+		.v81603553db425f0006037a131f9619ab .layout-header.open .btn-nav .icon-bar:nth-child(3) {
+			opacity: 0;
+		}
+
+		.v81603553db425f0006037a131f9619ab .layout-header.open .btn-nav .icon-bar:nth-child(4) {
+			-webkit-transform: translate3d(0, -8px, 0) rotate(-45deg);
+			transform: translate3d(0, -8px, 0) rotate(-45deg);
+		}
+
+		@media only screen and (max-width:768px) {
+
+			.v81603553db425f0006037a131f9619ab .layout-header .btn-nav {
+				margin-top: 1.7em;
+			}
+		}
+
+		.v81603553db425f0006037a131f9619ab .layout-navbar .layout-container {
+			overflow: visible;
+		}
+
+		.v81603553db425f0006037a131f9619ab nav .container {
+			padding: 0;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-list {
+			list-style: none;
+			font-size: 16px;
+			padding: 9px 0 0;
+			margin: 0;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar .caret {
+			margin-left: 7px;
+		}
+
+		.v81603553db425f0006037a131f9619ab .layout-navbar .navbar-list>li {
+			float: left;
+		}
+
+		.v81603553db425f0006037a131f9619ab .layout-navbar .navbar-list>li>a {
+			display: block;
+			color: #fff;
+			background-color: #006a96;
+			padding: 9px 15px;
+			text-decoration: none;
+			line-height: 1.3;
+		}
+
+		.v81603553db425f0006037a131f9619ab .layout-navbar .navbar-list>li.active>a {
+			border-bottom: 3px solid #ffcd00;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar {
+			margin-bottom: 0;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-default {
+			background-color: #006a96;
+			border-bottom: none;
+			font: 16px/1.7 Roboto, sans-serif;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-nav>li>a {
+			color: #fff;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-nav>.open>a,
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-nav>.open>a:focus,
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-nav>.open>a:hover,
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-nav>li>a:focus,
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-nav>li>a:hover {
+			background-color: #004663;
+			color: #fff;
+		}
+
+		.v81603553db425f0006037a131f9619ab .dropdown-menu {
+			background-color: #004663;
+			border-radius: 0;
+		}
+
+		.v81603553db425f0006037a131f9619ab .dropdown-menu>li>a {
+			color: #fff;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-nav>.active>a,
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-nav>.active>a:focus,
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-nav>.active>a:hover {
+			background-color: #004663;
+			color: #fff;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-toggle {
+			background-color: #006a96;
+			border: none;
+			float: left;
+			margin: 8px 0 8px 20px;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-toggle:focus,
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-toggle:hover {
+			background-color: #004663;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-toggle .icon-bar {
+			background-color: #fff;
+		}
+
+		.v81603553db425f0006037a131f9619ab .mobile-nav-bars {
+			padding: 5px;
+			float: left;
+		}
+
+		.v81603553db425f0006037a131f9619ab .mobile-nav-icon {
+			font-size: 13px;
+			padding: 2px 0;
+			float: left;
+			color: #fff;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-offcanvas .navmenu-nav>.active>a,
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-offcanvas .navmenu-nav>.active>a:focus,
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-offcanvas .navmenu-nav>.active>a:hover,
+		.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-nav>.active>a,
+		.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-nav>.active>a:focus,
+		.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-nav>.active>a:hover {
+			color: #fff;
+			background-color: #004663;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-offcanvas .navmenu-nav>li>a:focus,
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-offcanvas .navmenu-nav>li>a:hover,
+		.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-nav>li>a:focus,
+		.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-nav>li>a:hover {
+			color: #fff;
+			background-color: #006a96;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navmenu-nav {
+			padding-bottom: 0;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navmenu-nav>li {
+			border-bottom: 1px solid #ccc;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-nav>li>a {
+			color: #333;
+		}
+
+		.v81603553db425f0006037a131f9619ab .open .navmenu-nav>li>a {
+			padding: 10px 20px 10px 30px;
+			color: #006a96;
+		}
+
+		.v81603553db425f0006037a131f9619ab .open .navmenu-nav>li>a:hover {
+			color: #333;
+			background-color: transparent;
+			text-decoration: underline;
+		}
+
+		.v81603553db425f0006037a131f9619ab li.open {
+			border-bottom: none;
+		}
+
+		@media only screen and (max-width:767px) {
+
+			.v81603553db425f0006037a131f9619ab .offcanvas>ul.nav.navbar-nav.navbar-right {
+				margin: 0;
+			}
+
+			.v81603553db425f0006037a131f9619ab .offcanvas>ul.nav.navbar-nav.navbar-right .search {
+				width: 100%;
+			}
+
+			.v81603553db425f0006037a131f9619ab .offcanvas>ul.nav.navbar-nav.navbar-right .search-toggle {
+				display: none;
+			}
+
+			.v81603553db425f0006037a131f9619ab .offcanvas>ul.nav.navbar-nav.navbar-right .search-content {
+				background-color: #fff;
+				border-bottom: 2px solid #bdbdbd;
+			}
+
+			.v81603553db425f0006037a131f9619ab .offcanvas>ul.nav.navbar-nav.navbar-right #search {
+				display: block !important;
+				position: relative !important;
+				width: 100%;
+				padding: 10px 15px;
+				overflow: hidden;
+			}
+
+			.v81603553db425f0006037a131f9619ab .offcanvas>ul.nav.navbar-nav.navbar-right .search-content .input-group {
+				width: 60%;
+			}
+
+			.v81603553db425f0006037a131f9619ab .offcanvas>ul.nav.navbar-nav.navbar-right .search-content .search-scope {
+				width: 34%;
+			}
+		}
+
+		@media only screen and (max-width:767px) {
+
+			.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-nav>li>a {
+				background-color: #e7e7e7;
+				color: #006a96 !important;
+			}
+
+			.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-nav>.open>a {
+				color: #006a96 !important;
+				border-bottom: 1px solid #ccc;
+			}
+
+			.v81603553db425f0006037a131f9619ab .dropdown-menu>li>a {
+				background-color: #fff !important;
+				color: #006a96 !important;
+			}
+
+			.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-nav>.active>a {
+				color: #006a96 !important;
+				background-color: #e7e7e7;
+				border-left: 2px solid #006a96;
+			}
+		}
+
+		.v81603553db425f0006037a131f9619ab .main-content-nav {
+			background: #eee;
+			border: 1px solid #d8d7d7;
+			padding: 1em;
+			margin-bottom: 1em;
+		}
+
+		@media only screen and (max-width:768px) {
+
+			.v81603553db425f0006037a131f9619ab .main-content-nav {
+				margin-top: 0;
+			}
+		}
+
+		.v81603553db425f0006037a131f9619ab .main-content-nav>h2 {
+			color: #333;
+			font-size: 140%;
+			margin: 0 0 .4em;
+			text-transform: capitalize;
+			font-weight: 400;
+		}
+
+		.v81603553db425f0006037a131f9619ab .main-content-nav>ul {
+			margin: 0 -1em -1em;
+			font-size: 1em;
+		}
+
+		.v81603553db425f0006037a131f9619ab .main-content-nav>ul>li.active {
+			color: #004663;
+		}
+
+		.v81603553db425f0006037a131f9619ab .main-content-nav>ul li {
+			border-top: 1px solid #d8d7d7;
+			list-style: none;
+		}
+
+		.v81603553db425f0006037a131f9619ab .main-content-nav>ul li a {
+			display: block;
+			padding: 1em;
+			color: #333;
+		}
+
+		.v81603553db425f0006037a131f9619ab .main-content-nav>ul li a:hover {
+			background-color: #006a96;
+			color: #fff;
+		}
+
+		.v81603553db425f0006037a131f9619ab .main-content-nav>ul li a:active,
+		.v81603553db425f0006037a131f9619ab .main-content-nav>ul li a:hover,
+		.v81603553db425f0006037a131f9619ab .main-content-nav>ul li a:link {
+			text-decoration: none;
+		}
+
+		.v81603553db425f0006037a131f9619ab .main-content-nav>ul li.active {
+			background-color: #fff;
+			padding: 1em 0 1em 1em;
+			font-weight: 700;
+		}
+
+		.v81603553db425f0006037a131f9619ab .main-content-nav>ul li.active>ul li a {
+			color: #006a96;
+			padding-left: 0 !important;
+		}
+
+		.v81603553db425f0006037a131f9619ab .main-content-nav>ul li.active>a {
+			color: #006a96;
+		}
+
+		.v81603553db425f0006037a131f9619ab .main-content-nav>ul li.active a:hover {
+			text-decoration: underline;
+			color: #484949;
+			background-color: transparent;
+		}
+
+		.v81603553db425f0006037a131f9619ab .main-content-nav>ul li ul {
+			margin: .4em 0 -.4em 1em;
+			padding: 0;
+		}
+
+		.v81603553db425f0006037a131f9619ab .main-content-nav>ul li li {
+			font-size: 85%;
+		}
+
+		.v81603553db425f0006037a131f9619ab .layout-header button.btn-nav {
+			position: relative;
+			float: left;
+			height: 44px;
+			color: #fff;
+			font-size: 24px;
+			background-image: none;
+			background-color: #006a96;
+			border-radius: 1px;
+			border: 1px solid #006a96;
+			padding: 9px 10px;
+			margin-right: 10px;
+		}
+
+		@media only screen and (max-width:360px) {
+
+			.v81603553db425f0006037a131f9619ab .layout-header button.btn-nav {
+				font-size: 20px;
+			}
+		}
+
+		@media only screen and (max-width:960px) {
+
+			.v81603553db425f0006037a131f9619ab .layout-header button.btn-nav {
+				display: block;
+			}
+		}
+
+		.v81603553db425f0006037a131f9619ab button.btn-nav .icon-bar {
+			display: block;
+			width: 30px;
+			height: 2px;
+			background-color: #fff;
+			border-radius: 1px;
+			margin-top: .25em;
+		}
+
+		@media only screen and (max-width:360px) {
+
+			.v81603553db425f0006037a131f9619ab button.btn-nav .icon-bar {
+				width: 22px;
+			}
+		}
+
+		.v81603553db425f0006037a131f9619ab .btn-nav .icon-bar:nth-child(2),
+		.v81603553db425f0006037a131f9619ab .btn-nav .icon-bar:nth-child(3),
+		.v81603553db425f0006037a131f9619ab .btn-nav .icon-bar:nth-child(4) {
+			transition: all .2s ease;
+			transition-delay: .25s;
+			opacity: 1;
+		}
+
+		.v81603553db425f0006037a131f9619ab .btn-nav .icon-bar:nth-child(2) {
+			margin: 0;
+		}
+
+		.v81603553db425f0006037a131f9619ab .btn-nav .icon-bar:nth-child(2),
+		.v81603553db425f0006037a131f9619ab .btn-nav .icon-bar:nth-child(4) {
+			transition: all .2s ease;
+			transition-delay: .25s;
+		}
+
+		.v81603553db425f0006037a131f9619ab .layout-header.open .btn-nav .icon-bar:nth-child(2) {
+			-webkit-transform: translate3d(0, 8px, 0) rotate(45deg);
+			transform: translate3d(0, 8px, 0) rotate(45deg);
+		}
+
+		.v81603553db425f0006037a131f9619ab .layout-header.open .btn-nav .icon-bar:nth-child(3) {
+			opacity: 0;
+		}
+
+		.v81603553db425f0006037a131f9619ab .layout-header.open .btn-nav .icon-bar:nth-child(4) {
+			-webkit-transform: translate3d(0, -8px, 0) rotate(-45deg);
+			transform: translate3d(0, -8px, 0) rotate(-45deg);
+		}
+
+		.v81603553db425f0006037a131f9619ab .layout-navbar.navbar-is-opened .navbar-list>li {
+			float: none;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navdrawer-container.navbar-is-opened .layout-container {
+			width: 100%;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navdrawer-container.navbar-is-opened .navbar-list>li.active {
+			background: #fff;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navdrawer-container.navbar-is-opened .navbar-list>li>a {
+			border: none;
+			border-bottom: 1px solid #ccc;
+			padding: 10px 10px 10px 20px;
+			background-color: #006a96 !important;
+			border: none !important;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navdrawer-container.navbar-is-opened .navbar-list>li>a:hover {
+			background-color: #004663 !important;
+		}
+
+		@media only screen and (max-width:960px) {
+
+			.v81603553db425f0006037a131f9619ab .navdrawer-container.navbar-is-opened .navbar-list>li>a {
+				border: 0;
+				font-weight: 700;
+				background: #006a96;
+				border-bottom: 1px solid #ccc;
+			}
+		}
+
+		.v81603553db425f0006037a131f9619ab .navdrawer-container.navbar-is-opened button.search-toggle {
+			display: none;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navdrawer-container.navbar-is-opened .search {
+			width: 100%;
+			height: 100%;
+			float: none;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navdrawer-container.navbar-is-opened .search-content {
+			display: block;
+			height: 43px;
+			padding: 7px;
+			background-color: #006a96;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navdrawer-container.navbar-is-opened .search-content .search-scope {
+			max-width: 30%;
+			font-size: 11px;
+			padding: 4px 2px 4px 0;
+			float: left;
+			height: 27px;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navdrawer-container.navbar-is-opened .search-content form>.input-group {
+			width: 55%;
+			float: right;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navdrawer-container.navbar-is-opened .search-content form>.input-group input {
+			height: 27px;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navdrawer-container ul {
+			list-style-type: none;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navdrawer-container .navbar-subnav:hover>a {
+			border-bottom: 3px solid #9fb3bf;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-subnav .navbar-sublist li:hover>a {
+			background-color: #006a96;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navdrawer-container ul.navbar-sublist {
+			display: none;
+			position: absolute;
+			font-size: 14px;
+			padding: 0;
+			margin-left: 0;
+			box-shadow: 0 3px 5px 0 rgba(50, 50, 50, .2);
+		}
+
+		@media only screen and (max-width:960px) {
+
+			.v81603553db425f0006037a131f9619ab .navdrawer-container ul.navbar-sublist {
+				display: block;
+				position: relative;
+				border-left: 0;
+				border-top: 0;
+				border-bottom: 1px solid #e2e2e2;
+				box-shadow: none;
+			}
+		}
+
+		.v81603553db425f0006037a131f9619ab .navdrawer-container .subnav-hover ul.navbar-sublist {
+			display: block;
+			z-index: 3;
+		}
+
+		@media only screen and (max-width:960px) {
+
+			.v81603553db425f0006037a131f9619ab .navdrawer-container .subnav-hover ul.navbar-sublist {
+				display: block;
+				position: relative;
+				border: 0;
+				border-bottom: 1px solid #ccc;
+				box-shadow: none;
+			}
+
+			.v81603553db425f0006037a131f9619ab .navdrawer-container .subnav-hover ul.navbar-sublist a {
+				border: 0;
+				padding-left: 3em;
+			}
+		}
+
+		.v81603553db425f0006037a131f9619ab .navdrawer-container .navbar-sublist.subnav-is-opened {
+			display: block;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navdrawer-container.navbar-is-opened .navbar-sublist.subnav-is-opened a {
+			border: 0;
+			padding-left: 3em;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navdrawer-container .navbar-sublist a {
+			display: block;
+			background: #00587d;
+			color: #fff;
+			padding: 9px 15px 8px;
+			text-decoration: none;
+		}
+
+		.v81603553db425f0006037a131f9619ab .layout-footer,
+		.v81603553db425f0006037a131f9619ab .layout-header,
+		.v81603553db425f0006037a131f9619ab .layout-main {
+			transition: transform .3s ease-in-out;
+		}
+
+		.v81603553db425f0006037a131f9619ab nav.navdrawer-container.navbar-is-opened {
+			position: fixed;
+			top: 0;
+			height: 100%;
+			opacity: 1;
+			border-right: 1px solid #dadada;
+			transition: opacity .3s ease-in-out;
+			-webkit-transform: translate(0);
+			transform: translate(0);
+			transition-delay: .15s;
+			pointer-events: auto;
+			z-index: 2;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-is-opened {
+			display: block;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-is-opened a:hover {
+			text-decoration: underline !important;
+		}
+
+		@media only screen and (max-width:640px) {
+
+			.v81603553db425f0006037a131f9619ab .navdrawer-container.navbar-is-opened {
+				width: 83%;
+			}
+
+			.v81603553db425f0006037a131f9619ab .navdrawer-container.navbar-is-opened .search {
+				max-width: none;
+			}
+		}
+
+		@media screen and (min-width:320px) and (max-width:640px) {
+
+			.v81603553db425f0006037a131f9619ab .navdrawer-container.navbar-is-opened .search-content form>.input-group {
+				width: 60%;
+			}
+		}
+
+		@media only screen and (max-width:768px) {
+
+			.v81603553db425f0006037a131f9619ab .layout-header .btn-nav {
+				margin-top: 1.7em;
+			}
+		}
+
+		@media only screen and (max-width:960px) {
+
+			.v81603553db425f0006037a131f9619ab .navdrawer-container .navbar-sublist a {
+				border: none;
+				margin: 0;
+				padding-left: 2.5em !important;
+			}
+		}
+
+		@media only screen and (min-width:960px) {
+
+			.v81603553db425f0006037a131f9619ab .navdrawer-container {
+				display: block;
+				width: 100%;
+				opacity: 1;
+			}
+
+			.v81603553db425f0006037a131f9619ab button.btn-nav {
+				display: none;
+			}
+		}
+
+		@media only screen and (max-width:960px) {
+
+			.v81603553db425f0006037a131f9619ab .navdrawer-container {
+				position: fixed;
+				width: 42%;
+				z-index: -1;
+				opacity: 0;
+			}
+
+			.v81603553db425f0006037a131f9619ab .navdrawer-container .navbar-subnav .navbar-sublist.subnav-is-opened {
+				display: block;
+				position: relative;
+				border: 0;
+				border-bottom: 1px solid #ccc;
+				box-shadow: none;
+			}
+		}
+
+		.v81603553db425f0006037a131f9619ab .collapse-navbar .navdrawer-container {
+			position: fixed;
+			width: 42%;
+			z-index: -1;
+			opacity: 0;
+		}
+
+		.v81603553db425f0006037a131f9619ab .collapse-navbar .navdrawer-container .subnav-hover ul.navbar-sublist {
+			display: block;
+			position: relative;
+			border: 0;
+			border-bottom: 1px solid #ccc;
+			box-shadow: none;
+		}
+
+		.v81603553db425f0006037a131f9619ab .collapse-navbar .navdrawer-container .subnav-hover ul.navbar-sublist a {
+			border: 0;
+			padding-left: 3em;
+		}
+
+		.v81603553db425f0006037a131f9619ab .collapse-navbar .btn-nav {
+			display: block;
+		}
+
+		.v81603553db425f0006037a131f9619ab .collapse-navbar {
+			position: relative;
+			width: 100%;
+		}
+
+		.v81603553db425f0006037a131f9619ab .nav-tabs-bottom {
+			border-top: 1px solid #ddd;
+			border-bottom: 0;
+		}
+
+		.v81603553db425f0006037a131f9619ab .nav-tabs-bottom>li {
+			margin-top: -1px;
+			margin-bottom: 0;
+		}
+
+		.v81603553db425f0006037a131f9619ab .nav-tabs-bottom>li>a {
+			border-radius: 0 0 4px 4px;
+		}
+
+		.v81603553db425f0006037a131f9619ab .nav-tabs-bottom>li.active>a,
+		.v81603553db425f0006037a131f9619ab .nav-tabs-bottom>li.active>a:focus,
+		.v81603553db425f0006037a131f9619ab .nav-tabs-bottom>li.active>a:hover,
+		.v81603553db425f0006037a131f9619ab .nav-tabs-bottom>li>a:focus,
+		.v81603553db425f0006037a131f9619ab .nav-tabs-bottom>li>a:hover {
+			border: 1px solid #ddd;
+			border-top-color: transparent;
+		}
+
+		.v81603553db425f0006037a131f9619ab .nav-tabs-left {
+			border-right: 1px solid #ddd;
+			border-bottom: 0;
+		}
+
+		.v81603553db425f0006037a131f9619ab .nav-tabs-left>li {
+			float: none;
+			margin-right: -1px;
+			margin-bottom: 0;
+		}
+
+		.v81603553db425f0006037a131f9619ab .nav-tabs-left>li>a {
+			margin-right: 0;
+			margin-bottom: 2px;
+			border-radius: 4px 0 0 4px;
+		}
+
+		.v81603553db425f0006037a131f9619ab .nav-tabs-left>li.active>a,
+		.v81603553db425f0006037a131f9619ab .nav-tabs-left>li.active>a:focus,
+		.v81603553db425f0006037a131f9619ab .nav-tabs-left>li.active>a:hover,
+		.v81603553db425f0006037a131f9619ab .nav-tabs-left>li>a:focus,
+		.v81603553db425f0006037a131f9619ab .nav-tabs-left>li>a:hover {
+			border: 1px solid #ddd;
+			border-right-color: transparent;
+		}
+
+		.v81603553db425f0006037a131f9619ab .row>.nav-tabs-left {
+			position: relative;
+			z-index: 1;
+			padding-right: 0;
+			padding-left: 15px;
+			margin-right: -1px;
+		}
+
+		.v81603553db425f0006037a131f9619ab .nav-tabs-right,
+		.v81603553db425f0006037a131f9619ab .row>.nav-tabs-left+.tab-content {
+			border-left: 1px solid #ddd;
+		}
+
+		.v81603553db425f0006037a131f9619ab .nav-tabs-right {
+			border-bottom: 0;
+		}
+
+		.v81603553db425f0006037a131f9619ab .nav-tabs-right>li {
+			float: none;
+			margin-bottom: 0;
+			margin-left: -1px;
+		}
+
+		.v81603553db425f0006037a131f9619ab .nav-tabs-right>li>a {
+			margin-bottom: 2px;
+			margin-left: 0;
+			border-radius: 0 4px 4px 0;
+		}
+
+		.v81603553db425f0006037a131f9619ab .nav-tabs-right>li.active>a,
+		.v81603553db425f0006037a131f9619ab .nav-tabs-right>li.active>a:focus,
+		.v81603553db425f0006037a131f9619ab .nav-tabs-right>li.active>a:hover,
+		.v81603553db425f0006037a131f9619ab .nav-tabs-right>li>a:focus,
+		.v81603553db425f0006037a131f9619ab .nav-tabs-right>li>a:hover {
+			border: 1px solid #ddd;
+			border-left-color: transparent;
+		}
+
+		.v81603553db425f0006037a131f9619ab .row>.nav-tabs-right {
+			padding-right: 15px;
+			padding-left: 0;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-offcanvas,
+		.v81603553db425f0006037a131f9619ab .navmenu {
+			width: 300px;
+			height: auto;
+			border-style: solid;
+			border-width: 1px;
+			border-radius: 4px;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-offcanvas,
+		.v81603553db425f0006037a131f9619ab .navmenu-fixed-left,
+		.v81603553db425f0006037a131f9619ab .navmenu-fixed-right {
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			z-index: 1030;
+			overflow-y: auto;
+			border-radius: 0;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-offcanvas.navmenu-fixed-left,
+		.v81603553db425f0006037a131f9619ab .navmenu-fixed-left {
+			right: auto;
+			left: 0;
+			border-width: 0 1px 0 0;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-offcanvas,
+		.v81603553db425f0006037a131f9619ab .navmenu-fixed-right {
+			right: 0;
+			left: auto;
+			border-width: 0 0 0 1px;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navmenu-nav {
+			margin-bottom: 10px;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navmenu-nav.dropdown-menu {
+			position: static;
+			float: none;
+			padding-top: 0;
+			margin: 0;
+			border: none;
+			border-radius: 0;
+			box-shadow: none;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-offcanvas .navbar-nav {
+			margin: 0;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navmenu-brand {
+			display: block;
+			padding: 10px 15px;
+			margin: 10px 0;
+			font-size: 18px;
+			line-height: 20px;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navmenu-brand:focus,
+		.v81603553db425f0006037a131f9619ab .navmenu-brand:hover {
+			text-decoration: none;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-offcanvas,
+		.v81603553db425f0006037a131f9619ab .navmenu-default {
+			background-color: #f8f8f8;
+			border-color: #e7e7e7;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-offcanvas .navmenu-brand,
+		.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-brand {
+			color: #777;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-offcanvas .navmenu-brand:focus,
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-offcanvas .navmenu-brand:hover,
+		.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-brand:focus,
+		.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-brand:hover {
+			color: #5e5e5e;
+			background-color: transparent;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-offcanvas .navmenu-text,
+		.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-text {
+			color: #777;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-offcanvas .navmenu-nav>.dropdown>a:focus .caret,
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-offcanvas .navmenu-nav>.dropdown>a:hover .caret,
+		.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-nav>.dropdown>a:focus .caret,
+		.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-nav>.dropdown>a:hover .caret {
+			border-top-color: #333;
+			border-bottom-color: #333;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-offcanvas .navmenu-nav>.open>a,
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-offcanvas .navmenu-nav>.open>a:focus,
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-offcanvas .navmenu-nav>.open>a:hover,
+		.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-nav>.open>a,
+		.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-nav>.open>a:focus,
+		.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-nav>.open>a:hover {
+			color: #555;
+			background-color: #e7e7e7;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-offcanvas .navmenu-nav>.open>a .caret,
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-offcanvas .navmenu-nav>.open>a:focus .caret,
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-offcanvas .navmenu-nav>.open>a:hover .caret,
+		.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-nav>.open>a .caret,
+		.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-nav>.open>a:focus .caret,
+		.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-nav>.open>a:hover .caret {
+			border-top-color: #555;
+			border-bottom-color: #555;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-offcanvas .navmenu-nav>.dropdown>a .caret,
+		.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-nav>.dropdown>a .caret {
+			border-top-color: #777;
+			border-bottom-color: #777;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-offcanvas .navmenu-nav.dropdown-menu,
+		.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-nav.dropdown-menu {
+			background-color: #e7e7e7;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-offcanvas .navmenu-nav.dropdown-menu>.divider,
+		.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-nav.dropdown-menu>.divider {
+			background-color: #f8f8f8;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-offcanvas .navmenu-nav.dropdown-menu>.active>a,
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-offcanvas .navmenu-nav.dropdown-menu>.active>a:focus,
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-offcanvas .navmenu-nav.dropdown-menu>.active>a:hover,
+		.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-nav.dropdown-menu>.active>a,
+		.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-nav.dropdown-menu>.active>a:focus,
+		.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-nav.dropdown-menu>.active>a:hover {
+			background-color: #d7d7d7;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-offcanvas .navmenu-nav>li>a,
+		.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-nav>li>a {
+			color: #777;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-offcanvas .navmenu-nav>li>a:focus,
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-offcanvas .navmenu-nav>li>a:hover,
+		.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-nav>li>a:focus,
+		.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-nav>li>a:hover {
+			color: #333;
+			background-color: transparent;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-offcanvas .navmenu-nav>.active>a,
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-offcanvas .navmenu-nav>.active>a:focus,
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-offcanvas .navmenu-nav>.active>a:hover,
+		.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-nav>.active>a,
+		.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-nav>.active>a:focus,
+		.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-nav>.active>a:hover {
+			color: #555;
+			background-color: #e7e7e7;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-offcanvas .navmenu-nav>.disabled>a,
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-offcanvas .navmenu-nav>.disabled>a:focus,
+		.v81603553db425f0006037a131f9619ab .navbar-default .navbar-offcanvas .navmenu-nav>.disabled>a:hover,
+		.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-nav>.disabled>a,
+		.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-nav>.disabled>a:focus,
+		.v81603553db425f0006037a131f9619ab .navmenu-default .navmenu-nav>.disabled>a:hover {
+			color: #ccc;
+			background-color: transparent;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-inverse .navbar-offcanvas,
+		.v81603553db425f0006037a131f9619ab .navmenu-inverse {
+			background-color: #222;
+			border-color: #080808;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-inverse .navbar-offcanvas .navmenu-brand,
+		.v81603553db425f0006037a131f9619ab .navmenu-inverse .navmenu-brand {
+			color: #999;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-inverse .navbar-offcanvas .navmenu-brand:focus,
+		.v81603553db425f0006037a131f9619ab .navbar-inverse .navbar-offcanvas .navmenu-brand:hover,
+		.v81603553db425f0006037a131f9619ab .navmenu-inverse .navmenu-brand:focus,
+		.v81603553db425f0006037a131f9619ab .navmenu-inverse .navmenu-brand:hover {
+			color: #fff;
+			background-color: transparent;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-inverse .navbar-offcanvas .navmenu-text,
+		.v81603553db425f0006037a131f9619ab .navmenu-inverse .navmenu-text {
+			color: #999;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-inverse .navbar-offcanvas .navmenu-nav>.dropdown>a:focus .caret,
+		.v81603553db425f0006037a131f9619ab .navbar-inverse .navbar-offcanvas .navmenu-nav>.dropdown>a:hover .caret,
+		.v81603553db425f0006037a131f9619ab .navmenu-inverse .navmenu-nav>.dropdown>a:focus .caret,
+		.v81603553db425f0006037a131f9619ab .navmenu-inverse .navmenu-nav>.dropdown>a:hover .caret {
+			border-top-color: #fff;
+			border-bottom-color: #fff;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-inverse .navbar-offcanvas .navmenu-nav>.open>a,
+		.v81603553db425f0006037a131f9619ab .navbar-inverse .navbar-offcanvas .navmenu-nav>.open>a:focus,
+		.v81603553db425f0006037a131f9619ab .navbar-inverse .navbar-offcanvas .navmenu-nav>.open>a:hover,
+		.v81603553db425f0006037a131f9619ab .navmenu-inverse .navmenu-nav>.open>a,
+		.v81603553db425f0006037a131f9619ab .navmenu-inverse .navmenu-nav>.open>a:focus,
+		.v81603553db425f0006037a131f9619ab .navmenu-inverse .navmenu-nav>.open>a:hover {
+			color: #fff;
+			background-color: #080808;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-inverse .navbar-offcanvas .navmenu-nav>.open>a .caret,
+		.v81603553db425f0006037a131f9619ab .navbar-inverse .navbar-offcanvas .navmenu-nav>.open>a:focus .caret,
+		.v81603553db425f0006037a131f9619ab .navbar-inverse .navbar-offcanvas .navmenu-nav>.open>a:hover .caret,
+		.v81603553db425f0006037a131f9619ab .navmenu-inverse .navmenu-nav>.open>a .caret,
+		.v81603553db425f0006037a131f9619ab .navmenu-inverse .navmenu-nav>.open>a:focus .caret,
+		.v81603553db425f0006037a131f9619ab .navmenu-inverse .navmenu-nav>.open>a:hover .caret {
+			border-top-color: #fff;
+			border-bottom-color: #fff;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-inverse .navbar-offcanvas .navmenu-nav>.dropdown>a .caret,
+		.v81603553db425f0006037a131f9619ab .navmenu-inverse .navmenu-nav>.dropdown>a .caret {
+			border-top-color: #999;
+			border-bottom-color: #999;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-inverse .navbar-offcanvas .navmenu-nav.dropdown-menu,
+		.v81603553db425f0006037a131f9619ab .navmenu-inverse .navmenu-nav.dropdown-menu {
+			background-color: #080808;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-inverse .navbar-offcanvas .navmenu-nav.dropdown-menu>.divider,
+		.v81603553db425f0006037a131f9619ab .navmenu-inverse .navmenu-nav.dropdown-menu>.divider {
+			background-color: #222;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-inverse .navbar-offcanvas .navmenu-nav.dropdown-menu>.active>a,
+		.v81603553db425f0006037a131f9619ab .navbar-inverse .navbar-offcanvas .navmenu-nav.dropdown-menu>.active>a:focus,
+		.v81603553db425f0006037a131f9619ab .navbar-inverse .navbar-offcanvas .navmenu-nav.dropdown-menu>.active>a:hover,
+		.v81603553db425f0006037a131f9619ab .navmenu-inverse .navmenu-nav.dropdown-menu>.active>a,
+		.v81603553db425f0006037a131f9619ab .navmenu-inverse .navmenu-nav.dropdown-menu>.active>a:focus,
+		.v81603553db425f0006037a131f9619ab .navmenu-inverse .navmenu-nav.dropdown-menu>.active>a:hover {
+			background-color: #000;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-inverse .navbar-offcanvas .navmenu-nav>li>a,
+		.v81603553db425f0006037a131f9619ab .navmenu-inverse .navmenu-nav>li>a {
+			color: #999;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-inverse .navbar-offcanvas .navmenu-nav>li>a:focus,
+		.v81603553db425f0006037a131f9619ab .navbar-inverse .navbar-offcanvas .navmenu-nav>li>a:hover,
+		.v81603553db425f0006037a131f9619ab .navmenu-inverse .navmenu-nav>li>a:focus,
+		.v81603553db425f0006037a131f9619ab .navmenu-inverse .navmenu-nav>li>a:hover {
+			color: #fff;
+			background-color: transparent;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-inverse .navbar-offcanvas .navmenu-nav>.active>a,
+		.v81603553db425f0006037a131f9619ab .navbar-inverse .navbar-offcanvas .navmenu-nav>.active>a:focus,
+		.v81603553db425f0006037a131f9619ab .navbar-inverse .navbar-offcanvas .navmenu-nav>.active>a:hover,
+		.v81603553db425f0006037a131f9619ab .navmenu-inverse .navmenu-nav>.active>a,
+		.v81603553db425f0006037a131f9619ab .navmenu-inverse .navmenu-nav>.active>a:focus,
+		.v81603553db425f0006037a131f9619ab .navmenu-inverse .navmenu-nav>.active>a:hover {
+			color: #fff;
+			background-color: #080808;
+		}
+
+		.v81603553db425f0006037a131f9619ab .navbar-inverse .navbar-offcanvas .navmenu-nav>.disabled>a,
+		.v81603553db425f0006037a131f9619ab .navbar-inverse .navbar-offcanvas .navmenu-nav>.disabled>a:focus,
+		.v81603553db425f0006037a131f9619ab .navbar-inverse .navbar-offcanvas .navmenu-nav>.disabled>a:hover,
+		.v81603553db425f0006037a131f9619ab .navmenu-inverse .navmenu-nav>.disabled>a,
+		.v81603553db425f0006037a131f9619ab .navmenu-inverse .navmenu-nav>.disabled>a:focus,
+		.v81603553db425f0006037a131f9619ab .navmenu-inverse .navmenu-nav>.disabled>a:hover {
+			color: #444;
+			background-color: transparent;
+		}
+	</style>
+	<style type="text/css" id="vaf807d53db425f0006037a131f961956-s" widget="UCSD ITS Footer">
+		.vaf807d53db425f0006037a131f961956 section.page {
+			display: flex;
+			flex-direction: column;
+			display: -ms-flexbox;
+			-ms-flex-direction: column;
+		}
+
+		.vaf807d53db425f0006037a131f961956 section.page>main.body,
+		.vaf807d53db425f0006037a131f961956 section.page>section.body {
+			flex-grow: 1;
+			flex-shrink: 0;
+			-ms-flex-positive: 1;
+		}
+
+		@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+		.vaf807d53db425f0006037a131f961956 .layout-footer>.layout-container,
+		.vaf807d53db425f0006037a131f961956 .title-logo {
+			background: url(https://cdn.ucsd.edu/cms/decorator-5/styles/img/sprite_base.png) no-repeat transparent;
+		}
+
+		@media screen and (-webkit-min-device-pixel-ratio:2) {
+
+			.vaf807d53db425f0006037a131f961956 .layout-footer>.layout-container,
+			.vaf807d53db425f0006037a131f961956 .title-logo {
+				background-image: url(img/sprite_base2x.png);
+				background-size: 500px 120px;
+			}
+		}
+
+		.vaf807d53db425f0006037a131f961956 .layout-footer {
+			width: 100%;
+			color: #fff;
+			font-size: 90%;
+			border-top: 1px solid #ccc;
+			padding: 1em 0;
+			line-height: 1.5;
+		}
+
+		.vaf807d53db425f0006037a131f961956 .layout-footer>.layout-container {
+			background-position: right -74px;
+		}
+
+		@media only screen and (max-width:640px) {
+
+			.vaf807d53db425f0006037a131f961956 .layout-footer>.layout-container {
+				background: none;
+			}
+		}
+
+		.vaf807d53db425f0006037a131f961956 footer {
+			font: 16px/1.7 Roboto, sans-serif;
+			background-color: #006a96;
+		}
+
+		.vaf807d53db425f0006037a131f961956 .footer-links {
+			list-style: none;
+			margin: .5em 0 0;
+			padding: 0;
+		}
+
+		.vaf807d53db425f0006037a131f961956 .footer-links>li {
+			display: inline;
+			margin-left: 0;
+			margin-right: .5em;
+			padding-right: .75em;
+		}
+
+		.vaf807d53db425f0006037a131f961956 .footer-links>li a {
+			color: #fff;
+			text-decoration: underline;
+		}
+
+		.vaf807d53db425f0006037a131f961956 .footer-links>li:first-child {
+			border-right: 1px solid #fff;
+		}
+
+		.vaf807d53db425f0006037a131f961956 .footer .row {
+			padding: 1.5em .5em;
+			color: #fff;
+			font-size: .9em;
+		}
+
+		.vaf807d53db425f0006037a131f961956 .footer-logo {
+			width: 158px;
+			height: 30px;
+			float: right;
+		}
+
+		@media only screen and (max-width:768px) {
+
+			.vaf807d53db425f0006037a131f961956 .footer-logo {
+				float: none;
+				margin-top: 15px;
+			}
+		}
+	</style>
+	<style type="text/css" id="v200fbd96cb20020000f8d856634c9ca1-s" widget="Homepage Search">
+		.v200fbd96cb20020000f8d856634c9ca1 section.page {
+			display: flex;
+			flex-direction: column;
+			display: -ms-flexbox;
+			-ms-flex-direction: column;
+		}
+
+		.v200fbd96cb20020000f8d856634c9ca1 section.page>main.body,
+		.v200fbd96cb20020000f8d856634c9ca1 section.page>section.body {
+			flex-grow: 1;
+			flex-shrink: 0;
+			-ms-flex-positive: 1;
+		}
+
+		.v200fbd96cb20020000f8d856634c9ca1 .sp-tagline-color {
+			color: #717171;
+		}
+	</style>
+	<style type="text/css" id="vfa20ec02cb31020000f8d856634c9ce9-s" widget="Typeahead Search">
+		.vfa20ec02cb31020000f8d856634c9ce9 ul.dropdown-menu {
+			min-width: 100%;
+			border-radius: 0px 0px 4px 4px;
+			margin: 0px;
+		}
+
+		.vfa20ec02cb31020000f8d856634c9ce9 ul.dropdown-menu a.ta-item {
+			line-height: 20px;
+		}
+
+		.vfa20ec02cb31020000f8d856634c9ce9 ul.dropdown-menu i.ta-icon,
+		.vfa20ec02cb31020000f8d856634c9ce9 i.ta-img {
+			width: 20px;
+			height: 20px;
+			background-size: contain;
+			display: inline-block;
+			background-repeat: no-repeat;
+			background-position: center center;
+			text-align: center;
+			line-height: 20px;
+			float: left;
+			margin-right: 8px;
+		}
+
+		.vfa20ec02cb31020000f8d856634c9ce9 input[name="q"] {
+			color: black;
+		}
+	</style>
+	<style type="text/css" id="vd1fc9d4f4f30430001ddb5e18110c7a8-s" widget="NewRocket - Image Link">
+		.vd1fc9d4f4f30430001ddb5e18110c7a8 section.page {
+			display: flex;
+			flex-direction: column;
+			display: -ms-flexbox;
+			-ms-flex-direction: column;
+		}
+
+		.vd1fc9d4f4f30430001ddb5e18110c7a8 section.page>main.body,
+		.vd1fc9d4f4f30430001ddb5e18110c7a8 section.page>section.body {
+			flex-grow: 1;
+			flex-shrink: 0;
+			-ms-flex-positive: 1;
+		}
+
+		.vd1fc9d4f4f30430001ddb5e18110c7a8 .iconlink a label,
+		.vd1fc9d4f4f30430001ddb5e18110c7a8 h2 {
+			display: block;
+			font-size: 2.5rem;
+			font-weight: 300;
+			line-height: 1.1;
+			padding: 0;
+			margin: 0 0 10px 0;
+		}
+
+		.vd1fc9d4f4f30430001ddb5e18110c7a8 a.top_icon {
+			display: block;
+			padding: 20px;
+			text-align: center;
+		}
+
+		.vd1fc9d4f4f30430001ddb5e18110c7a8 a.top_icon .image-container {
+			display: block;
+			text-align: center;
+			margin-bottom: 10px;
+		}
+
+		.vd1fc9d4f4f30430001ddb5e18110c7a8 a.circle_icon {
+			display: block;
+			padding: 20px 0px 20px 70px;
+			position: relative;
+		}
+
+		.vd1fc9d4f4f30430001ddb5e18110c7a8 a.circle_icon .image-container {
+			position: absolute;
+			left: 0px;
+			top: 24px;
+		}
+
+		.vd1fc9d4f4f30430001ddb5e18110c7a8 a.color_box {
+			display: block;
+			position: relative;
+			padding: 20px 20px 20px 82px;
+			border-radius: 4px;
+			margin-bottom: 20px;
+		}
+
+		.vd1fc9d4f4f30430001ddb5e18110c7a8 a.color_box .image-container {
+			position: absolute;
+			left: 20px;
+			top: 20px;
+			width: 42px;
+			text-align: center;
+		}
+
+		.vd1fc9d4f4f30430001ddb5e18110c7a8 .icon-link-background-primary {
+			background-color: #006a96;
+		}
+
+		.vd1fc9d4f4f30430001ddb5e18110c7a8 .icon-link-background-info {
+			background-color: #03a9f4;
+		}
+
+		.vd1fc9d4f4f30430001ddb5e18110c7a8 .icon-link-background-success {
+			background-color: #4caf50;
+		}
+
+		.vd1fc9d4f4f30430001ddb5e18110c7a8 .icon-link-background-warning {
+			background-color: #ffc107;
+		}
+
+		.vd1fc9d4f4f30430001ddb5e18110c7a8 .icon-link-background-danger {
+			background-color: #f44336;
+		}
+
+		.vd1fc9d4f4f30430001ddb5e18110c7a8 .icon-link-background-default {
+			background-color: #006a96;
+		}
+
+		.vd1fc9d4f4f30430001ddb5e18110c7a8 .text-primary {
+			color: #006a96;
+		}
+
+		.vd1fc9d4f4f30430001ddb5e18110c7a8 .text-primary:hover {
+			color: #002230;
+		}
+
+		.vd1fc9d4f4f30430001ddb5e18110c7a8 .text-info {
+			color: #03a9f4;
+		}
+
+		.vd1fc9d4f4f30430001ddb5e18110c7a8 .text-info:hover {
+			color: #02638f;
+		}
+
+		.vd1fc9d4f4f30430001ddb5e18110c7a8 .text-success {
+			color: #4caf50;
+		}
+
+		.vd1fc9d4f4f30430001ddb5e18110c7a8 .text-success:hover {
+			color: #2d682f;
+		}
+
+		.vd1fc9d4f4f30430001ddb5e18110c7a8 .text-warning {
+			color: #ffc107;
+		}
+
+		.vd1fc9d4f4f30430001ddb5e18110c7a8 .text-warning:hover {
+			color: #a07800;
+		}
+
+		.vd1fc9d4f4f30430001ddb5e18110c7a8 .text-danger {
+			color: #f44336;
+		}
+
+		.vd1fc9d4f4f30430001ddb5e18110c7a8 .text-danger:hover {
+			color: #ba160a;
+		}
+
+		.vd1fc9d4f4f30430001ddb5e18110c7a8 .text-default {
+			color: #006a96;
+		}
+
+		.vd1fc9d4f4f30430001ddb5e18110c7a8 .text-default:hover {
+			color: #002230;
+		}
+	</style>
+	<style type="text/css" id="v5ef595c1cb12020000f8d856634c9c6e-s" widget="Header Menu">
+		.v5ef595c1cb12020000f8d856634c9c6e section.page {
+			display: flex;
+			flex-direction: column;
+			display: -ms-flexbox;
+			-ms-flex-direction: column;
+		}
+
+		.v5ef595c1cb12020000f8d856634c9c6e section.page>main.body,
+		.v5ef595c1cb12020000f8d856634c9c6e section.page>section.body {
+			flex-grow: 1;
+			flex-shrink: 0;
+			-ms-flex-positive: 1;
+		}
+
+		.v5ef595c1cb12020000f8d856634c9c6e .header-loader {
+			float: left;
+			width: 24px;
+			position: relative;
+			top: 24px;
+		}
+
+		.v5ef595c1cb12020000f8d856634c9c6e .cart-dropdown,
+		.v5ef595c1cb12020000f8d856634c9c6e .wishlist-menu,
+		.v5ef595c1cb12020000f8d856634c9c6e .gtd-dropdown-container .empty-dropdown {
+			width: 350px;
+			padding: 0;
+			z-index: 1000;
+			border-top-left-radius: 4px !important;
+			border-top-right-radius: 4px !important;
+		}
+
+		.v5ef595c1cb12020000f8d856634c9c6e .cart-dropdown ul,
+		.v5ef595c1cb12020000f8d856634c9c6e .wishlist-menu ul,
+		.v5ef595c1cb12020000f8d856634c9c6e .gtd-dropdown-container .empty-dropdown ul {
+			max-height: 300px;
+			overflow: auto;
+		}
+
+		.v5ef595c1cb12020000f8d856634c9c6e .cart-dropdown .subtotal,
+		.v5ef595c1cb12020000f8d856634c9c6e .wishlist-menu .subtotal,
+		.v5ef595c1cb12020000f8d856634c9c6e .gtd-dropdown-container .empty-dropdown .subtotal {
+			display: block;
+		}
+
+		.v5ef595c1cb12020000f8d856634c9c6e .cart-dropdown .item-image,
+		.v5ef595c1cb12020000f8d856634c9c6e .wishlist-menu .item-image,
+		.v5ef595c1cb12020000f8d856634c9c6e .gtd-dropdown-container .empty-dropdown .item-image {
+			padding: 0;
+			margin: 0;
+			text-align: center;
+			max-width: 100%;
+			height: auto;
+		}
+
+		.v5ef595c1cb12020000f8d856634c9c6e .cart-dropdown label,
+		.v5ef595c1cb12020000f8d856634c9c6e .cart-dropdown p,
+		.v5ef595c1cb12020000f8d856634c9c6e .wishlist-menu label,
+		.v5ef595c1cb12020000f8d856634c9c6e .wishlist-menu p,
+		.v5ef595c1cb12020000f8d856634c9c6e .gtd-dropdown-container .empty-dropdown label,
+		.v5ef595c1cb12020000f8d856634c9c6e .gtd-dropdown-container .empty-dropdown p {
+			padding: 0;
+			margin: 0;
+		}
+
+		.v5ef595c1cb12020000f8d856634c9c6e .cart-dropdown .media,
+		.v5ef595c1cb12020000f8d856634c9c6e .wishlist-menu .media,
+		.v5ef595c1cb12020000f8d856634c9c6e .gtd-dropdown-container .empty-dropdown .media {
+			padding: 0;
+			margin: 0;
+		}
+
+		.v5ef595c1cb12020000f8d856634c9c6e .cart-dropdown .media-left>a,
+		.v5ef595c1cb12020000f8d856634c9c6e .wishlist-menu .media-left>a,
+		.v5ef595c1cb12020000f8d856634c9c6e .gtd-dropdown-container .empty-dropdown .media-left>a {
+			display: block;
+			width: 48px;
+			max-width: 48px;
+		}
+
+		.v5ef595c1cb12020000f8d856634c9c6e .cart-dropdown .media-body label,
+		.v5ef595c1cb12020000f8d856634c9c6e .wishlist-menu .media-body label,
+		.v5ef595c1cb12020000f8d856634c9c6e .gtd-dropdown-container .empty-dropdown .media-body label {
+			font-weight: bold;
+		}
+
+		.v5ef595c1cb12020000f8d856634c9c6e .cart-dropdown li.media,
+		.v5ef595c1cb12020000f8d856634c9c6e .wishlist-menu li.media,
+		.v5ef595c1cb12020000f8d856634c9c6e .gtd-dropdown-container .empty-dropdown li.media {
+			border-top: 1px solid #cccccc;
+			padding: 1rem;
+		}
+
+		.v5ef595c1cb12020000f8d856634c9c6e .cart-dropdown .panel,
+		.v5ef595c1cb12020000f8d856634c9c6e .wishlist-menu .panel,
+		.v5ef595c1cb12020000f8d856634c9c6e .gtd-dropdown-container .empty-dropdown .panel {
+			margin: 0;
+		}
+
+		.v5ef595c1cb12020000f8d856634c9c6e .cart-dropdown .panel .panel-body,
+		.v5ef595c1cb12020000f8d856634c9c6e .wishlist-menu .panel .panel-body,
+		.v5ef595c1cb12020000f8d856634c9c6e .gtd-dropdown-container .empty-dropdown .panel .panel-body {
+			padding: 0;
+		}
+
+		.v5ef595c1cb12020000f8d856634c9c6e .cart-dropdown .btn-clear,
+		.v5ef595c1cb12020000f8d856634c9c6e .wishlist-menu .btn-clear,
+		.v5ef595c1cb12020000f8d856634c9c6e .gtd-dropdown-container .empty-dropdown .btn-clear {
+			color: #333;
+			background-color: #fff;
+		}
+
+		.v5ef595c1cb12020000f8d856634c9c6e .cart-dropdown p.quantity-price,
+		.v5ef595c1cb12020000f8d856634c9c6e .wishlist-menu p.quantity-price,
+		.v5ef595c1cb12020000f8d856634c9c6e .gtd-dropdown-container .empty-dropdown p.quantity-price {
+			padding-top: .5rem;
+		}
+
+		.v5ef595c1cb12020000f8d856634c9c6e .cart-dropdown p.quantity-price span,
+		.v5ef595c1cb12020000f8d856634c9c6e .wishlist-menu p.quantity-price span,
+		.v5ef595c1cb12020000f8d856634c9c6e .gtd-dropdown-container .empty-dropdown p.quantity-price span {
+			color: #757575;
+			padding-right: .5rem;
+		}
+
+		.v5ef595c1cb12020000f8d856634c9c6e .cart-dropdown .align-right,
+		.v5ef595c1cb12020000f8d856634c9c6e .wishlist-menu .align-right,
+		.v5ef595c1cb12020000f8d856634c9c6e .gtd-dropdown-container .empty-dropdown .align-right {
+			text-align: right;
+		}
+
+		.v5ef595c1cb12020000f8d856634c9c6e .item-added-tooltip,
+		.v5ef595c1cb12020000f8d856634c9c6e wishlist-item-added-tooltip {
+			width: 184px;
+			font-size: 14px;
+		}
+
+		.v5ef595c1cb12020000f8d856634c9c6e .gtd-dropdown-container .empty-tour-content {
+			text-align: center;
+			margin: 40px 20px;
+		}
+
+		.v5ef595c1cb12020000f8d856634c9c6e .gtd-dropdown-container .dropdown-menu li {
+			min-width: 20em;
+		}
+
+		.v5ef595c1cb12020000f8d856634c9c6e .gtd-dropdown-container .dropdown-menu li a {
+			cursor: pointer;
+		}
+
+		.v5ef595c1cb12020000f8d856634c9c6e .gtd-dropdown-container .label-as-badge {
+			width: 12px;
+			height: 12px;
+			display: inline-block;
+			padding: 0px;
+			padding-top: 2px;
+		}
+
+		.v5ef595c1cb12020000f8d856634c9c6e .gtd-dropdown-container .badge-container {
+			display: inline-block;
+			width: 12px;
+		}
+
+		@media (max-width: 845px) and (min-width: 768px) {
+
+			.v5ef595c1cb12020000f8d856634c9c6e .header-menu-item ul {
+				right: auto;
+				left: auto;
+			}
+		}
+	</style>
+	<style type="text/css" data-page-id="07261a2147132100ba13a5554ee49092" data-page-title="Service Catalog - Category Get Help (ITS)"></style>
+	<style type="text/css" id="v0fb269305b3212000d7ec7ad31f91ae2-s" widget="breadcrumbs">
+		.v0fb269305b3212000d7ec7ad31f91ae2 .nav li {
+			padding: 10px 7px;
+		}
+
+		.v0fb269305b3212000d7ec7ad31f91ae2 .nav li>span>a {
+			display: inline;
+		}
+
+		.v0fb269305b3212000d7ec7ad31f91ae2 .nav li>span>i {
+			padding-left: 15px;
+		}
+
+		.v0fb269305b3212000d7ec7ad31f91ae2 .a-disabled {
+			cursor: default;
+			color: inherit;
+		}
+	</style>
+	<style type="text/css" id="v4c03cba0cb11020000f8d856634c9ce1-s" widget="SC Categories">
+		.v4c03cba0cb11020000f8d856634c9ce1 section.page {
+			display: flex;
+			flex-direction: column;
+			display: -ms-flexbox;
+			-ms-flex-direction: column;
+		}
+
+		.v4c03cba0cb11020000f8d856634c9ce1 section.page>main.body,
+		.v4c03cba0cb11020000f8d856634c9ce1 section.page>section.body {
+			flex-grow: 1;
+			flex-shrink: 0;
+			-ms-flex-positive: 1;
+		}
+
+		.v4c03cba0cb11020000f8d856634c9ce1 .category-widget {
+			border: 1px solid #ddd;
+		}
+
+		.v4c03cba0cb11020000f8d856634c9ce1 .category-widget .category-list .fa {
+			margin-right: 5px;
+		}
+
+		.v4c03cba0cb11020000f8d856634c9ce1 .category-widget .category-list .l-h-1_6x {
+			line-height: 1.6em;
+		}
+
+		.v4c03cba0cb11020000f8d856634c9ce1 .category-widget .category-list a {
+			width: 88%;
+			display: inline-block;
+		}
+
+		.v4c03cba0cb11020000f8d856634c9ce1 .category-widget .category-list .list-group {
+			margin-bottom: 0;
+		}
+
+		.v4c03cba0cb11020000f8d856634c9ce1 .category-widget .category-list .list-group-item {
+			padding: 0;
+			border: 0;
+		}
+
+		.v4c03cba0cb11020000f8d856634c9ce1 .category-widget .category-list .group-item {
+			padding: 10px 15px;
+		}
+
+		.v4c03cba0cb11020000f8d856634c9ce1 .category-widget .category-list .group-item-default:hover,
+		.v4c03cba0cb11020000f8d856634c9ce1 .category-widget .category-list .group-item-default:focus {
+			background-color: #f0f0f0;
+		}
+
+		.v4c03cba0cb11020000f8d856634c9ce1 .category-widget .category-list .group-item-primary:hover,
+		.v4c03cba0cb11020000f8d856634c9ce1 .category-widget .category-list .group-item-primary:focus {
+			background-color: #63d1ff;
+		}
+
+		.v4c03cba0cb11020000f8d856634c9ce1 .category-widget .category-list .group-item-success:hover {
+			background-color: #e8f4e3;
+		}
+
+		.v4c03cba0cb11020000f8d856634c9ce1 .category-widget .category-list .group-item-info:hover,
+		.v4c03cba0cb11020000f8d856634c9ce1 .category-widget .category-list .group-item-info:focus {
+			background-color: #e6f3fa;
+		}
+
+		.v4c03cba0cb11020000f8d856634c9ce1 .category-widget .category-list .group-item-warning:hover,
+		.v4c03cba0cb11020000f8d856634c9ce1 .category-widget .category-list .group-item-warning:focus {
+			background-color: #fcf8e3;
+		}
+
+		.v4c03cba0cb11020000f8d856634c9ce1 .category-widget .category-list .group-item-danger:hover,
+		.v4c03cba0cb11020000f8d856634c9ce1 .category-widget .category-list .group-item-danger:focus {
+			background-color: #f6e9e9;
+		}
+
+		.v4c03cba0cb11020000f8d856634c9ce1 .category-widget .category-list .sub-category-list .list-group-item {
+			background-color: inherit;
+		}
+
+		.v4c03cba0cb11020000f8d856634c9ce1 .category-widget .category-list .list-bg-default {
+			border-left: 15px solid #f5f5f5;
+		}
+
+		.v4c03cba0cb11020000f8d856634c9ce1 .category-widget .category-list .list-bg-primary {
+			border-left: 15px solid #72d6ff;
+		}
+
+		.v4c03cba0cb11020000f8d856634c9ce1 .category-widget .category-list .list-bg-success {
+			border-left: 15px solid #f1f9ee;
+		}
+
+		.v4c03cba0cb11020000f8d856634c9ce1 .category-widget .category-list .list-bg-info {
+			border-left: 15px solid #f2f9fc;
+		}
+
+		.v4c03cba0cb11020000f8d856634c9ce1 .category-widget .category-list .list-bg-warning {
+			border-left: 15px solid #fdfbf1;
+		}
+
+		.v4c03cba0cb11020000f8d856634c9ce1 .category-widget .category-list .list-bg-danger {
+			border-left: 15px solid #fbf4f4;
+		}
+
+		.v4c03cba0cb11020000f8d856634c9ce1 .category-widget .category-list .list-bg-default {
+			background-color: #f5f5f5;
+		}
+
+		.v4c03cba0cb11020000f8d856634c9ce1 .category-widget .category-list .list-bg-primary {
+			background-color: #72d6ff;
+		}
+
+		.v4c03cba0cb11020000f8d856634c9ce1 .category-widget .category-list .list-bg-success {
+			background-color: #f1f9ee;
+		}
+
+		.v4c03cba0cb11020000f8d856634c9ce1 .category-widget .category-list .list-bg-info {
+			background-color: #f2f9fc;
+		}
+
+		.v4c03cba0cb11020000f8d856634c9ce1 .category-widget .category-list .list-bg-warning {
+			background-color: #fdfbf1;
+		}
+
+		.v4c03cba0cb11020000f8d856634c9ce1 .category-widget .category-list .list-bg-danger {
+			background-color: #fbf4f4;
+		}
+
+		.v4c03cba0cb11020000f8d856634c9ce1 .panel-primary .badge {
+			background-color: #006a96;
+			color: white;
+		}
+
+		.v4c03cba0cb11020000f8d856634c9ce1 .panel-default .badge {
+			background-color: #3a3f51;
+			color: white;
+		}
+
+		.v4c03cba0cb11020000f8d856634c9ce1 .panel-success .badge {
+			background-color: #4caf50;
+			color: white;
+		}
+
+		.v4c03cba0cb11020000f8d856634c9ce1 .panel-info .badge {
+			background-color: #31708f;
+			color: white;
+		}
+
+		.v4c03cba0cb11020000f8d856634c9ce1 .panel-warning .badge {
+			background-color: #f0ad4e;
+			color: white;
+		}
+
+		.v4c03cba0cb11020000f8d856634c9ce1 .panel-danger .badge {
+			background-color: #d9534f;
+			color: white;
+		}
+
+		.v4c03cba0cb11020000f8d856634c9ce1 .category-list .badge {
+			text-align: right;
+		}
+
+		.v4c03cba0cb11020000f8d856634c9ce1 .text-default {
+			color: #757575;
+		}
+	</style>
+	<style type="text/css" id="vf2ff0622d7000200a9ad1e173e24d4f3-s" widget="SC Category Page">
+		.vf2ff0622d7000200a9ad1e173e24d4f3 section.page {
+			display: flex;
+			flex-direction: column;
+			display: -ms-flexbox;
+			-ms-flex-direction: column;
+		}
+
+		.vf2ff0622d7000200a9ad1e173e24d4f3 section.page>main.body,
+		.vf2ff0622d7000200a9ad1e173e24d4f3 section.page>section.body {
+			flex-grow: 1;
+			flex-shrink: 0;
+			-ms-flex-positive: 1;
+		}
+
+		.vf2ff0622d7000200a9ad1e173e24d4f3 .toggle {
+			color: #ccc;
+		}
+
+		.vf2ff0622d7000200a9ad1e173e24d4f3 .fa.active {
+			color: #428bca;
+		}
+
+		.vf2ff0622d7000200a9ad1e173e24d4f3 .item-table {
+			background-color: #fff;
+		}
+
+		.vf2ff0622d7000200a9ad1e173e24d4f3 .item-table tr th {
+			padding: 16px 10px;
+		}
+
+		.vf2ff0622d7000200a9ad1e173e24d4f3 .item-table tr td {
+			padding: 16px 10px;
+			border: none;
+		}
+
+		.vf2ff0622d7000200a9ad1e173e24d4f3 .btn-loadmore {
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			margin-bottom: 20px;
+		}
+	</style>
+	<script src="https://ucsdservicedesk.service-now.com//scripts/thirdparty/dialog/dialog-polyfill.js" async=""></script>
+	<script src="https://ucsdservicedesk.service-now.com//scripts/libs/sp_codemirror_includes.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://ucsdservicedesk.service-now.com//styles/retina_icons/retina_icons.css">
+	<link type="text/css" rel="stylesheet" href="https://ucsdservicedesk.service-now.com//styles/sp_codemirror_includes.css">
+	<style type="text/css" data-page-id="9f12251147132100ba13a5554ee490f4" data-page-title="Service Catalog"></style>
+	<style type="text/css" id="v3c29786e87133200e0ef0cf888cb0bdf-s" widget="SC Catalog Item">
+		.v3c29786e87133200e0ef0cf888cb0bdf section.page {
+			display: flex;
+			flex-direction: column;
+			display: -ms-flexbox;
+			-ms-flex-direction: column;
+		}
+
+		.v3c29786e87133200e0ef0cf888cb0bdf section.page>main.body,
+		.v3c29786e87133200e0ef0cf888cb0bdf section.page>section.body {
+			flex-grow: 1;
+			flex-shrink: 0;
+			-ms-flex-positive: 1;
+		}
+
+		.v3c29786e87133200e0ef0cf888cb0bdf .panel-button {
+			float: none;
+		}
+
+		.v3c29786e87133200e0ef0cf888cb0bdf .sp-attachment-add {
+			padding: 5px;
+		}
+
+		.v3c29786e87133200e0ef0cf888cb0bdf .p-t-none {
+			padding-top: 0 !important;
+		}
+
+		.v3c29786e87133200e0ef0cf888cb0bdf .file-list-wrap {
+			margin-bottom: 10px;
+		}
+
+		.v3c29786e87133200e0ef0cf888cb0bdf .sc-btn {
+			color: #424242;
+		}
+
+		.v3c29786e87133200e0ef0cf888cb0bdf .dismiss-button {
+			position: absolute;
+			top: 1rem;
+			right: 10px;
+			color: #424242;
+			cursor: pointer;
+		}
+
+		.v3c29786e87133200e0ef0cf888cb0bdf .item-header {
+			padding-top: 10px !important;
+			padding-bottom: 10px !important;
+		}
+
+		.v3c29786e87133200e0ef0cf888cb0bdf .sc-sticky-item-header {
+			position: sticky;
+			position: -webkit-sticky;
+			position: -ms-sticky;
+			top: -44px;
+			z-index: 10;
+			background-color: inherit;
+			border-radius: 4px 4px 0 0;
+		}
+
+		.v3c29786e87133200e0ef0cf888cb0bdf .sc-fixed {
+			position: fixed;
+			max-height: 100%;
+			width: 17.67777%;
+		}
+
+		.v3c29786e87133200e0ef0cf888cb0bdf .no-margin {
+			margin: 0px;
+		}
+
+		.v3c29786e87133200e0ef0cf888cb0bdf .sc-item-error-messages {
+			max-height: 100%;
+			position: absolute;
+			overflow-y: auto;
+			overflow-x: hidden;
+			width: 100%;
+		}
+
+		.v3c29786e87133200e0ef0cf888cb0bdf .sc-field-error-label {
+			margin-right: .5em;
+			display: inline-block;
+			cursor: pointer;
+		}
+
+		.v3c29786e87133200e0ef0cf888cb0bdf .image-gallery {
+			font-size: 8px;
+			color: #CECECE;
+		}
+
+		.v3c29786e87133200e0ef0cf888cb0bdf .image-gallery .active {
+			color: #717171;
+		}
+
+		.v3c29786e87133200e0ef0cf888cb0bdf .image-gallery i {
+			padding: 0 5px;
+		}
+
+		.v3c29786e87133200e0ef0cf888cb0bdf .relative {
+			position: relative;
+		}
+
+		.v3c29786e87133200e0ef0cf888cb0bdf .sc-order-widget-btn {
+			position: absolute;
+			left: 9%;
+			top: 10px;
+		}
+
+		@media only screen and (max-width: 992px) {
+
+			.v3c29786e87133200e0ef0cf888cb0bdf .sc-fixed {
+				position: relative;
+				width: 100%;
+			}
+
+			.v3c29786e87133200e0ef0cf888cb0bdf .wishlist-update-message {
+				display: block;
+			}
+
+			.v3c29786e87133200e0ef0cf888cb0bdf .sc-item-error-messages {
+				position: relative;
+			}
+
+			.v3c29786e87133200e0ef0cf888cb0bdf .read-more,
+			.v3c29786e87133200e0ef0cf888cb0bdf .read-less {
+				font-size: 15px;
+				cursor: pointer;
+			}
+
+			.v3c29786e87133200e0ef0cf888cb0bdf .more-text {
+				display: none;
+			}
+
+			.v3c29786e87133200e0ef0cf888cb0bdf .inline-cart {
+				display: none;
+			}
+
+			.v3c29786e87133200e0ef0cf888cb0bdf .right-side-cart {
+				display: inherit !important;
+			}
+		}
+
+		@media only screen and (max-width: 768px) {
+
+			.v3c29786e87133200e0ef0cf888cb0bdf .sc-sticky-item-header {
+				position: inherit;
+			}
+		}
+
+		.v3c29786e87133200e0ef0cf888cb0bdf .inline-cart .quantity-selector {
+			display: inline-block;
+			width: 65px;
+			padding-top: 2px;
+		}
+	</style>
+	<style type="text/css" data-page-id="db9fcab847101200ba13a5554ee490cf" data-page-title="Knowledge Base"></style>
+	<style type="text/css" widget="Typeahead Search">
+		#x19538fc2cb10120000f8d856634c9c01 input {
+			color: black;
+		}
+	</style>
+	<style type="text/css" id="v3c817b52cb30020000f8d856634c9cfb-s" widget="KB Top Rated">
+		.v3c817b52cb30020000f8d856634c9cfb .list-group-item {
+			padding: 0;
+			border: none;
+		}
+	</style>
+	<style type="text/css" id="v7d903b52cb30020000f8d856634c9ce3-s" widget="KB Most Viewed">
+		.v7d903b52cb30020000f8d856634c9ce3 .list-group-item {
+			padding: 0;
+			border: none;
+			margin-bottom: 10px;
+		}
+	</style>
+	<style type="text/css" data-page-id="dea5792147132100ba13a5554ee4902d" data-page-title="KB0010510 - Get Access to Business Systems (SSO)"></style>
+	<style type="text/css" id="vc6545050ff223100ba13ffffffffffe8-s" widget="KB Article Page">
+		.vc6545050ff223100ba13ffffffffffe8 td {
+			padding: .5em;
+			line-height: 1em;
+		}
+	</style>
+	<style type="text/css" widget="KB Article Page">
+		#x76b00f30d7000200a9ad1e173e24d45b h1,
+		#x76b00f30d7000200a9ad1e173e24d45b h2,
+		#x76b00f30d7000200a9ad1e173e24d45b h3,
+		#x76b00f30d7000200a9ad1e173e24d45b h4,
+		#x76b00f30d7000200a9ad1e173e24d45b h5,
+		#x76b00f30d7000200a9ad1e173e24d45b h6 {
+			color: #484848;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			margin-bottom: 10px;
+		}
+
+		#x76b00f30d7000200a9ad1e173e24d45b h1 {
+			font-size: 26px;
+		}
+
+		#x76b00f30d7000200a9ad1e173e24d45b h2 {
+			font-size: 22px;
+		}
+
+		#x76b00f30d7000200a9ad1e173e24d45b h3 {
+			font-size: 18px;
+		}
+
+		#x76b00f30d7000200a9ad1e173e24d45b p,
+		#x76b00f30d7000200a9ad1e173e24d45b td,
+		#x76b00f30d7000200a9ad1e173e24d45b li {
+			color: #484848;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			line-height: 1.4;
+			font-size: 15px;
+		}
+
+		#x76b00f30d7000200a9ad1e173e24d45b hr {
+			color: #808080;
+			margin-top: 5px;
+			margin-bottom: 15px;
+		}
+
+		#x76b00f30d7000200a9ad1e173e24d45b img {
+			margin: 8px;
+		}
+
+		#x76b00f30d7000200a9ad1e173e24d45b table,
+		#x76b00f30d7000200a9ad1e173e24d45b thead,
+		#x76b00f30d7000200a9ad1e173e24d45b tbody,
+		#x76b00f30d7000200a9ad1e173e24d45b td {
+			border: 1px solid #505050;
+			padding: 10px;
+		}
+
+		#x76b00f30d7000200a9ad1e173e24d45b td {
+			min-width: 40px;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		#x76b00f30d7000200a9ad1e173e24d45b thead {
+			background-color: #E0E0E0;
+		}
+
+		#x76b00f30d7000200a9ad1e173e24d45b thead>tr>td {
+			font-weight: bold;
+			text-align: center;
+		}
+
+		#x76b00f30d7000200a9ad1e173e24d45b div.contact {
+			margin: 15px 0px;
+			padding: 10px 20px;
+			background: #d2e8f6;
+			border-radius: 6px;
+			text-align: center;
+		}
+
+		a {
+			color: #01577a;
+		}
+
+		.panel {
+			background: #FFF;
+		}
+
+		.panel.panel-primary div.panel-heading {
+			background-color: #FFF;
+			color: #000;
+			border-bottom: 4px solid #006a96;
+		}
+
+		.panel.panel-default div.panel-heading {
+			background-color: #FFF;
+			color: #000;
+			border-bottom: 4px solid #006a96;
+		}
+
+		.navbar-default {
+			z-index: 1;
+			background: #006a96;
+		}
+
+		.layout-container.container {
+			z-index: 1;
+		}
+
+		.layout-container {
+			overflow: visible;
+			max-width: 1200px;
+			width: 98%;
+			margin: 0 auto;
+		}
+
+		.layout-header {
+			max-height: unset !important;
+		}
+
+		.navbar-collapse {
+			width: 100%;
+		}
+		/*.navbar-avatar {
+    margin: -15px 6px 0 0px !important;
+}*/
+
+		.container.portal-icons {
+			margin-bottom: 60px;
+		}
+
+		footer {
+			position: relative !important;
+		}
+
+		.navbar-collapse {
+			width: 100%;
+		}
+
+		.pill-list {
+			padding: 0;
+		}
+
+		.pill-list>li {
+			list-style: none;
+			margin: 3px 0;
+			text-align: center;
+		}
+
+
+		.pill-list>li>a {
+			background: #f7f7f7;
+			border-radius: 5px;
+			padding: 4px;
+			margin: 10px;
+			text-align: center;
+			cursor: pointer;
+			font: 12px/1.7 Roboto, sans-serif;
+		}
+
+
+		button.navbar-toggle {
+			padding: 9px 5px;
+			margin: 8px 0;
+		}
+
+		.mobile-logo {
+			padding: 0;
+		}
+
+		main.body.padding-top {
+			background: #FFF;
+		}
+
+		.landing-container {
+			font: 16px/1.7 Roboto, sans-serif;
+		}
+
+		.landing-container h2.ng-binding {
+			color: #006A96;
+			font-size: 19px !important;
+			padding: 10px !important;
+			font-family: "Helvetica", sans-serif;
+			border-radius: 20px;
+			text-transform: uppercase;
+			font-weight: bold !important;
+		}
+
+		.iconlink:hover {
+			background: #f7f7f7;
+		}
+
+		.iconlink:hover h2.ng-binding {
+			color: #fccd05;
+		}
+
+		.m-b-xs {
+			margin-bottom: 5px !important;
+			font-size: 16px;
+			font-weight: bold;
+		}
+
+		.text-muted {
+			color: #757575;
+			font-size: 15px;
+		}
+
+		.homepage-search {
+			padding: 10px 0 100px 0;
+		}
+
+		.kb-cat-container>.panel li:before {
+			font-family: "FontAwesome";
+			content: "\f0f6";
+			margin: 0 10px 0 -23px;
+		}
+
+		.kb-cat-container>.panel ul {
+			list-style-type: none;
+		}
+
+		.kb-cat-container>.panel>.panel-body {
+			min-height: 300px;
+		}
+
+		@media screen and (max-width: 768px) {
+			.user-inf {
+				float: left !important;
+			}
+		}
+		/* homepage search bar styles */
+
+		input.form-control.input-typeahead.ng-pristine.ng-valid.ng-empty.ng-touched {
+			border-radius: 7px 0 0 7px !important;
+		}
+
+		#x19538fc2cb10120000f8d856634c9c01>form>div>span>button {
+			border-radius: 0 7px 7px 0 !important;
+		}
+
+
+		#homepage-search>div>h2 {
+			text-shadow: 2px 2px 12px #0000008f;
+			color: #fff !important;
+			font: 54px/1.7 Roboto, sans-serif;
+		}
+
+		h4#kb-header-tag {
+			text-shadow: 2px 2px 12px #0000008f;
+			color: #fff !important;
+			font: 18px/1.7 Roboto, sans-serif;
+		}
+
+		h1#kb-header-title {
+			text-shadow: 2px 2px 12px #0000008f;
+			color: #fff !important;
+			font: 54px/1 Roboto, sans-serif;
+		}
+
+		.header-loader {
+			display: none;
+		}
+
+		@media screen and (max-width: 767px) {
+
+			#homepage-search {
+				display: block !important;
+				margin: 0 !important;
+				padding: 15px !important;
+			}
+
+			.homepage-search {
+				padding: 0;
+			}
+		}
+
+		@media screen and (max-width: 457px) {
+
+			#homepage-search>div>h2 {
+				font-size: 25px !important;
+			}
+		}
+		/* kb styles */
+
+		@media screen and (max-width: 768px) {
+			#kb-header-title {
+				font-size: 25px !important;
+			}
+		}
+
+		@media screen and (max-width:590px) {
+
+			.kb-cat-container {
+				width: 100% !important;
+			}
+
+			.row {
+				margin: 0 !important;
+			}
+
+			button.navbar-toggle {
+
+				margin: 8px 0 !important;
+			}
+		}
+
+		@media screen and (min-width: 970px) {
+			#kb-header-title {
+				padding-top: 50px;
+			}
+		}
+		/* buttons */
+
+		.btn-help {
+			background: #d7eaf7;
+			border-color: #d7eaf7;
+			font-weight: bold;
+			color: #525252;
+		}
+		/* sc images */
+
+		.catalog-item-image {
+			max-height: 100px;
+			width: auto;
+		}
+	</style>
+	<style type="text/css" id="v69a638365b722200a9ad09ed5a62bceb-s" widget="KB Article Helpful">
+		.v69a638365b722200a9ad09ed5a62bceb .sp-helpful-text {
+			padding-right: 8px;
+		}
+
+		.v69a638365b722200a9ad09ed5a62bceb .sp-helpful-percent,
+		.v69a638365b722200a9ad09ed5a62bceb .sp-helpful-response {
+			padding-left: 8px;
+		}
+	</style>
+	<style type="text/css" id="v498c39d3db21634006037a131f9619c1-s" widget="get-help-link-button">
+		.v498c39d3db21634006037a131f9619c1 .btn {
+			width: 100%;
+		}
+	</style>
+</head>
+
+<body class="chrome ng-scope" ng-class="main.style" ng-controller="spPageCtrl as main" accessibility="false">
+	<div class="sp-page-root page flex-column sp-can-animate" ng-class="{'sp-can-animate': main.doAnimate}" style="">
+		<!-- ngIf: page.draft -->
+		<!-- ngIf: main.firstPage -->
+		<!-- ngIf: theme.header && theme.navbar_fixed -->
+		<div id="uiNotificationContainer">
+			<!-- ngRepeat: m in c.notifications track by $index -->
+		</div>
+		<section class="flex-grow page sp-scroll" aria-label="KB0010510 - Get Access to Business Systems (SSO) page content">
+			<!-- ngIf: theme.header && !theme.navbar_fixed -->
+			<header ng-if="theme.header &amp;&amp; !theme.navbar_fixed" class="ng-scope" style=""><a class="skip-link sr-only" ng-click="main.focusOnPageTitle()" href="javascript:void(0)">Skip to page content</a>
+				<script>
+					window.NOW.sp.disableAnnouncements = true;
+				</script>
+				<div class="v81603553db425f0006037a131f9619ab ng-scope" data="data" options="options" widget="widget" server="server">
+					<header>
+						<section class="layout-title">
+							<div class="layout-container container">
+								<a href="/its" class="title-header title-header-large">IT Service Hub</a>
+								<a href="/its" class="title-header title-header-short">IT Service Hub</a>
+								<a href="https://www.ucsd.edu" class="title-logo">UC San Diego</a>
+							</div>
+						</section>
+					</header>
+					<div class="navbar-default">
+						<div class="layout-container container">
+							<div class="navbar-default">
+								<div class="layout-container container">
+									<nav class="navbar navbar-default navbar-static-top navbar-inverse" ng-class="::{'navbar':!isViewNative, 'is-native': isViewNative}" role="navigation">
+										<button aria-expanded="false" class="navbar-toggle" data-target="#sp-nav-bar" data-toggle="collapse" type="button"> <span class="sr-only">Toggle navigation</span>
+    <div class="col-sm-1 mobile-nav-bars">
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+    </div>
+    <div class="col-sm-1 mobile-nav-icon">
+      MENU
+    </div> </button>
+										<div class="col-sm-4 pull-right visible--block mobile-logo">
+											<img alt="" class="img-responsive header-logo" src="https://cdn.ucsd.edu/cms/decorator-5/styles/img/ucsd-footer-logo-white.png" role="presentation">
+										</div>
+										<div sp-navbar-toggle="" class="collapse navbar-collapse navbar-left" id="sp-nav-bar">
+											<!-- Include The Menu -->
+											<ul class="v5ef595c1cb12020000f8d856634c9c6e nav navbar-nav ng-scope" aria-label="Header menu" role="menubar" id="x656d6f68db899f0006037a131f961985" data="data" options="options" widget="widget" server="server">
+												<div class="header-loader ng-hide" ng-show="loadingIndicator" aria-hidden="true">
+													<div class="hidden-xs sp-loading-indicator la-sm">
+														<div></div>
+														<div></div>
+														<div></div>
+													</div>
+												</div>
+												<!-- ngRepeat: item in visibleItems -->
+												<!-- ngInclude: 'menuTemplate' -->
+												<li ng-repeat="item in visibleItems" ng-class="{dropdown: item.items.length > 0, 'header-menu-item': true}" ng-include="'menuTemplate'" role="presentation" class="ng-scope header-menu-item">
+													<!-- ngIf: item.items.length == 0 && !item.scriptedItems -->
+													<a role="menuitem" ng-if="item.items.length == 0 &amp;&amp; !item.scriptedItems" ng-href="?id=sc_home" target="" title="" class="ng-scope" href="?id=sc_home">
+														<!-- ngIf: ::item.glyph --><span ng-bind-html="::item.label" class="ng-binding">Browse Services</span> </a>
+													<!-- end ngIf: item.items.length == 0 && !item.scriptedItems -->
+													<!-- ngIf: item.items.length > 0 -->
+													<!-- ngIf: item.items.length > 0 -->
+													<!-- ngIf: item.scriptedItems.count > 0 -->
+													<!-- ngIf: item.scriptedItems.count > 0 -->
+												</li>
+												<!-- end ngRepeat: item in visibleItems -->
+												<!-- ngInclude: 'menuTemplate' -->
+												<li ng-repeat="item in visibleItems" ng-class="{dropdown: item.items.length > 0, 'header-menu-item': true}" ng-include="'menuTemplate'" role="presentation" class="ng-scope header-menu-item">
+													<!-- ngIf: item.items.length == 0 && !item.scriptedItems -->
+													<a role="menuitem" ng-if="item.items.length == 0 &amp;&amp; !item.scriptedItems" ng-href="?id=sc_category&amp;sys_id=e15706fc0a0a0aa7007fc21e1ab70c2f" target="" title="" class="ng-scope" href="?id=sc_category&amp;sys_id=e15706fc0a0a0aa7007fc21e1ab70c2f">
+														<!-- ngIf: ::item.glyph --><span ng-bind-html="::item.label" class="ng-binding">Get Help</span> </a>
+													<!-- end ngIf: item.items.length == 0 && !item.scriptedItems -->
+													<!-- ngIf: item.items.length > 0 -->
+													<!-- ngIf: item.items.length > 0 -->
+													<!-- ngIf: item.scriptedItems.count > 0 -->
+													<!-- ngIf: item.scriptedItems.count > 0 -->
+												</li>
+												<!-- end ngRepeat: item in visibleItems -->
+												<!-- ngInclude: 'menuTemplate' -->
+												<li ng-repeat="item in visibleItems" ng-class="{dropdown: item.items.length > 0, 'header-menu-item': true}" ng-include="'menuTemplate'" role="presentation" class="ng-scope header-menu-item">
+													<!-- ngIf: item.items.length == 0 && !item.scriptedItems -->
+													<a role="menuitem" ng-if="item.items.length == 0 &amp;&amp; !item.scriptedItems" ng-href="?id=kb_view" target="" title="" class="ng-scope" href="?id=kb_view">
+														<!-- ngIf: ::item.glyph --><span ng-bind-html="::item.label" class="ng-binding">Knowledge Base</span> </a>
+													<!-- end ngIf: item.items.length == 0 && !item.scriptedItems -->
+													<!-- ngIf: item.items.length > 0 -->
+													<!-- ngIf: item.items.length > 0 -->
+													<!-- ngIf: item.scriptedItems.count > 0 -->
+													<!-- ngIf: item.scriptedItems.count > 0 -->
+												</li>
+												<!-- end ngRepeat: item in visibleItems -->
+												<!-- ngInclude: 'menuTemplate' -->
+												<li ng-repeat="item in visibleItems" ng-class="{dropdown: item.items.length > 0, 'header-menu-item': true}" ng-include="'menuTemplate'" role="presentation" class="ng-scope header-menu-item">
+													<!-- ngIf: item.items.length == 0 && !item.scriptedItems -->
+													<a role="menuitem" ng-if="item.items.length == 0 &amp;&amp; !item.scriptedItems" ng-href="?id=my_surveys" target="" title="" class="ng-scope" href="?id=my_surveys">
+														<!-- ngIf: ::item.glyph --><span ng-bind-html="::item.label" class="ng-binding">My Surveys</span> </a>
+													<!-- end ngIf: item.items.length == 0 && !item.scriptedItems -->
+													<!-- ngIf: item.items.length > 0 -->
+													<!-- ngIf: item.items.length > 0 -->
+													<!-- ngIf: item.scriptedItems.count > 0 -->
+													<!-- ngIf: item.scriptedItems.count > 0 -->
+												</li>
+												<!-- end ngRepeat: item in visibleItems -->
+												<!-- ngInclude: 'menuTemplate' -->
+												<li ng-repeat="item in visibleItems" ng-class="{dropdown: item.items.length > 0, 'header-menu-item': true}" ng-include="'menuTemplate'" role="presentation" class="ng-scope header-menu-item">
+													<!-- ngIf: item.items.length == 0 && !item.scriptedItems -->
+													<a role="menuitem" ng-if="item.items.length == 0 &amp;&amp; !item.scriptedItems" ng-href="?id=my_stuff" target="" title="" class="ng-scope" href="?id=my_stuff">
+														<!-- ngIf: ::item.glyph --><span ng-bind-html="::item.label" class="ng-binding">My Tickets</span> </a>
+													<!-- end ngIf: item.items.length == 0 && !item.scriptedItems -->
+													<!-- ngIf: item.items.length > 0 -->
+													<!-- ngIf: item.items.length > 0 -->
+													<!-- ngIf: item.scriptedItems.count > 0 -->
+													<!-- ngIf: item.scriptedItems.count > 0 -->
+												</li>
+												<!-- end ngRepeat: item in visibleItems -->
+												<!-- ngInclude: 'menuTemplate' -->
+												<li ng-repeat="item in visibleItems" ng-class="{dropdown: item.items.length > 0, 'header-menu-item': true}" ng-include="'menuTemplate'" role="presentation" class="ng-scope header-menu-item">
+													<!-- ngIf: item.items.length == 0 && !item.scriptedItems -->
+													<a role="menuitem" ng-if="item.items.length == 0 &amp;&amp; !item.scriptedItems" ng-href="nav_to.do?uri=%2Fhome.do" target="" title="" class="ng-scope" href="nav_to.do?uri=%2Fhome.do">
+														<!-- ngIf: ::item.glyph --><span ng-bind-html="::item.label" class="ng-binding">Fulfiller View</span> </a>
+													<!-- end ngIf: item.items.length == 0 && !item.scriptedItems -->
+													<!-- ngIf: item.items.length > 0 -->
+													<!-- ngIf: item.items.length > 0 -->
+													<!-- ngIf: item.scriptedItems.count > 0 -->
+													<!-- ngIf: item.scriptedItems.count > 0 -->
+												</li>
+												<!-- end ngRepeat: item in visibleItems -->
+												<!-- Wishlist menu -->
+												<!-- ngIf: options.enable_wishlist && data.isLoggedIn && data.showWishlist -->
+												<!-- ngIf: options.enable_wishlist && data.isLoggedIn && data.showWishlist -->
+												<!-- Shopping cart stuff -->
+												<!-- ngIf: ::options.enable_cart && data.isLoggedIn -->
+												<!-- ngIf: ::options.enable_cart && data.isLoggedIn -->
+												<!-- ngIf: data.isLoggedIn && data.guidedTours -->
+											</ul>
+											<!-- ngIf: ::(!user.logged_in && page.id != portal.login_page_dv && !data.hasLogin) -->
+											<!-- ngIf: ::user.logged_in -->
+											<ul ng-if="::user.logged_in" class="nav navbar-nav pull-right user-inf ng-scope" aria-haspopup="true">
+												<!-- chat, avatar, and logout -->
+												<!-- ngIf: ::data.connect_support_queue_id -->
+												<li class="dropdown hidden-xs"> <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Press space to access user profile or logout" id="profile-dropdown"> <span class="navbar-avatar">
+        <div class="avatar-small-medium avatar-container ng-isolate-scope" ng-class="avatarType()" title="" primary="userID"><!-- ngIf: (users.length > 1 && !groupAvatar) --><div class="avatar soloAvatar bottom ng-scope" context-menu="contextOptions"><div class="sub-avatar" ng-style="getBackgroundStyle(users[0] || primary)"><!-- ngIf: (!users[0].avatar && !groupAvatar) --><span ng-if="(!users[0].avatar &amp;&amp; !groupAvatar)" class="ng-binding ng-scope">CH</span><!-- end ngIf: (!users[0].avatar && !groupAvatar) --></div></div><!-- ngIf: users.length > 2 && !groupAvatar --><!-- ngIf: users.length > 3 && !groupAvatar --><span class="inner-details ng-scope" ng-transclude=""></span><!-- ngIf: ::presenceEnabled --></div></span> <span class="visible-lg-inline ng-binding">Cristian Horta</span> </a>
+													<ul class="dropdown-menu" role="menu">
+														<li><a ng-href="?id=user_profile&amp;sys_id=e5ae1cb2db175200dbd6f2b6af961989" role="menuitem" href="?id=user_profile&amp;sys_id=e5ae1cb2db175200dbd6f2b6af961989">Profile</a></li>
+														<!-- ngIf: ::!isViewNative -->
+														<li ng-if="::!isViewNative" class="ng-scope"><a href="/logout.do?sysparm_goto_url=/its" role="menuitem">Logout</a></li>
+														<!-- end ngIf: ::!isViewNative -->
+													</ul>
+												</li>
+												<li class="visible-xs-block"><a ng-href="?id=user_profile&amp;sys_id=e5ae1cb2db175200dbd6f2b6af961989" class="ng-binding" href="?id=user_profile&amp;sys_id=e5ae1cb2db175200dbd6f2b6af961989"><span class="navbar-avatar">
+        <div class="avatar-small-medium avatar-container ng-isolate-scope" ng-class="avatarType()" title="" primary="userID"><!-- ngIf: (users.length > 1 && !groupAvatar) --><div class="avatar soloAvatar bottom ng-scope" context-menu="contextOptions"><div class="sub-avatar" ng-style="getBackgroundStyle(users[0] || primary)"><!-- ngIf: (!users[0].avatar && !groupAvatar) --><span ng-if="(!users[0].avatar &amp;&amp; !groupAvatar)" class="ng-binding ng-scope">CH</span><!-- end ngIf: (!users[0].avatar && !groupAvatar) --></div></div><!-- ngIf: users.length > 2 && !groupAvatar --><!-- ngIf: users.length > 3 && !groupAvatar --><span class="inner-details ng-scope" ng-transclude=""></span><!-- ngIf: ::presenceEnabled --></div></span>Cristian Horta</a></li>
+												<!-- ngIf: ::!isViewNative -->
+												<li ng-if="::!isViewNative" class="visible-xs-block ng-scope"><a href="/logout.do?sysparm_goto_url=/its">Logout</a></li>
+												<!-- end ngIf: ::!isViewNative -->
+											</ul>
+											<!-- end ngIf: ::user.logged_in -->
+										</div>
+									</nav>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- ngRepeat: subheader in subheaders -->
+				<!-- ngIf: subheader -->
+				<div ng-if="subheader" ng-repeat="subheader in subheaders" ng-style="main.parseJSON(subheader.background)" ng-class="::[subheader.class_name, 'c' + subheader.sys_id]" class="ng-scope breadcrumbs-container c65739d7d5b7212000d7ec7ad31f91a55" style="background-size: initial; background-position: center center;">
+					<div ng-class="::main.getContainerClasses(subheader)" class="container">
+						<!-- ngRepeat: row in ::subheader.rows -->
+						<sp-page-row ng-repeat="row in ::subheader.rows" columns="::row.columns" row="::row" container="::subheader" class="ng-scope ng-isolate-scope">
+							<div class="sp-row-content  row">
+								<!-- ngRepeat: column in columns -->
+							<div ng-repeat="column in columns" class=" col-md-8 ">
+						<span ng-repeat="rectangle in column.widgets" sp-context-menu="contextMenu(event)" ng-controller="spWidgetDebug" class="ng-scope"><div id="x22839d7d5b7212000d7ec7ad31f91a8a" class="v0fb269305b3212000d7ec7ad31f91ae2 ng-scope" data="data" options="options" widget="widget" server="server">
+							<ul class="nav nav-pills nav-sm" aria-label="Page breadcrumbs" role="navigation">
+								<li> <span><a ng-href="?id=index" href="?id=index">Home</a> <i aria-hidden="true" class="fa fa-chevron-right"></i></span> </li>
+								<li class="ng-scope"> <span> <a ng-if="!$last" ng-href="?id=kb_view" class="ng-binding ng-scope" href="?id=kb_view">Knowledge Base</a> <i aria-hidden="true" ng-if="!$last" class="fa fa-chevron-right ng-scope"></i> </span> </li>
+								<li class="ng-scope"> <span> <a ng-if="!$last" ng-href="?id=kb_category&amp;kb_category=0a6e6111dbc99f80bd30f6e9af961933" class="ng-binding ng-scope" href="?id=kb_category&amp;kb_category=0a6e6111dbc99f80bd30f6e9af961933">Accounts &amp; Access</a>
+																							</i>
+																						</span> </li>
+
+							</ul>
+						</div>
+						<!-- ngIf: rectangle.debugModal -->
+						</span>
+						<!-- end ngRepeat: rectangle in column.widgets -->
+						</div>
+							<!-- end ngRepeat: column in columns -->
+							<div ng-repeat="column in columns" class=" col-md-4 ">
+								<!-- ngRepeat: row in column.rows -->
+								<!-- ngRepeat: rectangle in column.widgets -->
+							</div>
+							<!-- end ngRepeat: column in columns -->
+					</div>
+					</sp-page-row>
+					<!-- end ngRepeat: row in ::subheader.rows -->
+				</div>
+	</div>
+	<!-- end ngIf: subheader -->
+	<!-- end ngRepeat: subheader in subheaders -->
+	</header>
+	<!-- end ngIf: theme.header && !theme.navbar_fixed -->
+
+
+	<!-- START MAIN CONTAINER -->
+	<main class="body padding-top">
+		<h1 class="sr-only ng-binding ng-isolate-scope">Knowledge Base</h1>
+		<div class="ng-scope c5b9fcab847101200ba13a5554ee490d0">
+			<div class="container">
+				<sp-page-row class="ng-scope ng-isolate-scope">
+					<div class="sp-row-content  row">
+						<div ng-repeat="column in columns" class=" col-md-12 ">
+							<span ng-repeat="rectangle in column.widgets" class="ng-scope">
+								<div class="v945899d4dbe4af40a7907aa9bf9619e6 ng-scope" >
+									<div>
+										<div class="wrapper-md">
+											<h2 class="text-center">Browse UC San Diego IT Services</h2>
+										</div>
+
+										<!-- START CATEGORY PANEL -->
+										<div class="col-md-4 col-xs-6 kb-cat-container ng-scope" aria-hidden="false">
+											<div class="panel panel-primary b">
+												<div class="panel-heading">
+													<span style="font-size: 18px;" class="ng-binding"> <i class="fa fa-lock"></i> Accounts &amp; Access</span>
+												</div>
+												<div class="panel-body">
+													<div class="small text-center ng-binding ng-scope" style="padding-bottom:5px;">
+														9 articles
+													</div>
+													<ul>
+														<div class="text-primary ng-scope" style="padding-bottom:15px;">
+															<span>
+																<a href="#link">
+																	<li class="ng-binding">Get Access to Business Systems (SSO)</li>
+																</a>
+															</span>
+														</div>
+														<div class="text-primary ng-scope" style="padding-bottom:15px;">
+															<span>
+																<a href="#link">
+																	<li class="ng-binding">Faculty &amp; Staff Accounts</li>
+																</a>
+															</span>
+														</div>
+														<div class="text-primary ng-scope" style="padding-bottom:15px;">
+															<span>
+																<a href="#link">
+																	<li class="ng-binding">Reset your Business Systems (SSO) Password</li>
+																</a>
+															</span>
+														</div>
+														<div class="text-primary ng-scope" style="padding-bottom:15px;">
+															<span>
+																<a href="#link">
+																	<li class="ng-binding">Faculty &amp; Staff Account Closure</li>
+																</a>
+															</span>
+														</div>
+														<div class="text-primary ng-scope" style="padding-bottom:15px;">
+															<span>
+																<a href="#link">
+																	<li class="ng-binding">Activate and Access your New Student Account</li>
+																</a>
+															</span>
+														</div>
+													</ul>
+												</div>
+												<div class="panel-footer text-right">
+													<a href="?id=kb_category&amp;kb_category=0a6e6111dbc99f80bd30f6e9af961933">View All</a>
+												</div>
+											</div>
+										</div>
+										<!-- END CATEGORY PANEL -->
+
+										<!-- START CATEGORY PANEL -->
+										<div class="col-md-4 col-xs-6 kb-cat-container ng-scope" aria-hidden="false">
+											<div class="panel panel-primary b">
+												<div class="panel-heading">
+													<span style="font-size: 18px;" class="ng-binding"> <i class="fa fa-lock"></i> Accounts &amp; Access</span>
+												</div>
+												<div class="panel-body">
+													<div class="small text-center ng-binding ng-scope" style="padding-bottom:5px;">
+														9 articles
+													</div>
+													<ul>
+														<div class="text-primary ng-scope" style="padding-bottom:15px;">
+															<span>
+																<a href="#link">
+																	<li class="ng-binding">Get Access to Business Systems (SSO)</li>
+																</a>
+															</span>
+														</div>
+														<div class="text-primary ng-scope" style="padding-bottom:15px;">
+															<span>
+																<a href="#link">
+																	<li class="ng-binding">Faculty &amp; Staff Accounts</li>
+																</a>
+															</span>
+														</div>
+														<div class="text-primary ng-scope" style="padding-bottom:15px;">
+															<span>
+																<a href="#link">
+																	<li class="ng-binding">Reset your Business Systems (SSO) Password</li>
+																</a>
+															</span>
+														</div>
+														<div class="text-primary ng-scope" style="padding-bottom:15px;">
+															<span>
+																<a href="#link">
+																	<li class="ng-binding">Faculty &amp; Staff Account Closure</li>
+																</a>
+															</span>
+														</div>
+														<div class="text-primary ng-scope" style="padding-bottom:15px;">
+															<span>
+																<a href="#link">
+																	<li class="ng-binding">Activate and Access your New Student Account</li>
+																</a>
+															</span>
+														</div>
+													</ul>
+												</div>
+												<div class="panel-footer text-right">
+													<a href="?id=kb_category&amp;kb_category=0a6e6111dbc99f80bd30f6e9af961933">View All</a>
+												</div>
+											</div>
+										</div>
+										<!-- END CATEGORY PANEL -->
+
+										<!-- START CATEGORY PANEL -->
+										<div class="col-md-4 col-xs-6 kb-cat-container ng-scope" aria-hidden="false">
+											<div class="panel panel-primary b">
+												<div class="panel-heading">
+													<span style="font-size: 18px;" class="ng-binding"> <i class="fa fa-lock"></i> Accounts &amp; Access</span>
+												</div>
+												<div class="panel-body">
+													<div class="small text-center ng-binding ng-scope" style="padding-bottom:5px;">
+														9 articles
+													</div>
+													<ul>
+														<div class="text-primary ng-scope" style="padding-bottom:15px;">
+															<span>
+																<a href="#link">
+																	<li class="ng-binding">Get Access to Business Systems (SSO)</li>
+																</a>
+															</span>
+														</div>
+														<div class="text-primary ng-scope" style="padding-bottom:15px;">
+															<span>
+																<a href="#link">
+																	<li class="ng-binding">Faculty &amp; Staff Accounts</li>
+																</a>
+															</span>
+														</div>
+														<div class="text-primary ng-scope" style="padding-bottom:15px;">
+															<span>
+																<a href="#link">
+																	<li class="ng-binding">Reset your Business Systems (SSO) Password</li>
+																</a>
+															</span>
+														</div>
+														<div class="text-primary ng-scope" style="padding-bottom:15px;">
+															<span>
+																<a href="#link">
+																	<li class="ng-binding">Faculty &amp; Staff Account Closure</li>
+																</a>
+															</span>
+														</div>
+														<div class="text-primary ng-scope" style="padding-bottom:15px;">
+															<span>
+																<a href="#link">
+																	<li class="ng-binding">Activate and Access your New Student Account</li>
+																</a>
+															</span>
+														</div>
+													</ul>
+												</div>
+												<div class="panel-footer text-right">
+													<a href="?id=kb_category&amp;kb_category=0a6e6111dbc99f80bd30f6e9af961933">View All</a>
+												</div>
+											</div>
+										</div>
+										<!-- END CATEGORY PANEL -->
+
+										<!-- START CATEGORY PANEL -->
+										<div class="col-md-4 col-xs-6 kb-cat-container ng-scope" aria-hidden="false">
+											<div class="panel panel-primary b">
+												<div class="panel-heading">
+													<span style="font-size: 18px;" class="ng-binding"> <i class="fa fa-lock"></i> Accounts &amp; Access</span>
+												</div>
+												<div class="panel-body">
+													<div class="small text-center ng-binding ng-scope" style="padding-bottom:5px;">
+														9 articles
+													</div>
+													<ul>
+														<div class="text-primary ng-scope" style="padding-bottom:15px;">
+															<span>
+																<a href="#link">
+																	<li class="ng-binding">Get Access to Business Systems (SSO)</li>
+																</a>
+															</span>
+														</div>
+														<div class="text-primary ng-scope" style="padding-bottom:15px;">
+															<span>
+																<a href="#link">
+																	<li class="ng-binding">Faculty &amp; Staff Accounts</li>
+																</a>
+															</span>
+														</div>
+														<div class="text-primary ng-scope" style="padding-bottom:15px;">
+															<span>
+																<a href="#link">
+																	<li class="ng-binding">Reset your Business Systems (SSO) Password</li>
+																</a>
+															</span>
+														</div>
+														<div class="text-primary ng-scope" style="padding-bottom:15px;">
+															<span>
+																<a href="#link">
+																	<li class="ng-binding">Faculty &amp; Staff Account Closure</li>
+																</a>
+															</span>
+														</div>
+														<div class="text-primary ng-scope" style="padding-bottom:15px;">
+															<span>
+																<a href="#link">
+																	<li class="ng-binding">Activate and Access your New Student Account</li>
+																</a>
+															</span>
+														</div>
+													</ul>
+												</div>
+												<div class="panel-footer text-right">
+													<a href="?id=kb_category&amp;kb_category=0a6e6111dbc99f80bd30f6e9af961933">View All</a>
+												</div>
+											</div>
+										</div>
+										<!-- END CATEGORY PANEL -->
+
+										<!-- START CATEGORY PANEL -->
+										<div class="col-md-4 col-xs-6 kb-cat-container ng-scope" aria-hidden="false">
+											<div class="panel panel-primary b">
+												<div class="panel-heading">
+													<span style="font-size: 18px;" class="ng-binding"> <i class="fa fa-lock"></i> Accounts &amp; Access</span>
+												</div>
+												<div class="panel-body">
+													<div class="small text-center ng-binding ng-scope" style="padding-bottom:5px;">
+														9 articles
+													</div>
+													<ul>
+														<div class="text-primary ng-scope" style="padding-bottom:15px;">
+															<span>
+																<a href="#link">
+																	<li class="ng-binding">Get Access to Business Systems (SSO)</li>
+																</a>
+															</span>
+														</div>
+														<div class="text-primary ng-scope" style="padding-bottom:15px;">
+															<span>
+																<a href="#link">
+																	<li class="ng-binding">Faculty &amp; Staff Accounts</li>
+																</a>
+															</span>
+														</div>
+														<div class="text-primary ng-scope" style="padding-bottom:15px;">
+															<span>
+																<a href="#link">
+																	<li class="ng-binding">Reset your Business Systems (SSO) Password</li>
+																</a>
+															</span>
+														</div>
+														<div class="text-primary ng-scope" style="padding-bottom:15px;">
+															<span>
+																<a href="#link">
+																	<li class="ng-binding">Faculty &amp; Staff Account Closure</li>
+																</a>
+															</span>
+														</div>
+														<div class="text-primary ng-scope" style="padding-bottom:15px;">
+															<span>
+																<a href="#link">
+																	<li class="ng-binding">Activate and Access your New Student Account</li>
+																</a>
+															</span>
+														</div>
+													</ul>
+												</div>
+												<div class="panel-footer text-right">
+													<a href="?id=kb_category&amp;kb_category=0a6e6111dbc99f80bd30f6e9af961933">View All</a>
+												</div>
+											</div>
+										</div>
+										<!-- END CATEGORY PANEL -->
+
+										<!-- START CATEGORY PANEL -->
+										<div class="col-md-4 col-xs-6 kb-cat-container ng-scope" aria-hidden="false">
+											<div class="panel panel-primary b">
+												<div class="panel-heading">
+													<span style="font-size: 18px;" class="ng-binding"> <i class="fa fa-lock"></i> Accounts &amp; Access</span>
+												</div>
+												<div class="panel-body">
+													<div class="small text-center ng-binding ng-scope" style="padding-bottom:5px;">
+														9 articles
+													</div>
+													<ul>
+														<div class="text-primary ng-scope" style="padding-bottom:15px;">
+															<span>
+																<a href="#link">
+																	<li class="ng-binding">Get Access to Business Systems (SSO)</li>
+																</a>
+															</span>
+														</div>
+														<div class="text-primary ng-scope" style="padding-bottom:15px;">
+															<span>
+																<a href="#link">
+																	<li class="ng-binding">Faculty &amp; Staff Accounts</li>
+																</a>
+															</span>
+														</div>
+														<div class="text-primary ng-scope" style="padding-bottom:15px;">
+															<span>
+																<a href="#link">
+																	<li class="ng-binding">Reset your Business Systems (SSO) Password</li>
+																</a>
+															</span>
+														</div>
+														<div class="text-primary ng-scope" style="padding-bottom:15px;">
+															<span>
+																<a href="#link">
+																	<li class="ng-binding">Faculty &amp; Staff Account Closure</li>
+																</a>
+															</span>
+														</div>
+														<div class="text-primary ng-scope" style="padding-bottom:15px;">
+															<span>
+																<a href="#link">
+																	<li class="ng-binding">Activate and Access your New Student Account</li>
+																</a>
+															</span>
+														</div>
+													</ul>
+												</div>
+												<div class="panel-footer text-right">
+													<a href="?id=kb_category&amp;kb_category=0a6e6111dbc99f80bd30f6e9af961933">View All</a>
+												</div>
+											</div>
+										</div>
+										<!-- END CATEGORY PANEL -->
+
+
+
+
+									</div>
+								</div>
+							</span>
+						</div>
+					</div>
+				</sp-page-row>
+			</div>
+		</div>
+	</main>
+
+<!-- END MAIN CONTAINER -->
+
+
+	<footer ng-if="theme.footer &amp;&amp; !theme.footer_fixed" class="ng-scope">
+		<div class="vaf807d53db425f0006037a131f961956 ng-scope" data="data" options="options" widget="widget" server="server">
+			<footer class="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-8">
+							<p> <span>UC San Diego 9500 Gilman Dr. La Jolla, CA 92093 (858) 534-2230</span> <br> <span> Copyright Â© <span class="footer-copyright-year">2018</span> Regents of the University of California. All rights reserved. </span>
+							</p>
+							<ul class="footer-links">
+								<li><a href="https://www.ucsd.edu/_about/legal/index.html">Terms &amp; Conditions</a></li>
+								<li> <a href="mailto:servicedesk@ucsd.edu">Feedback</a> </li>
+							</ul>
+						</div>
+						<div class="col-sm-4">
+							<img alt="" class="img-responsive footer-logo" src="https://cdn.ucsd.edu/cms/decorator-5/styles/img/ucsd-footer-logo-white.png" role="presentation">
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</footer>
+	</section>
+	<sp-aria-live>
+		<div class="sr-only ng-binding" aria-live="assertive"></div>
+	</sp-aria-live>
+	</div>
+	<script id="sp_image_chooser.xml" type="text/ng-template">
+		<div class="sp-image-chooser-div"><input id="imageChooser{{ field.name }}" type="file" style="display: none;" ng-file-select="fileSelect($files, field)"></input><img ng-show="field.value" style="max-height: 200px; max-width: 200px;" ng-src="{{ field.value }}"></img><span ng-show="disabled() &amp;&amp; !field.value">No image</span>
+			<span ng-show="!disabled()"><a ng-show="!field.value" style="margin: 5px;" class="btn btn-default" ng-click="clickChoose()">Choose</a><a ng-show="field.value" style="margin: 5px;" class="btn btn-default" ng-click="clickChoose()">Change</a><a ng-show="field.value" style="margin: 5px;"
+				  class="btn btn-default" ng-click="clickClear()">Remove</a></span>
+		</div>
+	</script>
+	<script id="sp_dialog.xml" type="text/ng-template"><span><div sn-dialog="true" disable-auto-focus="true" name="{{name}}" modal="true" role="dialog" aria-labelledby="dialog-title" context="parms" class="sp-message-dialog {{ dialogClass }}"><div class="sp-message-dialog-title" id="dialog-title"><div class="sp-message-dialog-title-inner">{{title}}</div></div><div class="sp-message-dialog-content "><div class="sp-message-dialog-content-block">{{message}}</div><div class="sp-message-dialog-content-block" ng-if="parms.details">{{parms.details}}</div><div class="sp-message-dialog-content-block" ng-if="question">{{question}}</div><div class="sp-message-dialog-content-block" ng-if="checkboxMessage"><div style="float: left"><input type="checkbox" ng-model="checkboxModel.value" style="box-shadow: none; margin-left: 12px; width: auto; display: block; margin-top:3px; margin-right: 4px;" ng-change="update()"></input></div><div style="float: left">{{checkboxMessage}}</div></div></div><div class="sp-message-dialog-buttons"><button class="btn btn-cancel" title="{{cancel}}" ng-click="parms.cancel()" style="margin-right: 5px !important;" ng-if="cancel">{{cancel}}</button><button class="btn btn-primary" title="{{ok}}" ng-click="parms.ok()" style="margin-left: 5px !important;" ng-if="ok">{{ok}}</button></div></div></span></script>
+	<script id="sp_page_row" type="text/ng-template">
+		<div class="sp-row-content {{::row.class_name}} {{(!container.bootstrap_alt) ? 'row' : ''}}">
+			<div ng-repeat="column in columns" class="{{::column.class_name}} {{(!container.bootstrap_alt) ? column.size_classes : ''}}">
+				<div ng-repeat="row in column.rows" class="repeated-row-container">
+					<sp-page-row columns="row.columns" row="row" container="container"></sp-page-row>
+				</div><span ng-repeat="rectangle in column.widgets" sp-context-menu="contextMenu(event)" ng-controller="spWidgetDebug"><sp-widget widget="rectangle.widget"></sp-widget><sp-widget widget="rectangle.debugModal" ng-if="rectangle.debugModal"></sp-widget></span></div>
+		</div>
+	</script>
+	<script id="sp_form_field.xml" type="text/ng-template">
+		<div class="form-group" ng-class="{'form-group-has-focus': hasValueOrFocus()}"><label class="field-label" ng-if="::c.showLabel(field)" for="sp_formfield_{{::field.name}}" title="{{::field.hint}}" aria-label="{{field.type != 'reference' ? field.hint : field.hint + ' '+ getReferenceLabelContents(field)}} " tooltip-right="true"><span class="field-decorations"><span ng-show="field.isMandatory()" class="fa fa-asterisk mandatory" ng-class="{'mandatory-filled': field.mandatory_filled()}" title="Required" style="padding-right: .25em" aria-label="{{field.mandatory_filled()? 'Required Filled ' : 'Required '}}"></span><span ng-repeat="decoration in field.decorations" class="decoration {{decoration.icon}}" title="{{decoration.text}}"></span></span>{{field.label}}</label>
+			<span class="type-{{::field.type}} field-actual" ng-switch="::field.type" ng-class="{'state-mandatory': field.mandatory, 'state-readonly': field.read_only, 'state-hidden': field.hidden, 'has-error': field.isInvalid}">
+					<div ng-if="::c.showLabel(field)"><span ng-if="::field.help_text" title="{{::field.help_tag}}" class="help-block" ng-bind="::field.help_text"></span><span ng-if="::field.instructions" ng-bind-html="::trustedHTML(field.instructions)"></span></div>
+		<span
+		  ng-switch-when="boolean"><label title="{{::field.hint}}" tooltip-right="true" for="sp_formfield_{{::field.name}}"><input type="checkbox" name="{{::field.name}}" ng-model="fieldValue" ng-true-value="'true'" ng-false-value="'false'" ng-model-options="{getterSetter: true}" ng-disabled="field.isReadonly()" id="sp_formfield_{{::field.name}}"></input><span style="margin-left: 1em;">{{field.label}}</span></label>
+			<span class="sr-only">{{::field.hint}}</span><span ng-if="::field._pricing">{{getCheckBoxPrice(field)}}</span></span>
+			<sp-choice-list ng-switch-when="choice" field="field" glide-form="getGlideForm()" ng-init="setPriceLabelForChoice(field)"></sp-choice-list><span ng-switch-when="boolean_confirm"><span class="fa fa-asterisk mandatory" ng-class="{'mandatory-filled': field.mandatory_filled()}" title="Required" style="padding-right: .25em"></span><label title="{{::field.hint}}" tooltip-right="true"
+			  for="sp_formfield_{{::field.name}}"><input type="checkbox" name="{{::field.name}}" ng-model="fieldValue" ng-true-value="'true'" ng-false-value="'false'" ng-model-options="{getterSetter: true}" ng-disabled="field.isReadonly()" id="sp_formfield_{{::field.name}}"></input><span style="margin-left: 1em;"><span class="sr-only" ng-show="!field.mandatory_filled()">Required -</span><span class="sr-only" ng-show="field.mandatory_filled()">Required Filled -</span>{{field.label}}</span></label>
+			<span class="sr-only">{{::field.hint}}</span><span ng-if="::field._pricing">{{getCheckBoxPrice(field)}}</span></span>
+			<sp-color-picker ng-switch-when="color" field="field" glide-form="getGlideForm()" sn-change="fieldValue(newValue)" sn-disabled="field.isReadonly()" ng-if="c.depsLoaded"></sp-color-picker>
+			<sp-css-editor ng-switch-when="css" class="form-control" field="field" id="sp_formfield_{{::field.name}}" data-length="4000" sn-disabled="field.isReadonly()" sn-change="stagedValueChange()" sn-blur="fieldValue(field.stagedValue)" glide-form="getGlideForm()"
+			  ng-if="c.depsLoaded"></sp-css-editor><span ng-switch-when="document_id" class="padder">{{field.displayValue}}</span><span ng-switch-when="domain_id" class="padder">{{field.displayValue}}</span>
+			<sp-duration-element ng-switch-when="glide_duration" field="field" ng-model="fieldValue" ng-model-options="{getterSetter: true}"></sp-duration-element><input ng-switch-when="url" name="{{::field.name}}" id="sp_formfield_{{::field.name}}" autocomplete="off" class="form-control" ng-model="field.stagedValue" ng-model-options="{allowInvalid: true}" ng-change="stagedValueChange()"
+			  placeholder="{{::field.placeholder}}" ng-disabled="field.isReadonly()" maxlength="{{::field.max_length}}" data-type="{{::field.type}}"></input>
+			<sn-field-reference ng-switch-when="field_name" field="field" id="sp_formfield_{{::field.name}}" glide-form="getGlideForm()" sn-change="fieldValue(newValue)" sn-disabled="field.isReadonly()"></sn-field-reference>
+			<sn-field-list-element ng-switch-when="field_list" field="field" glide-form="getGlideForm()" sn-disabled="field.isReadonly()" sn-change="fieldValue(newValue, displayValue)"></sn-field-list-element>
+			<sp-date-picker sn-change="fieldValue(newValue, displayValue)" ng-switch-when="glide_date" field="field" sn-disabled="field.isReadonly()" ng-model="field.stagedValue" ng-model-options="{getterSetter: true}" ng-if="c.depsLoaded"></sp-date-picker>
+			<sp-date-picker sn-change="fieldValue(newValue, displayValue)" ng-switch-when="glide_date_time" field="field" sn-disabled="field.isReadonly()" ng-model="field.stagedValue" ng-model-options="{getterSetter: true}" sn-include-time="true" ng-if="c.depsLoaded"></sp-date-picker>
+			<sp-reference-element ng-switch-when="glide_list" field="field" sn-select-width="100%" ref-table="::formModel.table" ref-id="formModel.sys_id" glide-form="getGlideForm()" record-values="getEncodedRecordValues()" sn-options="{multiple: true, placeholder: field.placeholder}"
+			  sn-disabled="field.isReadonly()"></sp-reference-element>
+			<sp-glyph-picker ng-switch-when="glyphicon" field="field" sn-disabled="field.isReadonly()"></sp-glyph-picker>
+			<sp-html-editor ng-switch-when="xml" field="field" id="sp_formfield_{{::field.name}}" class="form-control" data-length="4000" sn-disabled="field.isReadonly()" sn-change="stagedValueChange()" sn-blur="fieldValue(field.stagedValue)" glide-form="getGlideForm()"
+			  ng-if="c.depsLoaded"></sp-html-editor>
+			<sp-html-editor ng-switch-when="html_template" class="form-control" field="field" id="sp_formfield_{{::field.name}}" data-length="4000" sn-disabled="field.isReadonly()" sn-change="stagedValueChange()" sn-blur="fieldValue(field.stagedValue)" glide-form="getGlideForm()"
+			  ng-if="c.depsLoaded"></sp-html-editor>
+			<sp-script-editor ng-switch-when="json" class="form-control" field="field" id="sp_formfield_{{::field.name}}" data-length="4000" sn-disabled="field.isReadonly()" sn-change="stagedValueChange()" sn-blur="fieldValue(field.stagedValue)" glide-form="getGlideForm()"
+			  ng-if="c.depsLoaded"></sp-script-editor>
+			<sp-mask-element ng-switch-when="masked" field="field" placeholder="field.placeholder" sn-disabled="field.isReadonly()" sn-change="stagedValueChange()" glide-form="getGlideForm()"></sp-mask-element>
+			<sp-radio-option ng-switch-when="multiple_choice" glide-form="getGlideForm()" field="field" ng-init="setPriceLabelForChoice(field)"></sp-radio-option>
+			<sp-textarea ng-switch-when="multi_two_lines" field="field" name="{{::field.name}}" id="sp_formfield_{{::field.name}}" class="form-control" ng-model="field.stagedValue" ng-change="stagedValueChange()" data-type="{{::field.type}}" ng-readonly="field.isReadonly()"></sp-textarea>
+			<fieldset ng-switch-when="numericscale" class="radio" id="sp_formfield_{{::field.name}}" role="group">
+				<legend class="sr-only"><span ng-show="field.isMandatory() &amp;&amp; !field.mandatory_filled()">Required -</span><span ng-show="field.isMandatory() &amp;&amp; field.mandatory_filled()">Required filled -</span>{{::field.label}}</legend><label tabindex="-1" ng-repeat="c in field.choices"
+				  for="sp_formfield_{{::field.name}}"><input type="radio" name="{{::field.name}}" value="{{c.value}}" ng-model="fieldValue" ng-model-options="{getterSetter: true}" ng-checked="field.value == c.value" ng-disabled="field.isReadonly()"></input><span style="margin-right: 1rem;">{{c.label}}</span></label></fieldset>
+			<sp-currency-element ng-switch-when="price" field="field" sn-disabled="field.isReadonly()" sn-change="stagedValueChange()" sn-blur="fieldValue(field.stagedValue)" glide-form="getGlideForm()"></sp-currency-element>
+			<sp-currency-element ng-switch-when="currency" field="field" sn-disabled="field.isReadonly()" sn-change="stagedValueChange()" sn-blur="fieldValue(field.stagedValue)" glide-form="getGlideForm()"></sp-currency-element><input ng-switch-when="password" type="password" name="{{::field.name}}" id="sp_formfield_{{::field.name}}" autocomplete="off" class="form-control" ng-model="field.stagedValue" ng-change="stagedValueChange()" ng-disabled="field.isReadonly()"></input>
+			<input ng-switch-when="password2" type="password" name="{{::field.name}}" id="sp_formfield_{{::field.name}}" autocomplete="off" class="form-control" ng-model="field.stagedValue" ng-change="stagedValueChange()" ng-disabled="field.isReadonly()"></input>
+			<sp-code-mirror ng-switch-when="properties" class="form-control" mode="properties" field="field" id="sp_formfield_{{::field.name}}" data-length="4000" sn-disabled="field.isReadonly()" sn-change="stagedValueChange()" sn-blur="fieldValue(field.stagedValue)"
+			  glide-form="getGlideForm()" ng-if="c.depsLoaded"></sp-code-mirror>
+			<sp-reference-field ng-switch-when="reference" id="sp_formfield_{{::field.name}}" ng-class="{'field-has-reference': field.value != '', 'field-empty-reference': field.value == ''}"></sp-reference-field>
+			<sp-script-editor ng-switch-when="script_server" class="form-control" field="field" id="sp_formfield_{{::field.name}}" data-length="4000" sn-disabled="field.isReadonly()" sn-change="stagedValueChange()" sn-blur="fieldValue(field.stagedValue)" glide-form="getGlideForm()"
+			  ng-if="c.depsLoaded"></sp-script-editor>
+			<sp-script-editor ng-switch-when="script" class="form-control" field="field" id="sp_formfield_{{::field.name}}" data-length="4000" sn-disabled="field.isReadonly()" sn-change="stagedValueChange()" sn-blur="fieldValue(field.stagedValue)" glide-form="getGlideForm()"
+			  ng-if="c.depsLoaded"></sp-script-editor>
+			<sn-table-reference ng-switch-when="table_name" field="field" sn-change="fieldValue(newValue)" sn-disabled="field.isReadonly()"></sn-table-reference>
+			<sp-textarea ng-switch-when="textarea" field="field" name="{{::field.name}}" id="sp_formfield_{{::field.name}}" class="form-control" ng-model="field.stagedValue" ng-change="stagedValueChange()" data-type="{{::field.type}}" ng-readonly="field.isReadonly()"></sp-textarea>
+			<sp-tinymce-editor ng-switch-when="html" name="{{::field.name}}" text-id="sp_formfield_{{::field.name}}" ng-model="field.stagedValue" ng-model-options="{getterSetter: true}" sn-blur="fieldValue(field.stagedValue)" field="field" glide-form="getGlideForm()"
+			  ng-change="stagedValueChange()" attachment-guid="c.getAttachmentGuid()"></sp-tinymce-editor>
+			<sp-tinymce-editor ng-switch-when="translated_html" name="{{::field.name}}" text-id="sp_formfield_{{::field.name}}" ng-model="field.stagedValue" sn-blur="fieldValue(field.stagedValue)" ng-model-options="{getterSetter: true}" field="field" glide-form="getGlideForm()"
+			  ng-change="stagedValueChange()" attachment-guid="c.getAttachmentGuid()"></sp-tinymce-editor><span ng-switch-when="user_image"><img ng-if="field.displayValue" ng-src="{{field.displayValue}}" style="max-height: 128px; max-width: 128px;"></img><sn-image-uploader ng-if="!field.isReadonly()" table-name="{{formModel.table}}" sys-id="{{formModel._attachmentGUID || formModel.sys_id}}" field-name="{{::field.name}}" read-only="field.isReadonly()" on-upload="onImageUpload(thumbnail, sys_id)" on-delete="onImageDelete()" upload-message="{{field.isMandatory() &amp;&amp; !field.mandatory_filled() ? 'Required -' : ''}} Upload an image" src="field.displayValue"></sn-image-uploader></span>
+			<sp-widget ng-switch-when="widget" widget="field.widget" page="{g_form: getGlideForm(), field: field, fieldValue: fieldValue}"></sp-widget>
+			<sp-widget ng-switch-when="widget_value" widget="field.widget" page="{g_form: getGlideForm(), field: field, fieldValue: fieldValue}"></sp-widget><span ng-switch-when="integer"><input name="{{::field.name}}" id="sp_formfield_{{::field.name}}" class="form-control" ng-readonly="field.isReadonly()" ng-model="field.stagedValue" ng-change="stagedValueChange()" ng-blur="formatNumber()" autocomplete="off"></input></span>
+			<span ng-switch-when="decimal"><input name="{{::field.name}}" id="sp_formfield_{{::field.name}}" class="form-control" ng-readonly="field.isReadonly()" ng-model="field.stagedValue" ng-change="stagedValueChange()" ng-blur="formatNumber()" autocomplete="off"></input>
+											</span>
+			<sp-catalog-variable ng-if="field._cat_variable" ng-switch-when="sc_multi_row"></sp-catalog-variable>
+			<sp-email-element ng-switch-when="email" field="field" glide-form="getGlideForm()"></sp-email-element><span ng-switch-default="true"><input ng-if="::!field.max_length || 256 &gt; field.max_length || field._force_single_line" name="{{::field.name}}" id="sp_formfield_{{::field.name}}" class="form-control" maxlength="{{::field.max_length}}" data-type="{{::field.type}}" ng-model="field.stagedValue" ng-model-options="{allowInvalid: true}" ng-change="stagedValueChange()" autocomplete="off" ng-readonly="field.isReadonly()" ng-attr-placeholder="{{field.placeholder}}" type="text" title="{{accessible ? field.hint : ''}}" tooltip-top="true" tooltip-toggle="{{accessible}}"></input><sp-textarea ng-if="::field.max_length &gt;= 256 &amp;&amp; !field._force_single_line" field="field" name="{{::field.name}}" id="sp_formfield_{{::field.name}}" class="form-control" data-type="{{::field.type}}" ng-model="field.stagedValue" ng-model-options="{allowInvalid: true}" ng-change="stagedValueChange()" ng-readonly="field.isReadonly()"></sp-textarea></span></span>
+			<div ng-show="field.messages">
+				<div ng-repeat="message in field.messages | unique: 'message'" class="wrapper-xs r m-t-xs" ng-class="{'bg-danger': message.type == 'error', 'bg-info': message.type == 'info'}">{{message.message}}</div>
+			</div>
+			</div>
+	</script>
+	<script id="sp_reference_field.xml" type="text/ng-template"><span class="ref-picker-container"><div class="add-on" ng-if="field.value != ''"><button type="button" class="btn btn-default bg-white lookup" ng-click="openReference(field, formModel.view)" ng-disabled="field.isReadonly() &amp;&amp; !field.readonlyClickthrough" title="Click to Preview {{field.displayValue}}"><span class="fa fa-info-circle"></span>
+		<span class="sr-only">Click to Preview {{field.displayValue}}</span>
+		</button>
+		</div>
+		<div class="reference">
+			<sp-reference-element field="field" sn-select-width="100%" ref-table="formModel.table" ref-id="formModel.sys_id" glide-form="getGlideForm()" sn-options="{placeholder: field.placeholder}" record-values="getEncodedRecordValues()" sn-disabled="field.isReadonly()"
+			  label-id="sp_reference_element_sr_{{::field.name}}"></sp-reference-element>
+		</div>
+		</span>
+	</script>
+	<script id="sp_model.xml" type="text/ng-template">
+		<div>
+			<sp-variable-layout ng-attr-id="{{::formModel.table}}.do"></sp-variable-layout>
+			<div ng-attr-id="{{::formModel.table}}.do" ng-init="execItemScripts()"></div>
+		</div>
+	</script>
+	<script id="sp_editable_field.xml" type="text/ng-template"><span><small ng-if="block &amp;&amp; fieldModel.displayValue" class="text-muted">{{fieldModel.label}}</small><span class="sp-editable-field" ng-style="blockDisplay" ng-class="{'editable-underline': editable}"><span ng-if="editable" ng-class="{'text-muted': !fieldModel.displayValue}" uib-popover-template="'sp_editable_popover.xml'" popover-placement="auto bottom" popover-is-open="shadowModel.popoverIsOpen" ng-click="togglePopover($event);" class="show-text bs-popover editable-text popover-trigger-{{::fieldID}}"><span ng-switch="fieldModel.type"><span ng-switch-when="user_image"><img ng-if="fieldModel.displayValue !=''" ng-src="{{fieldModel.displayValue}}"></img><span ng-if="fieldModel.displayValue ==''">Upload an image</span></span>
+		<span ng-switch-default="true"><span aria-label="{{fieldModel.label}} - {{fieldModel.displayValue || '(Empty)'}} - Press enter to edit" ng-if="!block" tabindex="0" id="field-{{::fieldID}}">{{fieldModel.displayValue || "(Empty)"}}</span><span ng-if="block"
+		  tabindex="0" id="field-{{::fieldID}}" aria-label="{{fieldModel.label}} - {{fieldModel.displayValue || '(Empty)'}} - Press enter to edit">{{fieldModel.displayValue || fieldModel.label}}</span></span>
+		</span>
+		</span><span ng-if="!editable" class="show-text" ng-switch="fieldModel.type"><span ng-switch-when="user_image"><img ng-if="fieldModel.displayValue !=''" ng-src="{{fieldModel.displayValue}}"></img><span ng-if="fieldModel.displayValue ==''">Upload an image</span></span>
+		<span ng-switch-default="true">{{fieldModel.displayValue}}</span>
+		</span>
+		</span>
+		</span>
+	</script>
+	<script id="sp_editable_field2.xml" type="text/ng-template">
+		<form ng-submit="saveForm();">
+			<sp-form-field form-model="fieldModel" field="fieldModel" glide-form="getGlideForm()"></sp-form-field>
+		</form>
+	</script>
+	<script id="sp_editable_popover.xml" type="text/ng-template">
+		<div style="min-width: 250px;" class="popover-{{::fieldID}}">
+			<h3 class="popover-title" ng-bind="title" ng-show="title"></h3>
+			<div class="popover-content">
+				<form id="editableSaveForm" ng-submit="saveForm();">
+					<sp-form-field form-model="shadowModel" field="shadowModel" glide-form="getGlideForm()"></sp-form-field>
+				</form>
+			</div>
+			<div class="popover-footer pull-right"><button ng-click="closePopover()" type="button" class="m-b-xs m-r-xs btn btn-default">Close</button><button ng-click="saveForm()" type="button" class="m-b-xs m-r-xs btn btn-primary">Save</button></div>
+		</div>
+	</script>
+	<script id="sp_element_duration.xml" type="text/ng-template">
+		<div class="form-inline">
+			<now-message key="days" value="Days"></now-message>
+			<now-message key="hours" value="Hours"></now-message>
+			<now-message key="minutes" value="Minutes"></now-message>
+			<now-message key="seconds" value="Seconds"></now-message>
+			<fieldset class="form-group" id="sp_formfield_{{::field.name}}" role="group">
+				<legend><span class="field-decorations"><span ng-show="field.isMandatory()" class="fa fa-asterisk mandatory" ng-class="{'mandatory-filled': field.mandatory_filled()}" title="Required" style="padding-right: .25em" aria-label="{{field.mandatory_filled()? 'Required Filled ' : 'Required '}}"></span>
+					<span ng-repeat="decoration in field.decorations" class="decoration {{decoration.icon}}" title="{{decoration.text}}"></span>
+					</span>{{field.label}}
+					<div><span ng-if="::field.help_text" title="{{::field.help_tag}}" class="help-block" ng-bind="::field.help_text"></span><span ng-if="::field.instructions" ng-bind-html="::trustedHTML(field.instructions)"></span></div>
+				</legend>
+				<div ng-repeat="unit in visibleUnits" class="input-group input-group-sm col-xs-{{12 / visibleUnits.length}}"><label ng-if="showLabel(unit)" class="input-group-addon text-capitalize" for="dur-{{unit}}" sn-bind-i18n="{{unit}}"></label><input type="text" class="form-control" id="dur-{{unit}}" ng-model="parts[unit]" ng-disabled="field.isReadonly()" ng-change="updateDuration()"
+					  title="{{unit.charAt(0).toUpperCase() + unit.slice(1)}}"></input>
+				</div>
+			</fieldset>
+		</div>
+	</script>
+	<script id="sp_element_currency.xml" type="text/ng-template">
+		<div class="input-group"><span class="input-group-addon input-group-select"><span style="position: relative; display: inline-block;"><select style="min-width: 75px" class="form-control" ng-model="field.currencyCode" ng-options="c.code as c.symbol for c in field.currencyCodes" ng-disabled="field.isReadonly()" ng-change="formatValue(true)"></select><i aria-hidden="true" class="select-indicator fa fa-chevron-down"></i></span></span>
+			<input name="{{::field.name}}" id="sp_formfield_{{::field.name}}" class="form-control decimal" maxlength="14" data-type="{{::field.type}}" ng-model="field.currencyValue" ng-model-options="{allowInvalid: true}" ng-change="formatValue()" autocomplete="off"
+			  ng-readonly="field.isReadonly()"></input>
+		</div>
+	</script>
+	<script id="sp_element_email.xml" type="text/ng-template"><span class="ng-form-element"><span sn-form-group="" class="input-group"><input name="{{::field.name}}" id="sp_formfield_{{::field.name}}" autocomplete="off" class="form-control" ng-model="field.stagedValue" ng-model-options="{allowInvalid: true}" ng-change="stagedValueChange()" ng-disabled="field.isReadonly()" placeholder="{{field.placeholder}}" maxlength="{{::field.max_length}}" data-type="{{::field.type}}"></input><span class="input-group-btn"><a ng-href="{{field.stagedValue ? ('mailto:' + field.stagedValue) : '#'}}" class="btn-ref btn btn-default" role="button" ng-disabled="field.isReadonly()" title="Send an email to this address"><i class="fa fa-envelope-o" aria-hidden="true"></i><span class="sr-only">Send an email to this address</span></a>
+		</span>
+		</span>
+		</span>
+	</script>
+	<script id="sp_element_mask.xml" type="text/ng-template"><span class="ng-form-element" ng-class="{'has-error' : field.isInvalid}"><span ng-if="field.catalog_view_masked"><input name="{{::field.name}}" id="sp_formfield_{{::field.name}}" ng-attr-type="{{inputType}}" autocomplete="off" class="form-control" ng-model="field.stagedValue" ng-model-options="{getterSetter: true}" ng-blur="modelValueChange()" ng-change="c.validate()" ng-disabled="disabled" style="padding-right: 55px" placeholder="{{placeholder}}" maxlength="{{::field.max_length}}"></input><a ng-if="field.stagedValue.length" ng-click="c.togglePassword()" class="btn sp-show-hide-masked-button" role="button" title="show/hide this value">{{toggleShowHide}}</a></span>
+		<span ng-if="!field.catalog_view_masked"><input name="{{::field.name}}" id="sp_formfield_{{::field.name}}" ng-attr-type="{{inputType}}" autocomplete="off" class="form-control" ng-model="field.stagedValue" ng-model-options="{getterSetter: true}" ng-change="c.validate()" ng-disabled="disabled"
+				  ng-keydown="c.cleanData()" placeholder="{{placeholder}}" maxlength="{{::field.max_length}}"></input>
+				</span><span ng-if="field.useConfirmation"><label class="field-label">{{reEnter}}</label><input name="sp_formfield_confirm.{{::field.name}}" id="sp_formfield_confirm.{{::field.name}}" type="password" autocomplete="off" class="form-control" ng-disabled="disabled" ng-change="c.validate()" ng-keydown="c.cleanData()" ng-model="field.confirmPassword" ng-model-options="{getterSetter: true}" placeholder="{{placeholder}}" maxlength="{{::field.max_length}}"></input><span ng-if="field.isInvalid" class="sp-date-format-info" style="display:table-row;" aria-hidden="true">{{misMatch}}</span></span>
+		</span>
+	</script>
+	<script id="sp_catalog_variable.xml" type="text/ng-template">
+		<div>
+			<sp-sc-multi-row-element ng-if="field.type == spSCConf.MULTI_ROW_TYPE" field="field" glide-form="getGlideForm()"></sp-sc-multi-row-element>
+		</div>
+	</script>
+	<script id="sp_element_sc_multi_row.xml" type="text/ng-template">
+		<div class="b wrapper-md r-2x" ng-if="field.columns_meta.length &gt; 0">
+			<sp-widget widget="c.activeRow" ng-if="c.activeRow"></sp-widget>
+			<div class="form-group" ng-if="!field.readonly &amp;&amp; !field.sys_readonly"><button class="btn btn-primary m-r" ng-click="c.createRow()" ng-disabled="!c.canInsert()">Add</button><button class="btn btn-default" ng-click="c.clearValue()" ng-disabled="!c.canClearValue()">Remove All</button></div>
+			<div style="overflow-x: auto;">
+				<table class="table table-bordered table-striped" style="margin-bottom: 5px;">
+					<thead>
+						<tr>
+							<th ng-if="!field.readonly &amp;&amp; !field.sys_readonly">Actions</th>
+							<th ng-repeat="col in ::field.columns_meta track by col.id">{{::col.label}}</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-if="field._value.length == 0 ">
+							<td ng-if="!field._loadingData" class="text-center" colspan="{{::field.columns_meta.length + 1}}">No data to display</td>
+						</tr>
+						<tr ng-if="field._loadingData">
+							<td class="text-center" ng-if="field._value.length == 0" colspan="{{::field.columns_meta.length + 1}}"><i class="fa fa-spinner fa-pulse fa-3x fa-fw" aria-hidden="true" title="Updating value"></i><span class="sr-only">Updating value</span></td>
+						</tr>
+						<tr ng-repeat="row_display_value in field._displayValue track by $index" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}">
+							<td ng-if="!field.readonly &amp;&amp; !field.sys_readonly"><a href="javascript:void(0);" class="wrapper-xs fa fa-pencil" role="button" title="Edit Row" ng-click="c.updateRow($index)"></a><a href="javascript:void(0);" class="wrapper-xs fa fa-close" role="button" title="Remove Row" ng-click="c.deleteRow($index)"></a></td>
+							<td ng-repeat="col in ::field.columns_meta track by col.id" style="text-overflow: ellipsis;">{{c.getCellDisplayValue(row_display_value[col.name], col.type)}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</script>
+	<script id="sp_element_radio_down.xml" type="text/ng-template">
+		<fieldset id="sp_formfield_{{::field.name}}" role="group">
+			<legend class="sr-only"><span ng-show="field.isMandatory() &amp;&amp; !field.mandatory_filled()">Required -</span><span ng-show="field.isMandatory() &amp;&amp; field.mandatory_filled()">Required filled -</span>{{::field.label}}</legend>
+			<div class="radio" ng-repeat="c in field.choices"><label tabindex="-1"><input type="radio" name="{{::field.name}}" value="{{c.value}}" ng-model="fieldValue" ng-model-options="{getterSetter: true}" ng-checked="field.value == c.value" ng-disabled="field.isReadonly()" role="radio" aria-checked="{{field.value == c.value}}" aria-label="{{c.label}}"></input><span style="margin-left: 1em;">{{c.label}}</span></label>
+				<span ng-if="c.priceLabel &amp;&amp; field.value != c.value">{{c.priceLabel}}</span>
+			</div>
+		</fieldset>
+	</script>
+	<script id="sp_element_radio_across.xml" type="text/ng-template">
+		<fieldset class="radio" id="sp_formfield_{{::field.name}}" role="group">
+			<legend class="sr-only"><span ng-show="field.isMandatory() &amp;&amp; !field.mandatory_filled()">Required -</span><span ng-show="field.isMandatory() &amp;&amp; field.mandatory_filled()">Required filled -</span>{{::field.label}}</legend><label tabindex="-1" ng-repeat="c in field.choices"><input type="radio" name="{{::field.name}}" value="{{c.value}}" ng-model="fieldValue" ng-model-options="{getterSetter: true}" ng-checked="field.value == c.value" ng-disabled="field.isReadonly()" role="radio" aria-checked="{{field.value == c.value}}" aria-label="{{c.label}}"></input><span style="margin-right: 1rem;">{{c.label}}<span ng-if="c.priceLabel &amp;&amp; field.value != c.value">{{c.priceLabel}}</span></span></label></fieldset>
+	</script>
+	<script id="angular.do?sysparm_type=get_partial&amp;name=directive.snImageUploader" type="text/ng-template">
+		<div class="sn-component sn-component-image-upload"><input ng-show="false" type="file" ng-file-select="onFileSelect($files)"></input>
+			<div ng-file-drop="onFileSelect($files)" ng-file-drag-over-class="sn-dragover" title="{{getTitle()}}" style="margin-top: .5em;" aria-hidden="true">
+				<div style="position:relative; display: inline-block;">
+					<div ng-if="!uploading" ng-click="openFileSelector($event)" style="cursor: pointer; margin-bottom: .25em; margin-right: 0.25em; display: inline-block;"><button class="btn btn-primary"><sn-glyph char="upload"></sn-glyph><small>{{uploadMessage}}</small></button></div><span class="upload-container" ng-click="activateUpload($event)" ng-if="!uploading" ng-transclude="" role="presentation" tabindex="-1"></span></div>
+				<div ng-if="uploading" style="position:relative; display: inline-block;"><button class="btn btn-default"><sn-glyph char="refresh"></sn-glyph><small>Uploading</small></button></div>
+				<div ng-if="src" ng-click="deleteAttachment()" style="cursor: pointer; display: inline-block;" title="Immediately delete this image"><button class="btn btn-default"><sn-glyph char="remove"></sn-glyph><small>Delete</small></button></div>
+			</div>
+		</div>
+	</script>
+	<script id="sp_variable_layout.xml" type="text/ng-template">
+		<fieldset ng-repeat="container in containers" ng-show="paintForm(container)">
+			<div ng-if="(container.caption || container.captionDisplay)">
+				<legend class="h4">{{container.captionDisplay || container.caption}}</legend>
+				<p ng-if="::formModel._fields[container.name].help_text" title="{{::formModel._fields[container.name].help_tag}}" class="help-block" ng-bind="::formModel._fields[container.name].help_text"></p><span ng-if="::formModel._fields[container.name].instructions" ng-bind-html="::formModel._fields[container.name].instructions"></span></div>
+			<div class="row">
+				<div ng-repeat="column in container.columns" class="col-md-{{::12 / container.columns.length }}">
+					<div ng-switch="::f.type" ng-repeat="f in ::column.fields" id="{{::getVarID(f)}}" ng-class="::{'form-inline': isInlineForm === true }">
+						<div ng-switch-when="label" ng-if="formModel._fields[f.name]" ng-show="formModel._fields[f.name].isVisible()"><label ng-bind="f.label"></label>
+							<p ng-if="formModel._fields[f.name].help_text" title="{{formModel._fields[f.name].help_tag}}" class="help-block" ng-bind="formModel._fields[f.name].help_text"></p><span ng-if="formModel._fields[f.name].instructions" ng-bind-html="::trustedHTML(formModel._fields[f.name].instructions)"></span>
+							<hr class="sp_label_hr"></hr>
+						</div>
+						<sp-form-field ng-switch-when="field" ng-if="formModel._fields[f.name]" form-model="formModel" field="formModel._fields[f.name]" glide-form="getGlideForm()" ng-show="formModel._fields[f.name].isVisible()"></sp-form-field>
+						<sp-variable-layout ng-switch-when="container" ng-init="containers=[f]"></sp-variable-layout>
+						<sp-checkbox-group ng-switch-when="checkbox_container" name="f.name" form-model="formModel" containers="f.containers" glide-form="getGlideForm()" class="checkbox-container"></sp-checkbox-group>
+						<sp-widget ng-switch-when="formatter" ng-if="formModel._formatters[f.id].widgetInstance" widget="formModel._formatters[f.id].widgetInstance" page="{g_form: getGlideForm()}"></sp-widget>
+						<hr ng-switch-when="break" ng-show="formModel._fields[f.name].isVisible()"></hr>
+					</div>
+				</div>
+			</div>
+		</fieldset>
+	</script>
+	<script id="sp_announcements.xml" type="text/ng-template">
+		<div class="sp-announcement-root" ng-class="{'accessibility-off': c.accessibilityOff, expanded: c.showAll, single: c.totalAnnouncements === 1}" ng-if="c.totalAnnouncements !== 0" ng-style="{maxHeight: c.getMaxHeight()}">
+			<div class="sp-announcement-list">
+				<div ng-repeat="a in c.announcements" class="sp-announcement" aria-live="assertive" aria-label="{{::a.glyphAltText}} {{::c.i18n.announcement}}" ng-style="::c.getStyle(a)">
+					<div class="content-container">
+						<div class="msg" ng-init="c.linkSetup(a)">
+							<div class="title-container" ng-style="::{justifyContent: c.getJustifyContentValue(a)}">
+								<div class="icon" ng-style="::{position: c.getAlignementContentValue(a)}" aria-label="{{::a.glyphAltText}} {{::c.i18n.announcement}}"><span class="glyphicon fa" ng-class="::('fa-' + a.glyph)" aria-label="{{::a.glyphAltText}}" aria-hidden="true" alt="{{::a.glyphAltText}}" data-toggle="tooltip" data-placement="bottom" title="{{::a.glyphAltText}}"></span></div>
+								<div ng-if="a.linkType !== 'title'" class="title" ng-bind="::a.title"></div><a class="info-link title" ng-if="a.linkType === 'title'" ng-bind="::a.title" ng-href="{{::a.targetLink}}" target="{{a.linkTarget}}" aria-label="{{::c.i18n.moreInfo}} {{::a.title}}" ng-style="::{color: c.getStyle(a).color}"></a></div>
+							<p class="content" ng-bind="::a.summary" ng-style="::{textAlign: c.getJustifyContentValue(a)}"></p><a class="info-link" ng-if="a.linkType === 'normal'" ng-bind="::a.targetLinkText" ng-href="{{::a.targetLink}}" target="{{a.linkTarget}}" aria-label="{{::a.targetLinkText}}" ng-style="::{color: c.getStyle(a).color}"></a></div>
+					</div><span ng-if="::a.dismissOption !== 'NOT_DISMISSIBLE'" ng-click="::c.dismiss(a.id)" aria-label="{{::c.i18n.dismiss}} {{::c.i18n.announcement}} {{::a.title}}" class="close glyphicon glyphicon-remove" tabindex="{{$index + 1}}" ng-style="::{color: c.getStyle(a).color}"><a ng-click="::c.dismiss(a.id)" href="#" ng-bind="::c.i18n.dismiss"></a></span></div>
+			</div>
+			<div class="sp-announcement-list-actions" ng-if="c.totalAnnouncements &gt;= 1" ng-click="::c.toggleShowAll()" tabindex="{{c.totalAnnouncements + 1}}" ng-style="c.getFirstStyle()" aria-label="{{c.showAll ? c.i18n.collapse : c.i18n.expand}} {{::c.i18n.announcements}}"><span ng-if="!c.showAll" class="count">{{::c.i18n.oneOf}}
+				{{c.totalAnnouncements}}</span><span ng-if="!c.showAll" class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span><span ng-if="c.showAll" class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span></div>
+		</div>
+	</script>
+	<script id="sp_search_nav.xml" type="text/ng-template">
+		<div>
+			<h2 class="sr-only">{{::c.i18n.search_categories}}</h2>
+			<sp-list-menu menu="c.searchSources" onclick-fn="c.onSearchSourceClick(menu, input)" list-view="listView" show-toggle="showToggle"></sp-list-menu>
+		</div>
+	</script>
+	<script id="sp_facet_list.xml" type="text/ng-template">
+		<div>
+			<div ng-if="::c.show" class="sp-facet-list">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<div><span class="panel-title" aria-label="{{::listTitle}} {{::c.i18n.collapse}}"><span class="visible-xs" ng-click="c.toggleIcon(listTitle)">{{::listTitle}}</span><span class="hidden-xs">{{::listTitle}}</span><button class="toggle-icon btn" ng-class="::{'hidden': !toggleSearchsource}"
+							  style="background-color:inherit" ng-click="c.toggleIcon(listTitle)" aria-label="{{c.collapse? c.i18n.expand : c.i18n.collapse}} {{::listTitle}}"><i class="fa" ng-class="{'fa-caret-down':c.collapsed,'fa-caret-up':!c.collapsed}" aria-hidden="true"></i></button></span>
+						</div>
+						<div><span><button ng-click="c.clearAll()" class="btn btn-link clear-all pull-right" ng-class="{'disabled': !c.showClearAll}">{{::c.i18n.clearAll}}</button></span></div>
+					</div>
+				</div>
+				<div class="collapse" ng-class="{'in': !c.collapsed}">
+					<div ng-repeat="facet in facets" class="inner-facet-list">
+						<sp-list-menu list-view="true" collapsed="c.isCollapsed(facet.id)" menu="facet" onclick-fn="c.onSelectFacet(menu, input)" onclear-fn="c.clearFacet(menu)" ontoggle-fn="c.onFacetToggle(menuId, collapsed)" show-clear="c.showClear(facet)" show-toggle="true"></sp-list-menu>
+					</div>
+				</div>
+			</div>
+		</div>
+	</script>
+	<script id="sp_list_menu.xml" type="text/ng-template">
+		<div class="sp-list-menu">
+			<div class="panel panel-default" ng-class="::{'list-view':listView}" ng-if="::c.show()">
+				<div class="panel-heading">
+					<div><span class="panel-title" aria-label="{{::menu.label}} {{::c.i18n.collapse}}"><span ng-click="c.showToggle ? c.toggleIcon(menu.label) : ''">{{::menu.label}}</span><button class="toggle-icon btn" ng-class="::{'hidden': !c.showToggle}" style="background-color:inherit"
+						  ng-click="c.toggleIcon($event, menu.label)" role="button" tabindex="0" aria-expanded="{{!c.collapsed}}" aria-label="{{::menu.label}}"><i class="fa" ng-class="{'fa-caret-down':c.collapsed,'fa-caret-up':!c.collapsed}" aria-hidden="true"></i></button></span>
+					</div>
+					<div><span><button ng-if="c.showClearButton()" class="btn btn-link clear pull-right" ng-click="c.clear()" aria-label="{{::c.i18n.clear}} {{::menu.label}}">{{::c.i18n.clear}}</button><button ng-if="c.isMultiSelect &amp;&amp; !c.showClearButton()" ng-disabled="!c.showApplyButton()" ng-class="{'disabled': !c.showApplyButton()}" class="btn btn-link clear pull-right" ng-click="c.submit()">{{::c.i18n.apply}}</button></span></div>
+				</div>
+				<div class="panel-content collapse" ng-class="{'in': !c.collapsed}">
+					<div ng-if="::c.isMultiSelect">
+						<sp-list-menu-items menu="menu" type="MULTI_SELECT" onclick-fn="c.onItemClickFn(menu, item)"></sp-list-menu-items>
+					</div>
+					<div ng-if="::!c.isMultiSelect">
+						<sp-list-menu-items menu="menu" onclick-fn="c.onItemClickFn(menu, item)"></sp-list-menu-items>
+					</div>
+				</div>
+			</div>
+		</div>
+	</script>
+	<script id="sp_list_menu_item.xml" type="text/ng-template">
+		<div class="sp-list-menu-items">
+			<ul>
+				<li ng-repeat="item in c.items track by item.value" class="sp-list-menu-item" ng-click="c.onClick(item)"><button class="btn-link" aria-label="{{item.selected? c.i18n.selected : c.i18n.select}} {{::menu.label}} {{::item.label}}" ng-class="{'active':item.selected}" style="padding: 0">{{::item.label}}</button></li>
+				<li ng-repeat="item in c.nextItems track by item.value" class="sp-list-menu-item" ng-class="{'hidden': !c.showNextItems}" ng-click="c.onClick(item)"><button class="btn-link" aria-label="{{item.selected? c.i18n.selected : c.i18n.select}} {{::menu.label}} {{::item.label}}" ng-class="{'active':item.selected}" style="padding: 0">{{::item.label}}</button></li>
+			</ul>
+			<div ng-if="::c.nextItems" class="sp-list-menu-item"><button ng-if="c.showMoreButton()" type="button" class="btn btn-link" ng-click="c.onMoreButtonClick()">{{::c.i18n.see_more}}</button><button ng-if="c.showNextItems" type="button" class="btn btn-link" ng-click="c.onLessButtonClick()">{{::c.i18n.see_less}}</button></div>
+		</div>
+	</script>
+	<script id="sp_list_menu_checkbox.xml" type="text/ng-template">
+		<div class="sp-list-menu-items">
+			<ul role="listbox" tabindex="0">
+				<li ng-repeat="item in c.items track by item.value" class="sp-list-menu-item sp-facet-checkbox" role="option" aria-selected="{{item.selected}}"><label><input type="checkbox" ng-checked="item.selected" role="checkbox" ng-click="c.onClick(item)" aria-checked="{{item.selected}}"></input><span ng-class="{'active': item.selected}">{{::item.label}}</span></label></li>
+				<li ng-repeat="item in c.nextItems track by item.value" class="sp-list-menu-item sp-facet-checkbox" ng-class="{'hidden': !c.showNextItems}" role="option" aria-selected="{{item.selected}}"><label><input type="checkbox" ng-checked="item.selected" role="checkbox" ng-click="c.onClick(item)" aria-checked="{{item.selected}}"></input><span ng-class="{'active': item.selected}">{{::item.label}}</span></label></li>
+			</ul>
+			<div ng-if="::c.nextItems" class="sp-list-menu-item"><button ng-if="c.showMoreButton()" type="button" class="btn btn-link" ng-click="c.onMoreButtonClick()">{{::c.i18n.see_more}}</button><button ng-if="c.showNextItems" type="button" class="btn btn-link" ng-click="c.onLessButtonClick()">{{::c.i18n.see_less}}</button></div>
+		</div>
+	</script>
+	<script id="sp_checkbox_group.xml" type="text/ng-template">
+		<fieldset ng-show="field.isVisible()">
+			<div ng-repeat="container in containers"><label class="field-label" title="{{::field.hint}}" tooltip-right="true" ng-if="::field.render_label"><span class="field-decorations"><span ng-show="field.isMandatory()" class="fa fa-asterisk mandatory" ng-class="{'mandatory-filled': field.mandatory_filled()}" title="Mandatory" style="padding-right: .25em" aria-label="{{field.mandatory_filled()? 'Mandatory Filled ' : 'Mandatory '}}"></span><span ng-repeat="decoration in field.decorations" class="decoration {{decoration.icon}}" title="{{decoration.text}}"></span></span>{{field.label}}<span class="sr-only">{{::field.hint}}</span></label>
+				<div><span ng-if="::field.help_text" title="{{::field.help_tag}}" class="help-block" ng-bind="::field.help_text"></span><span ng-if="::field.instructions" ng-bind-html="::trustedHTML(field.instructions)"></span></div>
+				<div class="row">
+					<div ng-repeat="column in container.columns" class="col-md-{{::12 / container.columns.length }}">
+						<div ng-repeat="f in ::column.fields" id="{{::getVarID(f)}}" ng-class="::{'form-inline': isInlineForm === true , 'sp-sc-single-checkbox' : !field.render_label}"><span ng-if="!field.render_label &amp;&amp; field.mandatory &amp;&amp; formModel._fields[f.name].isVisible()" class="fa fa-asterisk mandatory" ng-class="{'mandatory-filled': field.mandatory_filled()}" title="Mandatory" style="padding-right: .25em"></span>
+							<sp-form-field ng-if="formModel._fields[f.name]" form-model="formModel" field="formModel._fields[f.name]" glide-form="getGlideForm()" ng-show="formModel._fields[f.name].isVisible()"></sp-form-field>
+						</div>
+					</div>
+				</div>
+			</div>
+		</fieldset>
+	</script>
+	<script type="text/ng-template" id="sp-modal.html">
+		<div class="modal-header" ng-style="options.headerStyle"><button type="button" class="close pull-right" ng-click="$dismiss()" aria-label="Close modal">Ã—</button>
+			<h1 class="modal-title h4" ng-bind-html="options.title" id="modal-title"></h1></div>
+		<div class="modal-body" ng-keyup="keyPress($event.keyCode)">
+			<p ng-if="options.message" ng-bind-html="options.message"></p>
+			<p ng-if="options.errorMessage" class="alert alert-danger ng-binding ng-scope" role="alert" ng-bind-html="options.errorMessage"></p>
+			<div ng-if="options.widget">
+				<sp-widget widget="options.widget"></sp-widget>
+			</div>
+			<div ng-if="options.input">
+				<form name="form.xpForm" ng-if="options.input" ng-submit="submit()">
+					<div class="form-group"><label for="xpInput">{{options.label}}</label><input id="xpInput" type="text" class="form-control" placeholder="{{options.label}}" ng-model="input.value" required="true" ng-change="changed=true" ng-if="!options.values || options.values.length === 0"
+						  autocomplete="off" autofocus="autofocus"></input>
+						<div class="input-group" ng-if="options.values"><input id="xpInput" type="text" class="form-control" placeholder="{{options.label}}" ng-model="input.value" required="true" ng-change="changed=true" autocomplete="off" autofocus="autofocus"></input>
+							<div class="input-group-btn" dropdown="true"><button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle="true" data-toggle="dropdown"><span class="caret"></span></button>
+								<ul class="dropdown-menu pull-right">
+									<li ng-repeat="value in options.values"><a href="" ng-click="input.name = value">{{value}}</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="modal-footer" ng-style="options.footerStyle"><button ng-repeat="button in options.buttons track by button.label" sp-focus-if="button.focus" ng-disabled="button.primary &amp;&amp; options.input &amp;&amp; form.xpForm.$invalid" class="btn btn-default {{button.class}}" ng-class="{'btn-primary':button.primary}"
+			  ng-click="buttonClicked(button)">{{button.label}}</button></div>
+	</script>
+	<style>
+		.modal .panel {
+			margin-bottom: 0;
+		}
+	</style>
+	<script type="text/ng-template" id="sp_form_modal">
+		<div class="modal-body" style="padding: 0">
+			<sp-widget widget="item.form"></sp-widget>
+		</div>
+	</script>
+	<script type="text/ng-template" id="sp_modal">
+		<div class="modal-header"><button type="button" class="close" ng-click="cancel()">X</button>
+			<h4>This is the title</h4></div>
+		<div class="modal-body">{{item.name}}</div>
+		<div class="modal-footer"><button class="btn btn-default" ng-click="cancel()">Cancel</button><button class="btn btn-primary" ng-click="ok()">OK</button></div>
+	</script>
+	<script type="text/ng-template" id="angular.do?sysparm_type=get_partial&amp;name=sn_avatar.xml">
+		<div class="avatar-container" ng-class="avatarType()" title="{{ avatartooltip() }}">
+			<div class="avatar soloAvatar top" ng-if="(users.length &gt; 1 &amp;&amp; !groupAvatar)" context-menu="contextOptions">
+				<div class="sub-avatar" ng-style="getBackgroundStyle(users[1])"><span ng-if="!users[1].avatar">{{ users[1].initials }}</span></div>
+			</div>
+			<div class="avatar soloAvatar bottom" context-menu="contextOptions">
+				<div class="sub-avatar" ng-style="getBackgroundStyle(users[0] || primary)"><span ng-if="(!users[0].avatar &amp;&amp; !groupAvatar)">{{ users[0].initials }}</span></div>
+			</div>
+			<div class="avatar soloAvatar top" ng-if="users.length &gt; 2 &amp;&amp; !groupAvatar" context-menu="contextOptions">
+				<div class="sub-avatar" ng-style="getBackgroundStyle(users[2])"><span ng-if="!users[2].avatar">{{ users[2].initials }}</span></div>
+			</div>
+			<div class="avatar soloAvatar top" ng-if="users.length &gt; 3 &amp;&amp; !groupAvatar" context-menu="contextOptions">
+				<div class="sub-avatar" ng-style="getBackgroundStyle(users[3])"><span ng-if="!users[3].avatar">{{ users[3].initials }}</span></div>
+			</div><span class="inner-details" ng-transclude=""></span>
+			<sn-presence ng-if="::presenceEnabled" user="(users[0].userID || users[0].document)"></sn-presence>
+		</div>
+	</script>
+	<script type="text/ng-template" id="angular.do?sysparm_type=get_partial&amp;name=sp_tinymce_editor.xml">
+		<div>
+			<div ng-if="::accessibilityEnabled" tabindex="0" role="note">In the following editor, press Alt F10 to focus on the toolbar. Press Escape to return to the editor</div><textarea ui-tinymce="tinyMCEOptions" name="{{attrs.name}}" ng-model="model" ng-model-options="options" ng-change="onChangeModel()" rows="10"
+			  id="{{textareaId}}"></textarea><input ng-file-select="attachFiles({files: $files})" ng-click="$event.stopPropagation();" tabindex="-1" aria-hidden="true" multiple="" type="file" style="display: none;"></input>
+		</div>
+	</script>
+
+</body>
+
+</html>
