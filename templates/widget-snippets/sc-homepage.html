@@ -1,0 +1,32 @@
+<div>
+  <div ng-show="false" class="col-md-12"><input ng-model="?_view_filter" placeholder="{{data.filterMsg}}"/></div>
+
+  <div class="wrapper-md">
+    <h2 class="text-center">Browse UC San Diego IT Services</h2>
+  </div>
+
+  <div class="col-md-4 col-xs-6 kb-cat-container" ng-show="filtered.length > 0" ng-repeat="cat in data.categories" ng-if="cat.documents.length">
+    <div class="panel panel-primary b">
+      <div class="panel-heading">
+        <span style="font-size: 18px;"><i class="fa fa-lock"></i> {{cat.label}}</span>
+      </div>
+
+      <div class="panel-body" ;>
+        <div ng-if="filtered.length != 1" class="small text-center" style="padding-bottom:5px;">${{{filtered.length}} articles}</div>
+        <div ng-if="filtered.length == 1" class="small text-center" style="padding-bottom:5px;">${{{filtered.length}} article}</div>
+        <ul>
+					<div ng-repeat="doc in filtered |limitTo:5" class="text-primary" style="padding-bottom:15px;"><span><a href="/its?id=kb_article&sys_id={{doc.sys_id}}">
+							<li>{{doc.short_description}}</li>
+                      </a></span></div>
+				</ul>
+
+        <div ng-show="false" ng-repeat="doc in filtered = (cat.documents | filter : kb_view_filter)">
+        </div>
+      </div>
+
+      <div class="panel-footer text-right">
+        <a href="?id=kb_category&kb_category={{cat.sys_id}}">View all</a>
+      </div>
+    </div>
+  </div>
+</div>
