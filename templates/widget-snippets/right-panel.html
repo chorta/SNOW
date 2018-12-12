@@ -1,0 +1,13 @@
+<sp-panel ng-if="::data.isvalid" title="{{data.alsoInMsg}}">
+	<div ng-repeat="a in ::data.articles" class="m-b" >
+      <a href="?id=kb_article&sys_id={{::a.sys_id}}">{{::a.short_description}}</a>
+    </div>
+
+    <div ng-show="::(data.articles.length == 0)">
+      ${No other articles}
+    </div>
+
+    <div ng-show="::(data.count > 5)">
+      <a href="?id=kb_category&kb_category={{::data.category_id}}">${View all articles}</a>
+    </div>
+</sp-panel>
