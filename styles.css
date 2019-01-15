@@ -79,6 +79,14 @@ footer {
   font: 12px/1.7 Roboto, sans-serif;
 }
 
+.offer-pill {
+    background: #f1f1f1;
+    width: 121px;
+    margin: 0 auto 20px;
+    border-radius: 11px;
+    height: 17px;
+}
+
 
 button.navbar-toggle {
     padding: 9px 5px;

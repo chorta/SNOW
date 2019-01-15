@@ -11,6 +11,14 @@
 		.uib-time input {
 			width: 50px;
 		}
+		.offer-pill {
+    background: #f1f1f1;
+    width: 121px;
+    /* border: 1px solid #e8e8e8; */
+    margin: 0 auto 20px;
+    border-radius: 11px;
+    height: 17px;
+}
 	</style>
 	<style type="text/css">
 		.uib-datepicker .uib-title {
@@ -283,7 +291,7 @@
 		@media only screen and (max-width:360px) {
 
 			.v81603553db425f0006037a131f9619ab .title-header {
-				font-size: 20px;
+				font-size: 18px;
 				margin-top: 2em;
 			}
 		}
@@ -442,7 +450,7 @@
 		@media only screen and (max-width:360px) {
 
 			.v81603553db425f0006037a131f9619ab .layout-header button.btn-nav {
-				font-size: 20px;
+				font-size: 18px;
 			}
 		}
 
@@ -816,7 +824,7 @@
 		@media only screen and (max-width:360px) {
 
 			.v81603553db425f0006037a131f9619ab .layout-header button.btn-nav {
-				font-size: 20px;
+				font-size: 18px;
 			}
 		}
 
@@ -2550,7 +2558,7 @@
 
 		.landing-container h2.ng-binding {
 			color: #006A96;
-			font-size: 19px !important;
+			font-size: 18px !important;
 			padding: 10px !important;
 			font-family: "Helvetica", sans-serif;
 			border-radius: 20px;
@@ -2583,12 +2591,10 @@
 
 		.kb-cat-container>.panel li:before {
 			font-family: "FontAwesome";
-			content: "\f0f6";
 			margin: 0 10px 0 -23px;
 		}
 
 		.kb-cat-container>.panel ul {
-			list-style-type: none;
 		}
 
 		.kb-cat-container>.panel>.panel-body {
@@ -2920,351 +2926,494 @@
 			<div class="container">
 				<sp-page-row class="ng-scope ng-isolate-scope">
 					<div class="sp-row-content  row">
-						<div ng-repeat="column in columns" class=" col-md-12 ">
-							<span ng-repeat="rectangle in column.widgets" class="ng-scope">
-								<div class="v945899d4dbe4af40a7907aa9bf9619e6 ng-scope" >
-									<div>
-										<div class="wrapper-md">
-											<h2 class="text-center">Browse UC San Diego IT Services</h2>
-										</div>
+						<div ng-repeat="column in columns" class=" col-md-12 "><!-- ngRepeat: row in column.rows --><!-- ngRepeat: rectangle in column.widgets --><span ng-repeat="rectangle in column.widgets" sp-context-menu="contextMenu(event)" ng-controller="spWidgetDebug" class="ng-scope"><div id="x824ec29edbf6a30006037a131f961935" class="v067071dedbf2a30006037a131f96196f ng-scope" data="data" options="options" widget="widget" server="server"><div>
+	 <div ng-show="false" class="col-md-12 ng-hide" aria-hidden="true">
+	  <input ng-model="kb_view_filter" placeholder="Filter..." class="ng-pristine ng-untouched ng-valid ng-empty" aria-invalid="false">
+	 </div>
+	 <div class="wrapper-md">
+	  <h2 class="text-center">Browse UC San Diego IT Services</h2>
+	 </div>
+	 <!-- ngRepeat: group in data.groups | orderBy:'name' --><div class="col-md-4 col-xs-6 kb-cat-container ng-scope" ng-repeat="group in data.groups | orderBy:'name'">
+	  <div class="panel panel-primary b">
+	   <div class="panel-heading">
+	    <span style="font-size: 18px;"><a href="/its?id=sp_group&amp;sys_id=7188fa29db3e2784dbd6f2b6af9619ef" class="ng-binding"><i class="fa fa-user-plus" aria-hidden="true"></i>
 
-										<!-- START CATEGORY PANEL -->
-										<div class="col-md-4 col-xs-6 kb-cat-container ng-scope" aria-hidden="false">
-											<div class="panel panel-primary b">
-												<div class="panel-heading">
-													<span style="font-size: 18px;" class="ng-binding"> <i class="fa fa-lock"></i> Accounts &amp; Access</span>
-												</div>
-												<div class="panel-body">
-													<div class="small text-center ng-binding ng-scope" style="padding-bottom:5px;">
-														9 articles
-													</div>
-													<ul>
-														<div class="text-primary ng-scope" style="padding-bottom:15px;">
-															<span>
-																<a href="#link">
-																	<li class="ng-binding">Get Access to Business Systems (SSO)</li>
-																</a>
-															</span>
-														</div>
-														<div class="text-primary ng-scope" style="padding-bottom:15px;">
-															<span>
-																<a href="#link">
-																	<li class="ng-binding">Faculty &amp; Staff Accounts</li>
-																</a>
-															</span>
-														</div>
-														<div class="text-primary ng-scope" style="padding-bottom:15px;">
-															<span>
-																<a href="#link">
-																	<li class="ng-binding">Reset your Business Systems (SSO) Password</li>
-																</a>
-															</span>
-														</div>
-														<div class="text-primary ng-scope" style="padding-bottom:15px;">
-															<span>
-																<a href="#link">
-																	<li class="ng-binding">Faculty &amp; Staff Account Closure</li>
-																</a>
-															</span>
-														</div>
-														<div class="text-primary ng-scope" style="padding-bottom:15px;">
-															<span>
-																<a href="#link">
-																	<li class="ng-binding">Activate and Access your New Student Account</li>
-																</a>
-															</span>
-														</div>
-													</ul>
-												</div>
-												<div class="panel-footer text-right">
-													<a href="?id=kb_category&amp;kb_category=0a6e6111dbc99f80bd30f6e9af961933">View All</a>
-												</div>
-											</div>
-										</div>
-										<!-- END CATEGORY PANEL -->
+ Accounts and Access</a></span>
+	   </div>
+	   <div class="panel-body">
+	    <!-- ngIf: filtered.length != 1 --><div ng-if="filtered.length != 1" class="small text-center ng-binding ng-scope offer-pill" style="padding-bottom:5px;">
+	     4 service offerings
+	    </div><!-- end ngIf: filtered.length != 1 -->
+	    <!-- ngIf: filtered.length == 1 -->
+	    <div>
+	     <ul>
+	      <!-- ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=798bf221db7e2784dbd6f2b6af9619a8"> <li class="ng-binding">Logins and passwords</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=828bf221db7e2784dbd6f2b6af9619ab"> <li class="ng-binding">SSO</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=868bf221db7e2784dbd6f2b6af9619aa"> <li class="ng-binding">Student PID</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=8e8bf221db7e2784dbd6f2b6af9619ab"> <li class="ng-binding">VPN</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 -->
+	     </ul>
+	     <!-- ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) -->
+	    </div>
+	   </div>
+	   <div class="panel-footer text-right">
+	    <a href="/its?id=sp_group&amp;sys_id=7188fa29db3e2784dbd6f2b6af9619ef">See all offerings</a>
+	   </div>
+	  </div>
+	 </div><!-- end ngRepeat: group in data.groups | orderBy:'name' --><div class="col-md-4 col-xs-6 kb-cat-container ng-scope" ng-repeat="group in data.groups | orderBy:'name'">
+	  <div class="panel panel-primary b">
+	   <div class="panel-heading">
+	    <span style="font-size: 18px;"><a href="/its?id=sp_group&amp;sys_id=b588fa29db3e2784dbd6f2b6af9619f0" class="ng-binding"><i class="fa fa-video-camera" aria-hidden="true"></i>
 
-										<!-- START CATEGORY PANEL -->
-										<div class="col-md-4 col-xs-6 kb-cat-container ng-scope" aria-hidden="false">
-											<div class="panel panel-primary b">
-												<div class="panel-heading">
-													<span style="font-size: 18px;" class="ng-binding"> <i class="fa fa-lock"></i> Accounts &amp; Access</span>
-												</div>
-												<div class="panel-body">
-													<div class="small text-center ng-binding ng-scope" style="padding-bottom:5px;">
-														9 articles
-													</div>
-													<ul>
-														<div class="text-primary ng-scope" style="padding-bottom:15px;">
-															<span>
-																<a href="#link">
-																	<li class="ng-binding">Get Access to Business Systems (SSO)</li>
-																</a>
-															</span>
-														</div>
-														<div class="text-primary ng-scope" style="padding-bottom:15px;">
-															<span>
-																<a href="#link">
-																	<li class="ng-binding">Faculty &amp; Staff Accounts</li>
-																</a>
-															</span>
-														</div>
-														<div class="text-primary ng-scope" style="padding-bottom:15px;">
-															<span>
-																<a href="#link">
-																	<li class="ng-binding">Reset your Business Systems (SSO) Password</li>
-																</a>
-															</span>
-														</div>
-														<div class="text-primary ng-scope" style="padding-bottom:15px;">
-															<span>
-																<a href="#link">
-																	<li class="ng-binding">Faculty &amp; Staff Account Closure</li>
-																</a>
-															</span>
-														</div>
-														<div class="text-primary ng-scope" style="padding-bottom:15px;">
-															<span>
-																<a href="#link">
-																	<li class="ng-binding">Activate and Access your New Student Account</li>
-																</a>
-															</span>
-														</div>
-													</ul>
-												</div>
-												<div class="panel-footer text-right">
-													<a href="?id=kb_category&amp;kb_category=0a6e6111dbc99f80bd30f6e9af961933">View All</a>
-												</div>
-											</div>
-										</div>
-										<!-- END CATEGORY PANEL -->
+ Audio Visual</a></span>
+	   </div>
+	   <div class="panel-body">
+	    <!-- ngIf: filtered.length != 1 --><div ng-if="filtered.length != 1" class="small text-center ng-binding ng-scope offer-pill" style="padding-bottom:5px;">
+	     6 service offerings
+	    </div><!-- end ngIf: filtered.length != 1 -->
+	    <!-- ngIf: filtered.length == 1 -->
+	    <div>
+	     <ul>
+	      <!-- ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=8a8bf221db7e2784dbd6f2b6af9619ac"> <li class="ng-binding">AV Event Services (Recharge)</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=868bf221db7e2784dbd6f2b6af9619ad"> <li class="ng-binding">AV Systems Design &amp; Installation</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=868bf221db7e2784dbd6f2b6af9619b0"> <li class="ng-binding">Digital Signage</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=8e8bf221db7e2784dbd6f2b6af9619ae"> <li class="ng-binding">Instructional Video Production (Learning Glass)</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=828bf221db7e2784dbd6f2b6af9619ae"> <li class="ng-binding">Media Teaching Facility</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 -->
+	     </ul>
+	     <!-- ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) -->
+	    </div>
+	   </div>
+	   <div class="panel-footer text-right">
+	    <a href="/its?id=sp_group&amp;sys_id=b588fa29db3e2784dbd6f2b6af9619f0">See all offerings</a>
+	   </div>
+	  </div>
+	 </div><!-- end ngRepeat: group in data.groups | orderBy:'name' --><div class="col-md-4 col-xs-6 kb-cat-container ng-scope" ng-repeat="group in data.groups | orderBy:'name'">
+	  <div class="panel panel-primary b">
+	   <div class="panel-heading">
+	    <span style="font-size: 18px;"><a href="/its?id=sp_group&amp;sys_id=7988fa29db3e2784dbd6f2b6af9619fe" class="ng-binding"><i class="fa fa-briefcase" aria-hidden="true"></i>
 
-										<!-- START CATEGORY PANEL -->
-										<div class="col-md-4 col-xs-6 kb-cat-container ng-scope" aria-hidden="false">
-											<div class="panel panel-primary b">
-												<div class="panel-heading">
-													<span style="font-size: 18px;" class="ng-binding"> <i class="fa fa-lock"></i> Accounts &amp; Access</span>
-												</div>
-												<div class="panel-body">
-													<div class="small text-center ng-binding ng-scope" style="padding-bottom:5px;">
-														9 articles
-													</div>
-													<ul>
-														<div class="text-primary ng-scope" style="padding-bottom:15px;">
-															<span>
-																<a href="#link">
-																	<li class="ng-binding">Get Access to Business Systems (SSO)</li>
-																</a>
-															</span>
-														</div>
-														<div class="text-primary ng-scope" style="padding-bottom:15px;">
-															<span>
-																<a href="#link">
-																	<li class="ng-binding">Faculty &amp; Staff Accounts</li>
-																</a>
-															</span>
-														</div>
-														<div class="text-primary ng-scope" style="padding-bottom:15px;">
-															<span>
-																<a href="#link">
-																	<li class="ng-binding">Reset your Business Systems (SSO) Password</li>
-																</a>
-															</span>
-														</div>
-														<div class="text-primary ng-scope" style="padding-bottom:15px;">
-															<span>
-																<a href="#link">
-																	<li class="ng-binding">Faculty &amp; Staff Account Closure</li>
-																</a>
-															</span>
-														</div>
-														<div class="text-primary ng-scope" style="padding-bottom:15px;">
-															<span>
-																<a href="#link">
-																	<li class="ng-binding">Activate and Access your New Student Account</li>
-																</a>
-															</span>
-														</div>
-													</ul>
-												</div>
-												<div class="panel-footer text-right">
-													<a href="?id=kb_category&amp;kb_category=0a6e6111dbc99f80bd30f6e9af961933">View All</a>
-												</div>
-											</div>
-										</div>
-										<!-- END CATEGORY PANEL -->
-
-										<!-- START CATEGORY PANEL -->
-										<div class="col-md-4 col-xs-6 kb-cat-container ng-scope" aria-hidden="false">
-											<div class="panel panel-primary b">
-												<div class="panel-heading">
-													<span style="font-size: 18px;" class="ng-binding"> <i class="fa fa-lock"></i> Accounts &amp; Access</span>
-												</div>
-												<div class="panel-body">
-													<div class="small text-center ng-binding ng-scope" style="padding-bottom:5px;">
-														9 articles
-													</div>
-													<ul>
-														<div class="text-primary ng-scope" style="padding-bottom:15px;">
-															<span>
-																<a href="#link">
-																	<li class="ng-binding">Get Access to Business Systems (SSO)</li>
-																</a>
-															</span>
-														</div>
-														<div class="text-primary ng-scope" style="padding-bottom:15px;">
-															<span>
-																<a href="#link">
-																	<li class="ng-binding">Faculty &amp; Staff Accounts</li>
-																</a>
-															</span>
-														</div>
-														<div class="text-primary ng-scope" style="padding-bottom:15px;">
-															<span>
-																<a href="#link">
-																	<li class="ng-binding">Reset your Business Systems (SSO) Password</li>
-																</a>
-															</span>
-														</div>
-														<div class="text-primary ng-scope" style="padding-bottom:15px;">
-															<span>
-																<a href="#link">
-																	<li class="ng-binding">Faculty &amp; Staff Account Closure</li>
-																</a>
-															</span>
-														</div>
-														<div class="text-primary ng-scope" style="padding-bottom:15px;">
-															<span>
-																<a href="#link">
-																	<li class="ng-binding">Activate and Access your New Student Account</li>
-																</a>
-															</span>
-														</div>
-													</ul>
-												</div>
-												<div class="panel-footer text-right">
-													<a href="?id=kb_category&amp;kb_category=0a6e6111dbc99f80bd30f6e9af961933">View All</a>
-												</div>
-											</div>
-										</div>
-										<!-- END CATEGORY PANEL -->
-
-										<!-- START CATEGORY PANEL -->
-										<div class="col-md-4 col-xs-6 kb-cat-container ng-scope" aria-hidden="false">
-											<div class="panel panel-primary b">
-												<div class="panel-heading">
-													<span style="font-size: 18px;" class="ng-binding"> <i class="fa fa-lock"></i> Accounts &amp; Access</span>
-												</div>
-												<div class="panel-body">
-													<div class="small text-center ng-binding ng-scope" style="padding-bottom:5px;">
-														9 articles
-													</div>
-													<ul>
-														<div class="text-primary ng-scope" style="padding-bottom:15px;">
-															<span>
-																<a href="#link">
-																	<li class="ng-binding">Get Access to Business Systems (SSO)</li>
-																</a>
-															</span>
-														</div>
-														<div class="text-primary ng-scope" style="padding-bottom:15px;">
-															<span>
-																<a href="#link">
-																	<li class="ng-binding">Faculty &amp; Staff Accounts</li>
-																</a>
-															</span>
-														</div>
-														<div class="text-primary ng-scope" style="padding-bottom:15px;">
-															<span>
-																<a href="#link">
-																	<li class="ng-binding">Reset your Business Systems (SSO) Password</li>
-																</a>
-															</span>
-														</div>
-														<div class="text-primary ng-scope" style="padding-bottom:15px;">
-															<span>
-																<a href="#link">
-																	<li class="ng-binding">Faculty &amp; Staff Account Closure</li>
-																</a>
-															</span>
-														</div>
-														<div class="text-primary ng-scope" style="padding-bottom:15px;">
-															<span>
-																<a href="#link">
-																	<li class="ng-binding">Activate and Access your New Student Account</li>
-																</a>
-															</span>
-														</div>
-													</ul>
-												</div>
-												<div class="panel-footer text-right">
-													<a href="?id=kb_category&amp;kb_category=0a6e6111dbc99f80bd30f6e9af961933">View All</a>
-												</div>
-											</div>
-										</div>
-										<!-- END CATEGORY PANEL -->
-
-										<!-- START CATEGORY PANEL -->
-										<div class="col-md-4 col-xs-6 kb-cat-container ng-scope" aria-hidden="false">
-											<div class="panel panel-primary b">
-												<div class="panel-heading">
-													<span style="font-size: 18px;" class="ng-binding"> <i class="fa fa-lock"></i> Accounts &amp; Access</span>
-												</div>
-												<div class="panel-body">
-													<div class="small text-center ng-binding ng-scope" style="padding-bottom:5px;">
-														9 articles
-													</div>
-													<ul>
-														<div class="text-primary ng-scope" style="padding-bottom:15px;">
-															<span>
-																<a href="#link">
-																	<li class="ng-binding">Get Access to Business Systems (SSO)</li>
-																</a>
-															</span>
-														</div>
-														<div class="text-primary ng-scope" style="padding-bottom:15px;">
-															<span>
-																<a href="#link">
-																	<li class="ng-binding">Faculty &amp; Staff Accounts</li>
-																</a>
-															</span>
-														</div>
-														<div class="text-primary ng-scope" style="padding-bottom:15px;">
-															<span>
-																<a href="#link">
-																	<li class="ng-binding">Reset your Business Systems (SSO) Password</li>
-																</a>
-															</span>
-														</div>
-														<div class="text-primary ng-scope" style="padding-bottom:15px;">
-															<span>
-																<a href="#link">
-																	<li class="ng-binding">Faculty &amp; Staff Account Closure</li>
-																</a>
-															</span>
-														</div>
-														<div class="text-primary ng-scope" style="padding-bottom:15px;">
-															<span>
-																<a href="#link">
-																	<li class="ng-binding">Activate and Access your New Student Account</li>
-																</a>
-															</span>
-														</div>
-													</ul>
-												</div>
-												<div class="panel-footer text-right">
-													<a href="?id=kb_category&amp;kb_category=0a6e6111dbc99f80bd30f6e9af961933">View All</a>
-												</div>
-											</div>
-										</div>
-										<!-- END CATEGORY PANEL -->
-
-
-
-
-									</div>
-								</div>
-							</span>
-						</div>
+ Business</a></span>
+	   </div>
+	   <div class="panel-body">
+	    <!-- ngIf: filtered.length != 1 --><div ng-if="filtered.length != 1" class="small text-center ng-binding ng-scope offer-pill" style="padding-bottom:5px;">
+	     5 service offerings
+	    </div><!-- end ngIf: filtered.length != 1 -->
+	    <!-- ngIf: filtered.length == 1 -->
+	    <div>
+	     <ul>
+	      <!-- ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=868bf221db7e2784dbd6f2b6af9619b3"> <li class="ng-binding">BFS</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=868bf221db7e2784dbd6f2b6af9619b6"> <li class="ng-binding">Classroom Technology and Support</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=828bf221db7e2784dbd6f2b6af9619b4"> <li class="ng-binding">HDH</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=8e8bf221db7e2784dbd6f2b6af9619b4"> <li class="ng-binding">HR</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=8a8bf221db7e2784dbd6f2b6af9619b5"> <li class="ng-binding">RMP</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 -->
+	     </ul>
+	     <!-- ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) -->
+	    </div>
+	   </div>
+	   <div class="panel-footer text-right">
+	    <a href="/its?id=sp_group&amp;sys_id=7988fa29db3e2784dbd6f2b6af9619fe">See all offerings</a>
+	   </div>
+	  </div>
+	 </div><!-- end ngRepeat: group in data.groups | orderBy:'name' --><div class="col-md-4 col-xs-6 kb-cat-container ng-scope" ng-repeat="group in data.groups | orderBy:'name'">
+	  <div class="panel panel-primary b">
+	   <div class="panel-heading">
+	    <span style="font-size: 18px;"><a href="/its?id=sp_group&amp;sys_id=3588fa29db3e2784dbd6f2b6af9619f1" class="ng-binding"><i class="fa fa-area-chart" aria-hidden="true"></i>
+ Business Intelligence &amp; Analytics</a></span>
+	   </div>
+	   <div class="panel-body">
+	    <!-- ngIf: filtered.length != 1 --><div ng-if="filtered.length != 1" class="small text-center ng-binding ng-scope offer-pill" style="padding-bottom:5px;">
+	     2 service offerings
+	    </div><!-- end ngIf: filtered.length != 1 -->
+	    <!-- ngIf: filtered.length == 1 -->
+	    <div>
+	     <ul>
+	      <!-- ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=8a8bf221db7e2784dbd6f2b6af9619b2"> <li class="ng-binding">Advancement</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=8e8bf221db7e2784dbd6f2b6af9619b1"> <li class="ng-binding">Data Warehouse</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 -->
+	     </ul>
+	     <!-- ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) -->
+	    </div>
+	   </div>
+	   <div class="panel-footer text-right">
+	    <a href="/its?id=sp_group&amp;sys_id=3588fa29db3e2784dbd6f2b6af9619f1">See all offerings</a>
+	   </div>
+	  </div>
+	 </div><!-- end ngRepeat: group in data.groups | orderBy:'name' --><div class="col-md-4 col-xs-6 kb-cat-container ng-scope" ng-repeat="group in data.groups | orderBy:'name'">
+	  <div class="panel panel-primary b">
+	   <div class="panel-heading">
+	    <span style="font-size: 18px;"><a href="/its?id=sp_group&amp;sys_id=f588fa29db3e2784dbd6f2b6af9619ff" class="ng-binding"><i class="fa fa-users" aria-hidden="true"></i>
+ Classrooms and Labs</a></span>
+	   </div>
+	   <div class="panel-body">
+	    <!-- ngIf: filtered.length != 1 --><div ng-if="filtered.length != 1" class="small text-center ng-binding ng-scope offer-pill" style="padding-bottom:5px;">
+	     5 service offerings
+	    </div><!-- end ngIf: filtered.length != 1 -->
+	    <!-- ngIf: filtered.length == 1 -->
+	    <div>
+	     <ul>
+	      <!-- ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=828bf221db7e2784dbd6f2b6af9619ba"> <li class="ng-binding">Bigfix</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=8e8bf221db7e2784dbd6f2b6af9619b7"> <li class="ng-binding">Instructional Computer Labs</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=868bf221db7e2784dbd6f2b6af9619b9"> <li class="ng-binding">Lecture Capture (Podcasting)</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=8a8bf221db7e2784dbd6f2b6af9619b8"> <li class="ng-binding">Printing</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=828bf221db7e2784dbd6f2b6af9619b7"> <li class="ng-binding">Virtual Labs</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 -->
+	     </ul>
+	     <!-- ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) -->
+	    </div>
+	   </div>
+	   <div class="panel-footer text-right">
+	    <a href="/its?id=sp_group&amp;sys_id=f588fa29db3e2784dbd6f2b6af9619ff">See all offerings</a>
+	   </div>
+	  </div>
+	 </div><!-- end ngRepeat: group in data.groups | orderBy:'name' --><div class="col-md-4 col-xs-6 kb-cat-container ng-scope" ng-repeat="group in data.groups | orderBy:'name'">
+	  <div class="panel panel-primary b">
+	   <div class="panel-heading">
+	    <span style="font-size: 18px;"><a href="/its?id=sp_group&amp;sys_id=75883e29db3e2784dbd6f2b6af961900" class="ng-binding"><i class="fa fa-life-ring" aria-hidden="true"></i>
+ Desktop Support</a></span>
+	   </div>
+	   <div class="panel-body">
+	    <!-- ngIf: filtered.length != 1 --><div ng-if="filtered.length != 1" class="small text-center ng-binding ng-scope offer-pill" style="padding-bottom:5px;">
+	     3 service offerings
+	    </div><!-- end ngIf: filtered.length != 1 -->
+	    <!-- ngIf: filtered.length == 1 -->
+	    <div>
+	     <ul>
+	      <!-- ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=868bf221db7e2784dbd6f2b6af9619bc"> <li class="ng-binding">Educational Technology Consulting and Training</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=8e8bf221db7e2784dbd6f2b6af9619ba"> <li class="ng-binding">Jamf</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=8a8bf221db7e2784dbd6f2b6af9619bb"> <li class="ng-binding">SCCM</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 -->
+	     </ul>
+	     <!-- ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) -->
+	    </div>
+	   </div>
+	   <div class="panel-footer text-right">
+	    <a href="/its?id=sp_group&amp;sys_id=75883e29db3e2784dbd6f2b6af961900">See all offerings</a>
+	   </div>
+	  </div>
+	 </div><!-- end ngRepeat: group in data.groups | orderBy:'name' --><div class="col-md-4 col-xs-6 kb-cat-container ng-scope" ng-repeat="group in data.groups | orderBy:'name'">
+	  <div class="panel panel-primary b">
+	   <div class="panel-heading">
+	    <span style="font-size: 18px;"><a href="/its?id=sp_group&amp;sys_id=f1883e29db3e2784dbd6f2b6af961901" class="ng-binding"><i class="fa fa-laptop" aria-hidden="true"></i>
+ Educational Technology</a></span>
+	   </div>
+	   <div class="panel-body">
+	    <!-- ngIf: filtered.length != 1 --><div ng-if="filtered.length != 1" class="small text-center ng-binding ng-scope offer-pill" style="padding-bottom:5px;">
+	     4 service offerings
+	    </div><!-- end ngIf: filtered.length != 1 -->
+	    <!-- ngIf: filtered.length == 1 -->
+	    <div>
+	     <ul>
+	      <!-- ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=868bf221db7e2784dbd6f2b6af9619bf"> <li class="ng-binding">Exchange Online</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=8e8bf221db7e2784dbd6f2b6af9619bd"> <li class="ng-binding">iClickers</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=8a8bf221db7e2784dbd6f2b6af9619be"> <li class="ng-binding">Instructional Computing Environments</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=828bf221db7e2784dbd6f2b6af9619bd"> <li class="ng-binding">Learning Management System (LMS) - TritonEd</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 -->
+	     </ul>
+	     <!-- ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) -->
+	    </div>
+	   </div>
+	   <div class="panel-footer text-right">
+	    <a href="/its?id=sp_group&amp;sys_id=f1883e29db3e2784dbd6f2b6af961901">See all offerings</a>
+	   </div>
+	  </div>
+	 </div><!-- end ngRepeat: group in data.groups | orderBy:'name' --><div class="col-md-4 col-xs-6 kb-cat-container ng-scope" ng-repeat="group in data.groups | orderBy:'name'">
+	  <div class="panel panel-primary b">
+	   <div class="panel-heading">
+	    <span style="font-size: 18px;"><a href="/its?id=sp_group&amp;sys_id=71883e29db3e2784dbd6f2b6af961902" class="ng-binding"><i class="fa fa-envelope" aria-hidden="true"></i>
+ Email &amp; Calendar</a></span>
+	   </div>
+	   <div class="panel-body">
+	    <!-- ngIf: filtered.length != 1 --><div ng-if="filtered.length != 1" class="small text-center ng-binding ng-scope offer-pill" style="padding-bottom:5px;">
+	     6 service offerings
+	    </div><!-- end ngIf: filtered.length != 1 -->
+	    <!-- ngIf: filtered.length == 1 -->
+	    <div>
+	     <ul>
+	      <!-- ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=428bf221db7e2784dbd6f2b6af9619ce"> <li class="ng-binding">Alumni Email for Life</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=468bf221db7e2784dbd6f2b6af9619cd"> <li class="ng-binding">Email Forwarding</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=4e8bf221db7e2784dbd6f2b6af9619ce"> <li class="ng-binding">Email lists</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=4a8bf221db7e2784dbd6f2b6af9619cf"> <li class="ng-binding">Emergency Messaging (Triton Alerts)</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=828bf221db7e2784dbd6f2b6af9619c0"> <li class="ng-binding">Gmail</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 -->
+	     </ul>
+	     <!-- ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) -->
+	    </div>
+	   </div>
+	   <div class="panel-footer text-right">
+	    <a href="/its?id=sp_group&amp;sys_id=71883e29db3e2784dbd6f2b6af961902">See all offerings</a>
+	   </div>
+	  </div>
+	 </div><!-- end ngRepeat: group in data.groups | orderBy:'name' --><div class="col-md-4 col-xs-6 kb-cat-container ng-scope" ng-repeat="group in data.groups | orderBy:'name'">
+	  <div class="panel panel-primary b">
+	   <div class="panel-heading">
+	    <span style="font-size: 18px;"><a href="/its?id=sp_group&amp;sys_id=fd883e29db3e2784dbd6f2b6af961902" class="ng-binding"><i class="fa fa-wifi" aria-hidden="true"></i>
+ Network &amp; Connectivity</a></span>
+	   </div>
+	   <div class="panel-body">
+	    <!-- ngIf: filtered.length != 1 --><div ng-if="filtered.length != 1" class="small text-center ng-binding ng-scope offer-pill" style="padding-bottom:5px;">
+	     4 service offerings
+	    </div><!-- end ngIf: filtered.length != 1 -->
+	    <!-- ngIf: filtered.length == 1 -->
+	    <div>
+	     <ul>
+	      <!-- ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=468bf221db7e2784dbd6f2b6af9619d3"> <li class="ng-binding">Call Center</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=4a8bf221db7e2784dbd6f2b6af9619d2"> <li class="ng-binding">Domain Name registration</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=4e8bf221db7e2784dbd6f2b6af9619d1"> <li class="ng-binding">Residential Networking</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=428bf221db7e2784dbd6f2b6af9619d1"> <li class="ng-binding">Wireless networking</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 -->
+	     </ul>
+	     <!-- ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) -->
+	    </div>
+	   </div>
+	   <div class="panel-footer text-right">
+	    <a href="/its?id=sp_group&amp;sys_id=fd883e29db3e2784dbd6f2b6af961902">See all offerings</a>
+	   </div>
+	  </div>
+	 </div><!-- end ngRepeat: group in data.groups | orderBy:'name' --><div class="col-md-4 col-xs-6 kb-cat-container ng-scope" ng-repeat="group in data.groups | orderBy:'name'">
+	  <div class="panel panel-primary b">
+	   <div class="panel-heading">
+	    <span style="font-size: 18px;"><a href="/its?id=sp_group&amp;sys_id=7d883e29db3e2784dbd6f2b6af961903" class="ng-binding"><i class="fa fa-phone" aria-hidden="true"></i>
+ Phones</a></span>
+	   </div>
+	   <div class="panel-body">
+	    <!-- ngIf: filtered.length != 1 --><div ng-if="filtered.length != 1" class="small text-center ng-binding ng-scope offer-pill" style="padding-bottom:5px;">
+	     4 service offerings
+	    </div><!-- end ngIf: filtered.length != 1 -->
+	    <!-- ngIf: filtered.length == 1 -->
+	    <div>
+	     <ul>
+	      <!-- ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=428bf221db7e2784dbd6f2b6af9619d4"> <li class="ng-binding">Mobile</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=4e8bf221db7e2784dbd6f2b6af9619d4"> <li class="ng-binding">Office</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=4a8bf221db7e2784dbd6f2b6af9619d5"> <li class="ng-binding">Voicemail</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=468bf221db7e2784dbd6f2b6af9619d6"> <li class="ng-binding">Web and Video Conferencing (Zoom)</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 -->
+	     </ul>
+	     <!-- ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) -->
+	    </div>
+	   </div>
+	   <div class="panel-footer text-right">
+	    <a href="/its?id=sp_group&amp;sys_id=7d883e29db3e2784dbd6f2b6af961903">See all offerings</a>
+	   </div>
+	  </div>
+	 </div><!-- end ngRepeat: group in data.groups | orderBy:'name' --><div class="col-md-4 col-xs-6 kb-cat-container ng-scope" ng-repeat="group in data.groups | orderBy:'name'">
+	  <div class="panel panel-primary b">
+	   <div class="panel-heading">
+	    <span style="font-size: 18px;"><a href="/its?id=sp_group&amp;sys_id=f9883e29db3e2784dbd6f2b6af961904" class="ng-binding"><i class="fa fa-cogs" aria-hidden="true"></i>
+ Productivity &amp; Collaboration</a></span>
+	   </div>
+	   <div class="panel-body">
+	    <!-- ngIf: filtered.length != 1 --><div ng-if="filtered.length != 1" class="small text-center ng-binding ng-scope offer-pill" style="padding-bottom:5px;">
+	     9 service offerings
+	    </div><!-- end ngIf: filtered.length != 1 -->
+	    <!-- ngIf: filtered.length == 1 -->
+	    <div>
+	     <ul>
+	      <!-- ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=4a8bf221db7e2784dbd6f2b6af9619d8"> <li class="ng-binding">Case Management &amp; IT Service Management (ServiceNow)</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=4a8bf221db7e2784dbd6f2b6af9619db"> <li class="ng-binding">DocuSign</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=468bf221db7e2784dbd6f2b6af9619d9"> <li class="ng-binding">G-Suite</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=4e8bf221db7e2784dbd6f2b6af9619da"> <li class="ng-binding">Link Shortener</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=428bf221db7e2784dbd6f2b6af9619da"> <li class="ng-binding">Microsoft 365</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 -->
+	     </ul>
+	     <!-- ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) -->
+	    </div>
+	   </div>
+	   <div class="panel-footer text-right">
+	    <a href="/its?id=sp_group&amp;sys_id=f9883e29db3e2784dbd6f2b6af961904">See all offerings</a>
+	   </div>
+	  </div>
+	 </div><!-- end ngRepeat: group in data.groups | orderBy:'name' --><div class="col-md-4 col-xs-6 kb-cat-container ng-scope" ng-repeat="group in data.groups | orderBy:'name'">
+	  <div class="panel panel-primary b">
+	   <div class="panel-heading">
+	    <span style="font-size: 18px;"><a href="/its?id=sp_group&amp;sys_id=79883e29db3e2784dbd6f2b6af961905" class="ng-binding"><i class="fa fa-flask" aria-hidden="true"></i>
+ Research</a></span>
+	   </div>
+	   <div class="panel-body">
+	    <!-- ngIf: filtered.length != 1 --><div ng-if="filtered.length != 1" class="small text-center ng-binding ng-scope offer-pill" style="padding-bottom:5px;">
+	     5 service offerings
+	    </div><!-- end ngIf: filtered.length != 1 -->
+	    <!-- ngIf: filtered.length == 1 -->
+	    <div>
+	     <ul>
+	      <!-- ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=568bf221db7e2784dbd6f2b6af9619df"> <li class="ng-binding">AWS for Research</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=528bf221db7e2784dbd6f2b6af9619e0"> <li class="ng-binding">AWS RI (Strategic Blue)</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=5e8bf221db7e2784dbd6f2b6af9619e0"> <li class="ng-binding">CIRT</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=5a8bf221db7e2784dbd6f2b6af9619de"> <li class="ng-binding">Proof of Concept</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=5e8bf221db7e2784dbd6f2b6af9619dd"> <li class="ng-binding">Research Technology Consulting</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 -->
+	     </ul>
+	     <!-- ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) -->
+	    </div>
+	   </div>
+	   <div class="panel-footer text-right">
+	    <a href="/its?id=sp_group&amp;sys_id=79883e29db3e2784dbd6f2b6af961905">See all offerings</a>
+	   </div>
+	  </div>
+	 </div><!-- end ngRepeat: group in data.groups | orderBy:'name' --><div class="col-md-4 col-xs-6 kb-cat-container ng-scope" ng-repeat="group in data.groups | orderBy:'name'">
+	  <div class="panel panel-primary b">
+	   <div class="panel-heading">
+	    <span style="font-size: 18px;"><a href="/its?id=sp_group&amp;sys_id=f5883e29db3e2784dbd6f2b6af961906" class="ng-binding"><i class="fa fa-lock" aria-hidden="true"></i>
+ Security</a></span>
+	   </div>
+	   <div class="panel-body">
+	    <!-- ngIf: filtered.length != 1 --><div ng-if="filtered.length != 1" class="small text-center ng-binding ng-scope offer-pill" style="padding-bottom:5px;">
+	     7 service offerings
+	    </div><!-- end ngIf: filtered.length != 1 -->
+	    <!-- ngIf: filtered.length == 1 -->
+	    <div>
+	     <ul>
+	      <!-- ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=5a8bf221db7e2784dbd6f2b6af9619e1"> <li class="ng-binding">Duo</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=568bf221db7e2784dbd6f2b6af9619e2"> <li class="ng-binding">Firewall</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=528bf221db7e2784dbd6f2b6af9619e3"> <li class="ng-binding">Lastpass</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=5e8bf221db7e2784dbd6f2b6af9619e3"> <li class="ng-binding">Policy</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=528bf221db7e2784dbd6f2b6af9619e6"> <li class="ng-binding">Software</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 -->
+	     </ul>
+	     <!-- ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) -->
+	    </div>
+	   </div>
+	   <div class="panel-footer text-right">
+	    <a href="/its?id=sp_group&amp;sys_id=f5883e29db3e2784dbd6f2b6af961906">See all offerings</a>
+	   </div>
+	  </div>
+	 </div><!-- end ngRepeat: group in data.groups | orderBy:'name' --><div class="col-md-4 col-xs-6 kb-cat-container ng-scope" ng-repeat="group in data.groups | orderBy:'name'">
+	  <div class="panel panel-primary b">
+	   <div class="panel-heading">
+	    <span style="font-size: 18px;"><a href="/its?id=sp_group&amp;sys_id=75883e29db3e2784dbd6f2b6af961907" class="ng-binding"><i class="fa fa-file-text-o" aria-hidden="true"></i>
+ Software Licensing</a></span>
+	   </div>
+	   <div class="panel-body">
+	    <!-- ngIf: filtered.length != 1 -->
+	    <!-- ngIf: filtered.length == 1 --><div ng-if="filtered.length == 1" class="small text-center ng-binding ng-scope offer-pill" style="padding-bottom:5px;">
+	     1 service offering
+	    </div><!-- end ngIf: filtered.length == 1 -->
+	    <div>
+	     <ul>
+	      <!-- ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=5e8bf221db7e2784dbd6f2b6af9619e6"> <li class="ng-binding">Course Registration (WebReg)</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 -->
+	     </ul>
+	     <!-- ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) -->
+	    </div>
+	   </div>
+	   <div class="panel-footer text-right">
+	    <a href="/its?id=sp_group&amp;sys_id=75883e29db3e2784dbd6f2b6af961907">See all offerings</a>
+	   </div>
+	  </div>
+	 </div><!-- end ngRepeat: group in data.groups | orderBy:'name' --><div class="col-md-4 col-xs-6 kb-cat-container ng-scope" ng-repeat="group in data.groups | orderBy:'name'">
+	  <div class="panel panel-primary b">
+	   <div class="panel-heading">
+	    <span style="font-size: 18px;"><a href="/its?id=sp_group&amp;sys_id=f1883e29db3e2784dbd6f2b6af961908" class="ng-binding"><i class="fa fa-graduation-cap" aria-hidden="true"></i>
+ Student Administration</a></span>
+	   </div>
+	   <div class="panel-body">
+	    <!-- ngIf: filtered.length != 1 --><div ng-if="filtered.length != 1" class="small text-center ng-binding ng-scope offer-pill" style="padding-bottom:5px;">
+	     4 service offerings
+	    </div><!-- end ngIf: filtered.length != 1 -->
+	    <!-- ngIf: filtered.length == 1 -->
+	    <div>
+	     <ul>
+	      <!-- ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=568bf221db7e2784dbd6f2b6af9619e8"> <li class="ng-binding">Academic History</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=5a8bf221db7e2784dbd6f2b6af9619e7"> <li class="ng-binding">E-Bill/E-Payment</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=528bf221db7e2784dbd6f2b6af9619e9"> <li class="ng-binding">Virtual Advising Center</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=5e8bf221db7e2784dbd6f2b6af9619e9"> <li class="ng-binding">Web Content Management</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 -->
+	     </ul>
+	     <!-- ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) -->
+	    </div>
+	   </div>
+	   <div class="panel-footer text-right">
+	    <a href="/its?id=sp_group&amp;sys_id=f1883e29db3e2784dbd6f2b6af961908">See all offerings</a>
+	   </div>
+	  </div>
+	 </div><!-- end ngRepeat: group in data.groups | orderBy:'name' --><div class="col-md-4 col-xs-6 kb-cat-container ng-scope" ng-repeat="group in data.groups | orderBy:'name'">
+	  <div class="panel panel-primary b">
+	   <div class="panel-heading">
+	    <span style="font-size: 18px;"><a href="/its?id=sp_group&amp;sys_id=71883e29db3e2784dbd6f2b6af961909" class="ng-binding"><i class="fa fa-mobile" aria-hidden="true"></i>
+ Websites and Mobile</a></span>
+	   </div>
+	   <div class="panel-body">
+	    <!-- ngIf: filtered.length != 1 -->
+	    <!-- ngIf: filtered.length == 1 --><div ng-if="filtered.length == 1" class="small text-center ng-binding ng-scope offer-pill" style="padding-bottom:5px;">
+	     1 service offering
+	    </div><!-- end ngIf: filtered.length == 1 -->
+	    <div>
+	     <ul>
+	      <!-- ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 --><div ng-repeat="svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5" class="text-primary ng-scope" style="padding-bottom:15px;">
+	       <span><a href="/its?id=sp_service&amp;sys_id=5a8bf221db7e2784dbd6f2b6af9619ea"> <li class="ng-binding">UC San Diego Flagship Mobile App</li></a></span>
+	      </div><!-- end ngRepeat: svc in data.services | filter: c.u_service_group = group.sys_id | limitTo:5 -->
+	     </ul>
+	     <!-- ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) --><div ng-show="false" ng-repeat="ser in filtered = (data.services | filter: c.u_service_group = group.sys_id)" class="ng-scope ng-hide" aria-hidden="true"></div><!-- end ngRepeat: ser in filtered = (data.services | filter: c.u_service_group = group.sys_id) -->
+	    </div>
+	   </div>
+	   <div class="panel-footer text-right">
+	    <a href="/its?id=sp_group&amp;sys_id=71883e29db3e2784dbd6f2b6af961909">See all offerings</a>
+	   </div>
+	  </div>
+	 </div><!-- end ngRepeat: group in data.groups | orderBy:'name' -->
+	</div></div><!-- ngIf: rectangle.debugModal --></span><!-- end ngRepeat: rectangle in column.widgets --></div>
 					</div>
 				</sp-page-row>
 			</div>
