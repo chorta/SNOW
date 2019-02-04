@@ -7,9 +7,9 @@ a {
 }
 
 .panel.panel-primary div.panel-heading {
-  background-color: #FFF;
+  background-color: #f5f5f5;
   color: #000;
-  border-bottom: 4px solid #006a96;
+  border-bottom: 1px solid #0175a0;
 }
 
 .panel.panel-default div.panel-heading {
@@ -138,6 +138,10 @@ main.body.padding-top {
     padding: 10px 0 100px 0;
 }
 
+.kb-cat-container >.panel {
+    border-radius: 0;
+}
+
 
 .kb-cat-container > .panel li:before {
     font-family: "FontAwesome";
@@ -149,12 +153,32 @@ main.body.padding-top {
     list-style-type: none;
 }
 
+.kb-cat-container > .panel > .panel-footer {
+    padding: 1px 15px;
+}
+
 .kb-cat-container > .panel > .panel-body {
     min-height: 300px;
 }
 
 .sc-cat-container > .panel > .panel-body {
     min-height: 300px;
+}
+
+.sc-cat-container >.panel {
+    border-radius: 0;
+}
+
+.sc-cat-container > .panel > .panel-footer {
+    padding: 1px 15px;
+}
+
+
+/*SC icon Font Size*/
+
+.sc-cat-container > div.panel > div.panel-heading > span > a > i {
+  font-size: 23px;
+  padding-right: 10px !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -233,6 +257,10 @@ h1#kb-header-title {
   	width: 100% !important;
   }
 
+  .sc-cat-container {
+  	width: 100% !important;
+  }
+
   .row {
     margin: 0 !important;
 }
@@ -266,3 +294,28 @@ h1#kb-header-title {
     max-height: 100px;
     width: auto;
 }
+
+/* Page Title */
+
+h2.panel-title.h4 {
+    margin: 10px !important;
+    color: #484848;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 22px;
+}
+
+
+/* SP Group */
+
+.sp-group-title {
+    color: #484848;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.sp-group-hr {
+    color: #808080;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
