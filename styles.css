@@ -199,19 +199,19 @@ input.form-control.input-typeahead.ng-pristine.ng-valid.ng-empty.ng-touched {
 
 
 #homepage-search > div > h2 {
-    text-shadow: 2px 2px 12px #0000008f;
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5607843137254902);
     color: #fff !important;
     font: 54px/1.7 Roboto, sans-serif;
 }
 
 h4#kb-header-tag {
-    text-shadow: 2px 2px 12px #0000008f;
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5607843137254902);
     color: #fff !important;
     font: 18px/1.7 Roboto, sans-serif;
 }
 
 h1#kb-header-title {
-    text-shadow: 2px 2px 12px #0000008f;
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5607843137254902);
     color: #fff !important;
     font: 54px/1 Roboto, sans-serif;
 }
