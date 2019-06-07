@@ -7,7 +7,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:2) {
     .layout-footer>.layout-container,
     .title-logo {
-        background-image: url(img/sprite_base2x.png);
+        background-image: url(https://cdn.ucsd.edu/cms/decorator-5/styles/img/sprite_base2x.png);
         background-size: 500px 120px
     }
 }
